@@ -67,6 +67,7 @@
 	export let size: ButtonSize = 'md'
 	export let rounded: ButtonRoundness = 'md'
 	export let alignment: ButtonAlignment = 'center'
+	export let column: boolean = false
 
 	export let loaderWidth: number | undefined = undefined
 
@@ -91,7 +92,11 @@
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"
 	type={submit ? 'submit' : 'button'}
 >
-	<div class="flex flex-row items-center gap-1.5 {buttonAlignment[alignment]}">
+	<div
+		class="flex {column
+			? 'flex-col justify-center'
+			: 'flex-row items-center'} gap-1.5 {buttonAlignment[alignment]}"
+	>
 		{#if loading}
 			<Spinner
 				width={loaderWidth

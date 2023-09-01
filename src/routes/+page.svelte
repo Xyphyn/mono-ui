@@ -4,8 +4,8 @@
 	import { ArrowRight, Check, Icon } from 'svelte-hero-icons'
 </script>
 
-<div class="grid md:grid-cols-5 gap-6 max-w-full min-w-0">
-	<div class="flex flex-col gap-6 col-span-3 w-full min-w-0">
+<div class="grid md:grid-cols-2 gap-6 max-w-full min-w-0">
+	<div class="flex flex-col gap-6 col-span-1 w-full min-w-0">
 		<h1 class="font-black text-5xl">
 			A Svelte UI library for <span
 				class="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-pink-600"
@@ -30,11 +30,12 @@
 			</Button>
 		</div>
 	</div>
-	<div class="flex flex-col gap-4 col-span-2">
-		<h2 class="font-black text-3xl text-center self-center justify-self-center">Components</h2>
-		<Button class="w-max" size="lg">
-			<span><Icon src={Check} slot="prefix" mini size="18" /></span>
-			Button
-		</Button>
+	<div class="flex flex-col gap-4 col-span-1">
+		<div class="self-end">
+			<Button class="w-max" size="lg">
+				<span><Icon src={Check} slot="prefix" mini size="18" /></span>
+				Button
+			</Button>
+		</div>
 	</div>
 </div>

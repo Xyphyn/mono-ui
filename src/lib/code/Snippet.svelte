@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class="px-4 flex justify-between max-w-full box-border bg-neutral-300 dark:bg-neutral-950 items-center gap-4 rounded-md border dark:border-neutral-800
+	class="px-4 flex justify-between max-w-full box-border bg-neutral-100 dark:bg-neutral-950 items-center gap-4 rounded-md border dark:border-neutral-800
   {$$props.class}"
 >
 	<pre class="overflow-auto max-w-full whitespace-nowrap w-max">

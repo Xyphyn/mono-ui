@@ -1,0 +1,45 @@
+<script>
+	import {Button} from '$lib/index'; import ComponentContainer from '../ComponentContainer.svelte'
+</script>
+
+# Buttons
+
+A clickable element that triggers an action on press.
+
+<br />
+
+## Sizes
+
+<ComponentContainer>
+	<Button size="xl" class="w-max">
+		X Large
+	</Button>
+	<Button size="lg" class="w-max">
+		Large
+	</Button>
+	<Button size="md" class="w-max">
+		Medium
+	</Button>
+	<Button size="sm" class="w-max">
+		Small
+	</Button>
+</ComponentContainer>
+
+## Colors
+
+<ComponentContainer>
+	<Button color="primary">Primary</Button>
+	<Button color="secondary">Secondary</Button>
+	<Button color="tertiary">Tertiary</Button>
+	<Button color="elevated">Elevated</Button>
+	<Button color="danger">Danger</Button>
+</ComponentContainer>
+
+## Type
+
+A button can become a link if you add `href`.
+
+<ComponentContainer>
+	<Button on:click={() => alert('button')}>Button</Button>
+	<Button href="">Link</Button>
+</ComponentContainer>
