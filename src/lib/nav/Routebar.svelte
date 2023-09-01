@@ -23,9 +23,9 @@
 	{#each routes as route}
 		{#if route.children}
 			<Button
-				class="{route.url == currentRoute
-					? 'border-t-0 border-r-0 border-b-0 border-l border-neutral-900 dark:border-neutral-50'
-					: 'border-t-0 border-r-0 border-b-0 border-l border-neutral-300'} rounded-l-none {depth ==
+				class="{depth > 0 ? 'pl-6' : ''} {route.url == currentRoute
+					? 'border-t-0 border-r-0 border-b-0 border-l !border-neutral-900 dark:!border-neutral-50'
+					: 'border-t-0 border-r-0 border-b-0 border-l !border-neutral-300'} rounded-l-none {depth ==
 				0
 					? 'mt-2'
 					: ''}"
@@ -43,9 +43,9 @@
 				alignment="left"
 				color="tertiary"
 				size="lg"
-				class="{depth > 0 ? 'pl-6' : ''} {route.url == currentRoute
-					? 'border-t-0 border-r-0 border-b-0 border-l border-neutral-900 dark:border-neutral-50'
-					: 'border-t-0 border-r-0 border-b-0 border-l border-neutral-300'} font-normal rounded-l-none"
+				class="{depth > 1 ? 'pl-12' : depth > 0 ? 'pl-6' : ''} {route.url == currentRoute
+					? 'border-t-0 border-r-0 border-b-0 border-l !border-neutral-950 dark:!border-neutral-50'
+					: 'border-t-0 border-r-0 border-b-0 border-l !border-neutral-300'} font-normal rounded-l-none"
 			>
 				{route.name}
 			</Button>

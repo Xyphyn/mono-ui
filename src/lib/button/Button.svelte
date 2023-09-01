@@ -50,6 +50,7 @@
 		'square-sm': 'w-6 h-6',
 		'square-md': 'w-8 h-8',
 		'square-lg': 'w-10 h-10',
+		'square-xl': 'w-12 h-12',
 		custom: ''
 	}
 
@@ -65,7 +66,7 @@
 
 	export let color: ButtonColor = 'secondary'
 	export let size: ButtonSize = 'md'
-	export let rounded: ButtonRoundness = 'md'
+	export let rounding: ButtonRoundness = 'md'
 	export let alignment: ButtonAlignment = 'center'
 	export let column: boolean = false
 
@@ -83,7 +84,7 @@
 	class="
       {buttonColor[color]}
       {buttonSize[size]}
-      {buttonRoundness[rounded]}
+      {buttonRoundness[rounding]}
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit

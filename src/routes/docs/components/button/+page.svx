@@ -33,6 +33,7 @@ A clickable element that triggers an action on press.
 	<Button color="tertiary">Tertiary</Button>
 	<Button color="elevated">Elevated</Button>
 	<Button color="danger">Danger</Button>
+	<Button color="none">None</Button>
 </ComponentContainer>
 
 ## Type
@@ -41,5 +42,54 @@ A button can become a link if you add `href`.
 
 <ComponentContainer>
 	<Button on:click={() => alert('button')}>Button</Button>
-	<Button href="">Link</Button>
+	<Button href="#buttons">Link</Button>
+</ComponentContainer>
+
+## Roundness
+
+<ComponentContainer>
+	<Button rounding="pill">Full</Button>
+	<Button rounding="lg">Large</Button>
+	<Button rounding="md">Medium</Button>
+	<Button rounding="none">None</Button>
+</ComponentContainer>
+
+## Squares
+
+Adding `-square` to the end of a `size` will make it square.
+
+<ComponentContainer>
+	<Button size="square-xl">xl</Button>
+	<Button size="square-lg">lg</Button>
+	<Button size="square-md">md</Button>
+	<Button size="square-sm">sm</Button>
+</ComponentContainer>
+
+## Alignments
+
+<ComponentContainer>
+	<Button alignment="left" class="w-36">
+		Left
+	</Button>
+	<Button alignment="center" class="w-36">
+		Center
+	</Button>
+	<Button alignment="right" class="w-36">
+		Right
+	</Button>
+</ComponentContainer>
+
+## Prefix/Suffix
+
+There is a `slot` for suffixes/prefixes.
+
+<ComponentContainer>
+	<Button>
+		<span slot="prefix">�</span>
+		Prefix
+	</Button>
+	<Button>
+		<span slot="suffix">�</span>
+		Suffix
+	</Button>
 </ComponentContainer>

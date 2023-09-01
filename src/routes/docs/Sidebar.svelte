@@ -1,14 +1,34 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import Button from '$lib/button/Button.svelte'
 	import Routebar from '$lib/nav/Routebar.svelte'
+	import { ChevronDoubleLeft, ChevronDoubleRight, Icon } from 'svelte-hero-icons'
 
 	const toPathName = (url: URL) => `${url.pathname}${url.hash}`
 
 	$: currentRoute = toPathName($page.url)
-	$: console.log(currentRoute)
+
+	let expanded = false
 </script>
 
-<div class="w-1/4 h-full border-r px-2 flex flex-col gap-4 sticky top-0 left-0">
+<div class="md:hidden">
+	<Button on:click={() => (expanded = !expanded)} size="square-md">
+		<Icon src={ChevronDoubleRight} size="16" slot="prefix" mini />
+	</Button>
+</div>
+
+<div
+	class="{expanded
+		? 'flex'
+		: 'hidden'} md:flex w-1/2 md:w-1/4 h-full border-r px-2 flex-col gap-4 fixed md:sticky
+		top-20 left-0 bg-neutral-50 dark:bg-neutral-900"
+>
+	<div class="md:hidden flex flex-col gap-2">
+		<span class="text-sm font-medium">Navigation</span>
+		<Button on:click={() => (expanded = !expanded)} size="square-md">
+			<Icon src={ChevronDoubleLeft} size="16" slot="prefix" mini />
+		</Button>
+	</div>
 	<div class="flex flex-col gap-2">
 		<Routebar
 			{currentRoute}
@@ -34,6 +54,16 @@
 						{
 							url: '/docs/components/button',
 							name: 'Button'
+						},
+						{
+							url: '/docs/components/forms',
+							name: 'Forms',
+							children: [
+								{
+									url: '/docs/components/forms/textinput',
+									name: 'Text Input'
+								}
+							]
 						},
 						{
 							url: '/docs/getting-started#snippet',
