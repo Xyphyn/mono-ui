@@ -5,8 +5,9 @@
 	import h3 from './components/h3.svelte'
 	import p from './components/p.svelte'
 	import code from './components/code.svelte'
+	import pre from './components/pre.svelte'
 
-	export { h1, h2, h3, p, code }
+	export { h1, h2, h3, p, code, pre }
 </script>
 
 <div class="flex flex-col md:flex-row w-full h-full gap-6">
