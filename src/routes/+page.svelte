@@ -1,9 +1,11 @@
 <script lang="ts">
+	import Snippet from '$lib/code/Snippet.svelte'
 	import Button from './../lib/button/Button.svelte'
+	import { ArrowRight, Check, Icon } from 'svelte-hero-icons'
 </script>
 
-<div class="grid md:grid-cols-2">
-	<div class="flex flex-col gap-6">
+<div class="grid md:grid-cols-5 gap-6 max-w-full min-w-0">
+	<div class="flex flex-col gap-6 col-span-3 w-full min-w-0">
 		<h1 class="font-black text-5xl">
 			A Svelte UI library for <span
 				class="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-pink-600"
@@ -15,7 +17,24 @@
 			Whether it's a landing page or a big web app, Mono is a great choice for any project. It
 			follows best Svelte practices-with a low bundle size.
 		</p>
-		<Button class="w-max">View the Docs</Button>
+		<div class="flex flex-col sm:flex-row gap-4 w-full">
+			<Snippet value="npm i mono-svelte" class="h-12" />
+			<Button
+				class="w-max bg-gradient-to-br from-violet-500 to-pink-600 text-white hover:brightness-110"
+				color="none"
+				size="xl"
+				href="/docs"
+			>
+				View the Docs
+				<Icon src={ArrowRight} mini size="16" slot="suffix" />
+			</Button>
+		</div>
 	</div>
-	<div class="flex flex-col" />
+	<div class="flex flex-col gap-4 col-span-2">
+		<h2 class="font-black text-3xl text-center self-center justify-self-center">Components</h2>
+		<Button class="w-max" size="lg">
+			<span><Icon src={Check} slot="prefix" mini size="18" /></span>
+			Button
+		</Button>
+	</div>
 </div>
