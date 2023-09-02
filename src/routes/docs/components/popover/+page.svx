@@ -4,6 +4,10 @@
   import { Icon, InformationCircle } from 'svelte-hero-icons'
 </script>
 
+<Note>
+This component does not work without JS.
+</Note>
+
 # Popovers
 
 A component that appears below a target when hovered or clicked.

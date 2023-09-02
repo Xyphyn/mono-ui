@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Spinner } from '$lib/index.js'
+	import { Spinner } from '$lib/index.js'
 	import { type Toast, toasts, toastColors } from './toasts.js'
 	import {
 		InformationCircle,

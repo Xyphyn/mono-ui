@@ -1,8 +1,12 @@
 <script>
-  import { Modal, Button } from '$lib/index'
+  import { Modal, Button, Note } from '$lib/index'
 
   let open = false
 </script>
+
+<Note>
+This component does not work without JS.
+</Note>
 
 # Modals
 

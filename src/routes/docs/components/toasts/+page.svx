@@ -3,6 +3,10 @@
   import ComponentContainer from '../ComponentContainer.svelte'
 </script>
 
+<Note>
+This component does not work without JS.
+</Note>
+
 # Toasts
 
 A small notification card that appears on the bottom right of the screen.

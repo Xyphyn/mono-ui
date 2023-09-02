@@ -1,0 +1,8 @@
+<script>
+  import ComponentContainer from '../ComponentContainer.svelte'
+  import { Note } from '$lib/index'
+</script>
+
+<Note>
+  content
+</Note>

@@ -3,6 +3,10 @@
 	'../ComponentContainer.svelte';
 </script>
 
+<Note>
+Buttons won't work without JavaScript, links will though.
+</Note>
+
 # Buttons
 
 A clickable element that triggers an action on press.

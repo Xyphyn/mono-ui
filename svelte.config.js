@@ -15,8 +15,7 @@ const config = {
 			layout: './src/routes/docs/+page.svelte',
 			smartypants: {
 				dashes: 'oldschool'
-			},
-			highlight: {}
+			}
 		})
 	],
 	extensions: ['.svelte', '.md', '.svx'],
