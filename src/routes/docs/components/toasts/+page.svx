@@ -1,0 +1,34 @@
+<script>
+  import { Button, toast } from '$lib/index'
+  import ComponentContainer from '../ComponentContainer.svelte'
+</script>
+
+# Toasts
+
+A small notification card that appears on the bottom right of the screen.
+
+A `ToastContainer` must be put in `+layout.svelte`, then you can call `toast()`.
+
+<Button color="primary" class="w-max" on:click={() => toast({ content: 'Example toast' })}>
+Show toast
+</Button>
+
+## Types
+
+<ComponentContainer>
+<Button color="secondary" class="w-max" on:click={() => toast({ content: 'Example toast', type: 'info' })}>
+Info
+</Button>
+
+<Button color="none" class="bg-green-500 w-max" on:click={() => toast({ content: 'Example toast', type: 'success' })}>
+Success
+</Button>
+
+<Button color="none" class="bg-yellow-500 w-max" on:click={() => toast({ content: 'Example toast', type: 'warning' })}>
+Warning
+</Button>
+
+<Button color="danger" class="w-max" on:click={() => toast({ content: 'Example toast', type: 'error' })}>
+Error
+</Button>
+</ComponentContainer>

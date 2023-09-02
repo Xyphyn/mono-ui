@@ -61,10 +61,6 @@
 							name: 'Button'
 						},
 						{
-							url: '/docs/components/popover',
-							name: 'Popover'
-						},
-						{
 							url: '/docs/components/codeblock',
 							name: 'Code Blocks'
 						},
@@ -86,6 +82,18 @@
 									name: 'Select Menus'
 								}
 							]
+						},
+						{
+							url: '/docs/components/modal',
+							name: 'Modal'
+						},
+						{
+							url: '/docs/components/popover',
+							name: 'Popover'
+						},
+						{
+							url: '/docs/components/toasts',
+							name: 'Toasts'
 						}
 					]
 				}

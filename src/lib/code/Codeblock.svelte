@@ -6,6 +6,7 @@
 
 	export let src: string
 	export let filename: string | undefined = undefined
+	export let htmlSrc: string | undefined = undefined
 
 	let copied = false
 
@@ -58,7 +59,9 @@
 		bind:this={pre}
 		{...$$restProps}
 		class="{$$props.class} bg-white dark:bg-gray-900 px-4 overflow-auto max-h-96">
-		{#if $$slots.default}
+		{#if htmlSrc}
+			{@html htmlSrc}
+		{:else if $$slots.default}
 			<slot />
 		{:else if src}
 			{src}

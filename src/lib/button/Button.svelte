@@ -10,7 +10,7 @@
 
 	export const buttonColor = {
 		primary: `border border-primary-900 bg-primary-900 dark:bg-primary-100
-	dark:border-primary-100 dark:text-primary hover:text-inherit text-primary-100
+	dark:border-primary-100 dark:text-primary-900 hover:text-inherit text-primary-100
 	hover:bg-transparent hover:dark:bg-transparent active:text-inherit
 	active:bg-primary-900/10 active:dark:bg-primary-100/10`,
 

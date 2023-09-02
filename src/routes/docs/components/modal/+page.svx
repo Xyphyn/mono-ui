@@ -1,0 +1,39 @@
+<script>
+  import { Modal, Button } from '$lib/index'
+
+  let open = false
+</script>
+
+# Modals
+
+Also referred to as a dialog, a modal will open full-screen and prompt the user for action.
+
+<Modal bind:open title="Modal" action="Action" on:action={(e) => {
+alert('action')
+open = !open
+}}>
+
+  <p>
+    Modal text
+  </p>
+</Modal>
+
+<Button class="w-max" color="primary" on:click={() => open = !open}>
+Open Modal
+</Button>
+
+```svelte
+<Modal
+	bind:open
+	title="Modal"
+	action="Action"
+	on:action={(e) => {
+		alert('action')
+		open = !open
+	}}
+>
+	<p>Modal text</p>
+</Modal>
+
+<Button class="w-max" color="primary" on:click={() => (open = !open)}>Open Modal</Button>
+```
