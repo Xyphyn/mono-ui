@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Material from '$lib/materials/Material.svelte'
-	import { fly } from 'svelte/transition'
+	import { expoOut } from 'svelte/easing'
+	import { fly, scale } from 'svelte/transition'
 
 	export let openOnHover: boolean = false
 
@@ -28,7 +29,7 @@
 	on:keypress={() => (open = !open)}
 	role="menu"
 	tabindex="0"
-	class="relative z-30 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
+	class="relative z-20 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
 >
 	<div tabindex="-1">
 		<slot name="target" />
@@ -36,9 +37,12 @@
 	<!--Artificial gap-->
 	<div class="h-2" />
 	{#if open}
-		<div transition:fly={{ opacity: 0, y: 2 }} class="absolute left-0 origin-top-left top-full">
+		<div
+			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
+			class="absolute left-0 origin-top-left top-full min-w-[12rem]"
+		>
 			<slot name="popover">
-				<Material>
+				<Material elevation="high">
 					<slot />
 				</Material>
 			</slot>

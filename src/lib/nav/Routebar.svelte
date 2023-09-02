@@ -28,7 +28,7 @@
 					: 'border-t-0 border-r-0 border-b-0 border-l !border-neutral-300 dark:!border-neutral-700'} rounded-l-none {depth ==
 				0
 					? 'mt-2'
-					: ''}"
+					: ''} font-bold"
 				href={route.url}
 				alignment="left"
 				color="tertiary"

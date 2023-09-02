@@ -10,4 +10,10 @@
 	<div class="box-border max-w-full p-4 md:p-6 lg:p-8 overlfow-scroll flex-1 min-w-0 h-full">
 		<slot />
 	</div>
+	<footer
+		class="mt-auto p-6 bg-neutral-100 dark:bg-black border-t
+	 border-neutral-200 dark:border-neutral-800"
+	>
+		Mono
+	</footer>
 </div>

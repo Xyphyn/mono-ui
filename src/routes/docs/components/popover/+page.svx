@@ -1,34 +1,111 @@
 <script>
-	import {Button, Popover} from '$lib/index'; import ComponentContainer from
-	'../ComponentContainer.svelte';
+	import {Button, Popover, Codeblock, Menu, MenuButton, MenuDivider} from '$lib/index';
+  import ComponentContainer from '../ComponentContainer.svelte';
 </script>
+
+# Popovers
+
+A component that appears below a target when hovered or clicked.
 
 <Popover>
 	<Button slot="target">Popover</Button>
-	<div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-64 gap-2">
+	<div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-96 gap-2">
     <Button alignment="left">
       <div class="flex flex-col gap-2">
-        <span>Test</span>
-        <span class="text-xs opacity-80">Test</span>
+        <span>Button 1</span>
+        <span class="text-xs opacity-80">A description</span>
       </div>
     </Button>
     <Button alignment="left">
       <div class="flex flex-col gap-2">
-        <span>Test 2</span>
-        <span class="text-xs opacity-80">Test 2</span>
+        <span>Button 2</span>
+        <span class="text-xs opacity-80">Another description</span>
       </div>
     </Button>
     <Button alignment="left">
       <div class="flex flex-col gap-2">
-        <span>Test 3</span>
-        <span class="text-xs opacity-80">Test 3</span>
+        <span>Button 3</span>
+        <span class="text-xs opacity-80">Yet another description</span>
       </div>
     </Button>
     <Button alignment="left">
       <div class="flex flex-col gap-2">
-        <span>Test 4</span>
-        <span class="text-xs opacity-80">Test 4</span>
+        <span>Ok 4</span>
+        <span class="text-xs opacity-80">Ok 4</span>
       </div>
     </Button>
   </div>
 </Popover>
+
+The `target` slot defines what element will cause the popover to appear when clicked or hovered.
+
+<Codeblock
+filename="Svelte"
+src={`<Popover>
+<Button slot="target">Popover</Button>
+
+  <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-96 gap-2">
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Button 1</span>
+        <span class="text-xs opacity-80">A description</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Button 2</span>
+        <span class="text-xs opacity-80">Another description</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Button 3</span>
+        <span class="text-xs opacity-80">Yet another description</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Ok 4</span>
+        <span class="text-xs opacity-80">Ok 4</span>
+      </div>
+    </Button>
+  </div>
+</Popover>`}
+/>
+
+## Show on hover
+
+<Popover openOnHover>
+  <Button slot="target">Hover over me</Button>
+  thanks for hovering
+</Popover>
+
+<Codeblock
+filename="Svelte"
+src={`<Popover openOnHover>
+<Button slot="target">Hover over me</Button>
+thanks for hovering
+</Popover>`}
+/>
+
+# Menus
+
+<Menu>
+  <Button slot="target">Menu</Button>
+  <MenuDivider>Test Menu</MenuDivider>
+  <MenuButton on:click={() => alert('clicked')}>
+  Example button
+  </MenuButton>
+</Menu>
+
+<Codeblock
+filename="Svelte"
+src={`<Menu>
+<Button slot="target">Menu</Button>
+<MenuDivider>Test Menu</MenuDivider>
+<MenuButton on:click={() => alert('clicked')}>
+Example button
+</MenuButton>
+
+</Menu>`}
+/>

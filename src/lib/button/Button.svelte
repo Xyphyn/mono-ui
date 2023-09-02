@@ -1,26 +1,22 @@
-<script lang="ts">
-	import Spinner from '$lib/loader/Spinner.svelte'
+<script context="module" lang="ts">
+	export type ButtonColor = keyof typeof buttonColor
+	export type ButtonAlignment = keyof typeof buttonAlignment
 
-	type ButtonColor = keyof typeof buttonColor
-	type ButtonSize = keyof typeof buttonSize
-	type ButtonRoundness = keyof typeof buttonRoundness
-	type ButtonAlignment = keyof typeof buttonAlignment
-
-	const buttonAlignment = {
+	export const buttonAlignment = {
 		left: 'justify-start text-left',
 		center: 'justify-center text-center',
 		right: 'justify-end text-right'
 	}
 
-	const buttonColor = {
+	export const buttonColor = {
 		primary: `border border-slate-900 bg-slate-900 dark:bg-neutral-100
-    dark:border-neutral-100 dark:text-black hover:text-inherit text-slate-100
-    hover:bg-transparent hover:dark:bg-transparent active:text-inherit
-    active:bg-black/10 active:dark:bg-white/10`,
+	dark:border-neutral-100 dark:text-black hover:text-inherit text-slate-100
+	hover:bg-transparent hover:dark:bg-transparent active:text-inherit
+	active:bg-black/10 active:dark:bg-white/10`,
 
 		secondary: `border border-slate-200 dark:border-neutral-700 dark:bg-neutral-900
-      hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-300 hover:text-inherit
-      hover:dark:text-inherit`,
+		hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-300 hover:text-inherit
+		hover:dark:text-inherit`,
 
 		tertiary:
 			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-neutral-800 dark:text-neutral-200',
@@ -28,19 +24,26 @@
 		danger: 'border border-red-500 bg-red-500 hover:text-red-500 hover:bg-transparent text-white',
 
 		ghost: `border border-slate-200 dark:border-neutral-800 bg-transparent
-      hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-400 hover:text-inherit
-      hover:dark:text-inherit`,
+		hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-400 hover:text-inherit
+		hover:dark:text-inherit`,
 
 		elevated: `bg-slate-100 dark:bg-neutral-800 border border-slate-200
-     dark:border-neutral-700 hover:bg-slate-200 hover:dark:bg-neutral-700 hover:border-slate-300
-     hover:dark:border-neutral-600`,
+	 dark:border-neutral-700 hover:bg-slate-200 hover:dark:bg-neutral-700 hover:border-slate-300
+	 hover:dark:border-neutral-600`,
 
 		elevatedLow: `bg-slate-100 dark:bg-neutral-900 border border-slate-200
-    dark:border-neutral-800 hover:bg-slate-200 hover:dark:bg-neutral-800 hover:border-slate-300
-    hover:dark:border-neutral-700`,
+	dark:border-neutral-800 hover:bg-slate-200 hover:dark:bg-neutral-800 hover:border-slate-300
+	hover:dark:border-neutral-700`,
 
 		none: ''
 	}
+</script>
+
+<script lang="ts">
+	import Spinner from '$lib/loader/Spinner.svelte'
+
+	type ButtonRoundness = keyof typeof buttonRoundness
+	type ButtonSize = keyof typeof buttonSize
 
 	const buttonSize = {
 		sm: 'px-2 py-1',

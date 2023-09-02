@@ -1,5 +1,5 @@
 <script>
-	import {(Button, Popover)} from '$lib/index'; import ComponentContainer from
+	import {Button, Popover, Codeblock} from '$lib/index'; import ComponentContainer from
 	'../ComponentContainer.svelte';
 </script>
 
@@ -27,8 +27,8 @@ A clickable element that triggers an action on press.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button size="xl">X Large</Button>
+filename="Svelte"
+src={`<Button size="xl">X Large</Button>
 <Button size="lg">Large</Button>
 <Button size="md">Medium</Button>
 <Button size="sm">Small</Button>
@@ -47,8 +47,8 @@ A clickable element that triggers an action on press.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button color="primary">Primary</Button>
+filename="Svelte"
+src={`<Button color="primary">Primary</Button>
 <Button color="secondary">Secondary</Button>
 <Button color="tertiary">Tertiary</Button>
 <Button color="elevated">Elevated</Button>
@@ -67,8 +67,8 @@ A button can become a link if you add `href`.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button on:click={() => alert('button')}>Button</Button>
+filename="Svelte"
+src={`<Button on:click={() => alert('button')}>Button</Button>
 <Button href="#buttons">Link</Button>
 `}
 />
@@ -83,8 +83,8 @@ A button can become a link if you add `href`.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button rounding="pill">Full</Button>
+filename="Svelte"
+src={`<Button rounding="pill">Full</Button>
 <Button rounding="lg">Large</Button>
 <Button rounding="md">Medium</Button>
 <Button rounding="none">None</Button>
@@ -103,8 +103,8 @@ Adding `-square` to the end of a `size` will make it square.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button size="square-xl">xl</Button>
+filename="Svelte"
+src={`<Button size="square-xl">xl</Button>
 <Button size="square-lg">lg</Button>
 <Button size="square-md">md</Button>
 <Button size="square-sm">sm</Button>
@@ -126,8 +126,8 @@ Adding `-square` to the end of a `size` will make it square.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button alignment="left" class="w-36">
+filename="Svelte"
+src={`<Button alignment="left" class="w-36">
 	Left
 </Button>
 <Button alignment="center" class="w-36">
@@ -155,8 +155,8 @@ There is a `slot` for suffixes/prefixes.
 </ComponentContainer>
 
 <Codeblock
-	filename="Svelte"
-	src={`<Button>
+filename="Svelte"
+src={`<Button>
 	<span slot="prefix">�</span>
 	Prefix
 </Button>
