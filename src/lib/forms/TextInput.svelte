@@ -21,7 +21,7 @@
 	`
 </script>
 
-<div class="flex flex-col gap-1">
+<div class="flex flex-col gap-1 {$$props.class}">
 	{#if $$slots.label || label}
 		<label for={id.toString()} class="text-sm text-gray-600 dark:text-gray-400 font-medium">
 			{#if $$slots.label}
@@ -31,7 +31,7 @@
 			{/if}
 		</label>
 	{/if}
-	<div class="rounded-md flex flex-row items-center w-full text-sm {$$props.class}">
+	<div class="rounded-md flex flex-row items-center text-sm {$$props.class}">
 		{#if $$slots.prefix}
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
@@ -52,8 +52,8 @@
 			class="{sizeClass[size]} {borderClass} focus:border-gray-800
 			focus:dark:border-gray-200 bg-white dark:bg-gray-950
      focus:outline-none focus:ring-2 ring-gray-800/50 rounded-md
-    dark:ring-gray-200/50 transition-all text-sm max-w-full disabled:bg-gray-100
-		disabled:cursor-not-allowed disabled:dark:bg-gray-900 {$$props.class}"
+    dark:ring-gray-200/50 transition-all text-sm w-full disabled:bg-gray-100
+		disabled:cursor-not-allowed disabled:dark:bg-gray-900 {$$props.class || ''}"
 			class:rounded-l-none={$$slots.prefix}
 			class:rounded-r-none={$$slots.suffix}
 		/>

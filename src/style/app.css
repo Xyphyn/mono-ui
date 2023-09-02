@@ -9,7 +9,7 @@
 }
 
 html {
-	@apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100;
+	@apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 accent-primary-900 dark:accent-primary-100;
 	font-family: 'Inter', sans-serif;
 	scroll-behavior: smooth;
 	scroll-padding-top: 30%;

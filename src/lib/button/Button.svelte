@@ -9,30 +9,30 @@
 	}
 
 	export const buttonColor = {
-		primary: `border border-slate-900 bg-slate-900 dark:bg-gray-100
-	dark:border-gray-100 dark:text-black hover:text-inherit text-slate-100
+		primary: `border border-primary-900 bg-primary-900 dark:bg-primary-100
+	dark:border-primary-100 dark:text-primary hover:text-inherit text-primary-100
 	hover:bg-transparent hover:dark:bg-transparent active:text-inherit
-	active:bg-black/10 active:dark:bg-white/10`,
+	active:bg-primary-900/10 active:dark:bg-primary-100/10`,
 
-		secondary: `border border-slate-200 dark:border-gray-700 dark:bg-gray-900
-		hover:bg-slate-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-300 hover:text-inherit
+		secondary: `border border-gray-200 dark:border-gray-700 dark:bg-gray-900
+		hover:bg-gray-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-300 hover:text-inherit
 		hover:dark:text-inherit`,
 
 		tertiary:
-			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-gray-800 dark:text-gray-200',
+			'border border-transparent bg-transparent hover:bg-gray-100 hover:dark:bg-gray-800 dark:text-gray-200',
 
 		danger: 'border border-red-500 bg-red-500 hover:text-red-500 hover:bg-transparent text-white',
 
-		ghost: `border border-slate-200 dark:border-gray-800 bg-transparent
-		hover:bg-slate-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-400 hover:text-inherit
+		ghost: `border border-gray-200 dark:border-gray-800 bg-transparent
+		hover:bg-gray-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-400 hover:text-inherit
 		hover:dark:text-inherit`,
 
-		elevated: `bg-slate-100 dark:bg-gray-800 border border-slate-200
-	 dark:border-gray-700 hover:bg-slate-200 hover:dark:bg-gray-700 hover:border-slate-300
+		elevated: `bg-gray-100 dark:bg-gray-800 border border-gray-200
+	 dark:border-gray-700 hover:bg-gray-200 hover:dark:bg-gray-700 hover:border-gray-300
 	 hover:dark:border-gray-600`,
 
-		elevatedLow: `bg-slate-100 dark:bg-gray-900 border border-slate-200
-	dark:border-gray-800 hover:bg-slate-200 hover:dark:bg-gray-800 hover:border-slate-300
+		elevatedLow: `bg-gray-100 dark:bg-gray-900 border border-gray-200
+	dark:border-gray-800 hover:bg-gray-200 hover:dark:bg-gray-800 hover:border-gray-300
 	hover:dark:border-gray-700`,
 
 		none: ''
@@ -89,8 +89,8 @@
       {buttonSize[size]}
       {buttonRoundness[rounding]}
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
-      disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
-      disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit
+      disabled:!border disabled:!border-slate-300 disabled:!bg-neutral-200
+      disabled:dark:!border-neutral-700 disabled:dark:!bg-neutral-800 disabled:text-inherit
       font-medium cursor-pointer
       {$$props.class}
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"

@@ -1,3 +1,31 @@
+<script>
+  import { Form, TextInput, Select, Button, Checkbox } from '$lib/index'
+
+  let loading = false
+</script>
+
 # Forms
 
 Inputs, switches, checkboxes, etc for use in forms.
+
+<Form on:submit={(e) => {
+  loading = true
+  setTimeout(() => {
+    e.preventDefault(); alert('submitted'); loading = false
+  }, 1000)
+}} title="Example Form" class="flex-row flex-wrap">
+  <TextInput label="Input 1" placeholder="Placeholder 1" class="w-full" />
+  <TextInput label="Input 2" placeholder="Placeholder 2" class="w-full" />
+  <Select label="Select 3">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </Select>
+  <TextInput label="Input 4" placeholder="Placeholder 4" class="w-full" />
+  <Checkbox>
+    Checkbox 5
+  </Checkbox>
+  <Button size="lg" color="primary" submit {loading} disabled={loading}>
+    Submit
+  </Button>
+</Form>
