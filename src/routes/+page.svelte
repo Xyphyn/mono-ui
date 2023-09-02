@@ -23,18 +23,10 @@
 				class="w-max bg-gradient-to-br from-violet-500 to-pink-600 text-white hover:brightness-110"
 				color="none"
 				size="xl"
-				href="/docs"
+				href="/docs/components"
 			>
-				View the Docs
+				Components
 				<Icon src={ArrowRight} mini size="16" slot="suffix" />
-			</Button>
-		</div>
-	</div>
-	<div class="flex flex-col gap-4 col-span-1">
-		<div class="self-end">
-			<Button class="w-max" size="lg">
-				<span><Icon src={Check} slot="prefix" mini size="18" /></span>
-				Button
 			</Button>
 		</div>
 	</div>

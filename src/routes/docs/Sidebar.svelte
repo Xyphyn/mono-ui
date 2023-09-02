@@ -34,20 +34,6 @@
 			{currentRoute}
 			routes={[
 				{
-					name: 'Getting Started',
-					url: '/docs/getting-started',
-					children: [
-						{
-							url: '/docs/getting-started#installation',
-							name: 'Installation'
-						},
-						{
-							url: '/docs/getting-started#test',
-							name: 'Test'
-						}
-					]
-				},
-				{
 					name: 'Components',
 					url: '/docs/components',
 					children: [
