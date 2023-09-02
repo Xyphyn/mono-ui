@@ -25,7 +25,7 @@
 	{:else if label}
 		<span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">{label}</span>
 	{/if}
-	<div class="rounded-md flex flex-row items-center w-full {$$props.class}">
+	<div class="rounded-md flex flex-row items-center w-full text-sm {$$props.class}">
 		{#if $$slots.prefix}
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
