@@ -10,7 +10,19 @@
 	function openMenu() {
 		open = true
 	}
+
+	let el: any
 </script>
+
+<svelte:body
+	on:click={(e) => {
+		if (openOnHover) return
+
+		if (!el.contains(e.target)) {
+			open = false
+		}
+	}}
+/>
 
 <div
 	on:mouseover={() => {
@@ -30,6 +42,7 @@
 	role="menu"
 	tabindex="0"
 	class="relative z-20 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
+	bind:this={el}
 >
 	<div tabindex="-1">
 		<slot name="target" />

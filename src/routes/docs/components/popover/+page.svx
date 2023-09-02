@@ -1,6 +1,7 @@
 <script>
 	import {Button, Popover, Codeblock, Menu, MenuButton, MenuDivider} from '$lib/index';
   import ComponentContainer from '../ComponentContainer.svelte';
+  import { Icon, InformationCircle } from 'svelte-hero-icons'
 </script>
 
 # Popovers
@@ -109,3 +110,12 @@ Example button
 
 </Menu>`}
 />
+
+# Tooltips
+
+You can also make tooltips with popovers.
+
+<Popover openOnHover>
+  <Icon src={InformationCircle} size="24" slot="target" />
+  this is a tooltip
+</Popover>
