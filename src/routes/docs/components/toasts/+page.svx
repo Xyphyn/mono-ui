@@ -32,3 +32,58 @@ Warning
 Error
 </Button>
 </ComponentContainer>
+
+```svelte
+<Button
+	color="secondary"
+	class="w-max"
+	on:click={() => toast({ content: 'Example toast', type: 'info' })}
+>
+	Info
+</Button>
+
+<Button
+	color="none"
+	class="bg-green-500 w-max"
+	on:click={() => toast({ content: 'Example toast', type: 'success' })}
+>
+	Success
+</Button>
+
+<Button
+	color="none"
+	class="bg-yellow-500 w-max"
+	on:click={() => toast({ content: 'Example toast', type: 'warning' })}
+>
+	Warning
+</Button>
+
+<Button
+	color="danger"
+	class="w-max"
+	on:click={() => toast({ content: 'Example toast', type: 'error' })}
+>
+	Error
+</Button>
+```
+
+## Actions
+
+The `action` property is a callback.
+
+<ComponentContainer>
+<Button color="secondary" class="w-max" on:click={() => toast({ content: 'Example toast action', type: 'info', action: () => alert('clicked') })}>
+Click me
+</Button>
+</ComponentContainer>
+
+```svelte
+<Button
+	color="secondary"
+	class="w-max"
+	on:click={() =>
+		toast({ content: 'Example toast action', type: 'info', action: () => alert('clicked') })}
+>
+	Click me
+</Button>
+```
