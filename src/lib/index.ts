@@ -2,6 +2,7 @@
 
 export { default as Button } from './button/Button.svelte'
 export { default as Codeblock } from './code/Codeblock.svelte'
+export { default as Snippet } from './code/Snippet.svelte'
 export { default as Spinner } from './loader/Spinner.svelte'
 export { default as Routebar } from './nav/Routebar.svelte'
 export { default as Material } from './materials/Material.svelte'

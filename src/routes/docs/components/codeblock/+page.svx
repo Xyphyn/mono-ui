@@ -1,0 +1,32 @@
+<script>
+	import {Snippet} from '$lib/index'; import ComponentContainer from '../ComponentContainer.svelte';
+	import {Codeblock} from '$lib/index';
+</script>
+
+# Code Blocks
+
+Represent code or snippets easily.
+
+## Snippet
+
+Represents one line of code. Good for simple commands.
+
+<ComponentContainer>
+	<Snippet value="npm i is-odd" class="w-max" />
+</ComponentContainer>
+
+<Codeblock src={`<Snippet value="npm i is-odd" class="w-max" />`} filename="Svelte" />
+
+### No copy button
+
+<ComponentContainer>
+	<Snippet value="npm i is-odd" class="w-max" copy={false} />
+</ComponentContainer>
+
+<Codeblock src={`<Snippet value="npm i is-odd" class="w-max" copy={false} />`} filename="Svelte" />
+
+## Block
+
+Represent long pieces of code. Good for showing an entire component, etc.
+
+<Codeblock src={`<Codeblock src={\`codeblockception\`} filename="Svelte" />`} filename="Svelte" />

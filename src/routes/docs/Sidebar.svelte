@@ -56,6 +56,10 @@
 							name: 'Button'
 						},
 						{
+							url: '/docs/components/codeblock',
+							name: 'Code Blocks'
+						},
+						{
 							url: '/docs/components/forms',
 							name: 'Forms',
 							children: [
@@ -64,10 +68,6 @@
 									name: 'Text Input'
 								}
 							]
-						},
-						{
-							url: '/docs/getting-started#snippet',
-							name: 'Snippet'
 						}
 					]
 				}

@@ -1,6 +1,6 @@
 <script>
-	import ComponentContainer from '../../ComponentContainer.svelte';import {TextInput} from
-	'$lib/index'
+	import ComponentContainer from '../../ComponentContainer.svelte';import {TextInput, Codeblock}
+	from '$lib/index'
 </script>
 
 # Text Input
@@ -15,6 +15,14 @@ The most basic of all inputs.
 	<TextInput placeholder="Small" size="sm" />
 </ComponentContainer>
 
+<Codeblock
+filename="Svelte"
+src={`<TextInput placeholder="Large" size="lg" />
+<TextInput placeholder="Medium" size="md" />
+<TextInput placeholder="Small" size="sm" />
+`}
+/>
+
 ## Labels
 
 <ComponentContainer>
@@ -26,3 +34,15 @@ The most basic of all inputs.
 		</span>
 	</TextInput>
 </ComponentContainer>
+
+<Codeblock
+filename="Svelte"
+src={`<TextInput label="Label" />
+<TextInput label="Cool" />
+<TextInput>
+	<span class="text-green-800 dark:text-green-200 font-black" slot="label">
+		It can be used as a slot, too.
+	</span>
+</TextInput>
+`}
+/>
