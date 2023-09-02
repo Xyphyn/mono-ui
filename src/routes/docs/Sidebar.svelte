@@ -22,7 +22,7 @@
 	class="{expanded
 		? 'flex'
 		: 'hidden'} md:flex w-1/2 md:w-1/4 h-full border-r px-2 flex-col gap-4 fixed md:sticky
-		top-20 left-0 bg-neutral-50 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800"
+		top-20 left-0 bg-gray-50 dark:bg-gray-950 border-gray-200 dark:border-gray-800"
 >
 	<div class="md:hidden flex flex-col gap-2">
 		<span class="text-sm font-medium">Navigation</span>
@@ -34,6 +34,24 @@
 		<Routebar
 			{currentRoute}
 			routes={[
+				{
+					name: 'Getting Started',
+					url: '/docs/start#installation',
+					children: [
+						{
+							url: '/docs/start#installation',
+							name: 'Installation'
+						},
+						{
+							url: '/docs/start#setup-tailwindcss',
+							name: 'Setup Tailwind'
+						},
+						{
+							url: '/docs/start#inter',
+							name: 'Inter Font'
+						}
+					]
+				},
 				{
 					name: 'Components',
 					url: '/docs/components',

@@ -28,7 +28,7 @@ const config = {
 					} else {
 						const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;')
 						const pre = `<code>${escaped}</code>`
-						return `<Components.Codeblock filename="${lang}">${pre}</Components.Codeblock>`
+						return `<Components.Codeblock filename="${lang}">{@html \`${pre}\` }</Components.Codeblock>`
 					}
 				}
 			}

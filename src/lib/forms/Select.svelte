@@ -8,7 +8,7 @@
 
 <div class="flex flex-col gap-1 w-max">
 	{#if $$slots.label || label}
-		<span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+		<span class="text-sm text-gray-600 dark:text-gray-400 font-medium">
 			{#if $$slots.label}
 				<slot name="label" />
 			{:else if label}

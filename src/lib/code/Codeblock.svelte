@@ -21,7 +21,7 @@
 </script>
 
 <Material
-	class="overflow-hidden flex flex-col divide-y divide-neutral-200 dark:divide-neutral-800"
+	class="overflow-hidden flex flex-col divide-y divide-gray-200 dark:divide-gray-800"
 	padding="none"
 	rounding="md"
 >
@@ -33,6 +33,7 @@
 			<Button
 				size="square-sm"
 				color="tertiary"
+				aria-label="Copy"
 				on:click={() => {
 					copied = true
 					copy()
@@ -56,7 +57,7 @@
 	<pre
 		bind:this={pre}
 		{...$$restProps}
-		class="{$$props.class} bg-white dark:bg-neutral-900 px-4 overflow-auto max-h-96">
+		class="{$$props.class} bg-white dark:bg-gray-900 px-4 overflow-auto max-h-96">
 		{#if $$slots.default}
 			<slot />
 		{:else if src}

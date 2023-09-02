@@ -17,13 +17,13 @@
 	export let id: number = Math.floor(Math.random() * 100000000)
 
 	const borderClass = `
-	border border-neutral-200 dark:border-neutral-800
+	border border-gray-200 dark:border-gray-800
 	`
 </script>
 
 <div class="flex flex-col gap-1">
 	{#if $$slots.label || label}
-		<label for={id.toString()} class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+		<label for={id.toString()} class="text-sm text-gray-600 dark:text-gray-400 font-medium">
 			{#if $$slots.label}
 				<slot name="label" />
 			{:else if label}
@@ -35,7 +35,7 @@
 		{#if $$slots.prefix}
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
-			border-r-0 text-neutral-600 dark:text-neutral-400 {sizeClass[size]}"
+			border-r-0 text-gray-600 dark:text-gray-400 {sizeClass[size]}"
 			>
 				<slot name="prefix" />
 			</div>
@@ -49,18 +49,18 @@
 			on:input
 			on:change
 			{...$$restProps}
-			class="{sizeClass[size]} {borderClass} hover:bg-white focus:border-neutral-800
-			focus:dark:border-neutral-200 bg-white dark:bg-black
-     focus:outline-none focus:ring-2 ring-neutral-800/50 rounded-md
-    dark:ring-neutral-200/50 transition-all text-sm max-w-full disabled:bg-neutral-100
-		disabled:cursor-not-allowed disabled:dark:bg-neutral-800 {$$props.class}"
+			class="{sizeClass[size]} {borderClass} focus:border-gray-800
+			focus:dark:border-gray-200 bg-white dark:bg-gray-950
+     focus:outline-none focus:ring-2 ring-gray-800/50 rounded-md
+    dark:ring-gray-200/50 transition-all text-sm max-w-full disabled:bg-gray-100
+		disabled:cursor-not-allowed disabled:dark:bg-gray-900 {$$props.class}"
 			class:rounded-l-none={$$slots.prefix}
 			class:rounded-r-none={$$slots.suffix}
 		/>
 		{#if $$slots.suffix}
 			<div
 				class="rounded-md rounded-l-none border {borderClass}
-			border-l-0 text-neutral-600 dark:text-neutral-400 {sizeClass[size]}"
+			border-l-0 text-gray-600 dark:text-gray-400 {sizeClass[size]}"
 			>
 				<slot name="suffix" />
 			</div>

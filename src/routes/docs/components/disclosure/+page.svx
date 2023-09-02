@@ -4,7 +4,7 @@
   import { Icon, ChevronUp, ChevronDown } from 'svelte-hero-icons'
 </script>
 
-<Disclosure class="w-full border-b p-2 dark:border-neutral-800">
+<Disclosure class="w-full border-b p-2 dark:border-gray-800">
   <div slot="summary" class="text-3xl font-bold w-full flex items-center justify-between" let:open>
     <span>Disclosure</span>
     <Icon src={open ? ChevronUp : ChevronDown} size="20" mini />

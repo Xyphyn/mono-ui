@@ -9,31 +9,31 @@
 	}
 
 	export const buttonColor = {
-		primary: `border border-slate-900 bg-slate-900 dark:bg-neutral-100
-	dark:border-neutral-100 dark:text-black hover:text-inherit text-slate-100
+		primary: `border border-slate-900 bg-slate-900 dark:bg-gray-100
+	dark:border-gray-100 dark:text-black hover:text-inherit text-slate-100
 	hover:bg-transparent hover:dark:bg-transparent active:text-inherit
 	active:bg-black/10 active:dark:bg-white/10`,
 
-		secondary: `border border-slate-200 dark:border-neutral-700 dark:bg-neutral-900
-		hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-300 hover:text-inherit
+		secondary: `border border-slate-200 dark:border-gray-700 dark:bg-gray-900
+		hover:bg-slate-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-300 hover:text-inherit
 		hover:dark:text-inherit`,
 
 		tertiary:
-			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-neutral-800 dark:text-neutral-200',
+			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-gray-800 dark:text-gray-200',
 
 		danger: 'border border-red-500 bg-red-500 hover:text-red-500 hover:bg-transparent text-white',
 
-		ghost: `border border-slate-200 dark:border-neutral-800 bg-transparent
-		hover:bg-slate-100 hover:dark:bg-neutral-800 hover:dark:border-neutral-700 dark:text-neutral-400 hover:text-inherit
+		ghost: `border border-slate-200 dark:border-gray-800 bg-transparent
+		hover:bg-slate-100 hover:dark:bg-gray-800 hover:dark:border-gray-700 dark:text-gray-400 hover:text-inherit
 		hover:dark:text-inherit`,
 
-		elevated: `bg-slate-100 dark:bg-neutral-800 border border-slate-200
-	 dark:border-neutral-700 hover:bg-slate-200 hover:dark:bg-neutral-700 hover:border-slate-300
-	 hover:dark:border-neutral-600`,
+		elevated: `bg-slate-100 dark:bg-gray-800 border border-slate-200
+	 dark:border-gray-700 hover:bg-slate-200 hover:dark:bg-gray-700 hover:border-slate-300
+	 hover:dark:border-gray-600`,
 
-		elevatedLow: `bg-slate-100 dark:bg-neutral-900 border border-slate-200
-	dark:border-neutral-800 hover:bg-slate-200 hover:dark:bg-neutral-800 hover:border-slate-300
-	hover:dark:border-neutral-700`,
+		elevatedLow: `bg-slate-100 dark:bg-gray-900 border border-slate-200
+	dark:border-gray-800 hover:bg-slate-200 hover:dark:bg-gray-800 hover:border-slate-300
+	hover:dark:border-gray-700`,
 
 		none: ''
 	}

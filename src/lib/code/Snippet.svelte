@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class="px-4 py-1 flex justify-between max-w-full box-border bg-neutral-100 dark:bg-neutral-950 items-center gap-4 rounded-md border dark:border-neutral-800
+	class="px-4 py-1 flex justify-between max-w-full box-border bg-gray-100 dark:bg-gray-950 items-center gap-4 rounded-md border dark:border-gray-800
   {$$props.class}"
 >
 	<pre class="overflow-auto max-w-full whitespace-nowrap w-max">
@@ -23,6 +23,7 @@
 		<Button
 			size="square-md"
 			color="tertiary"
+			aria-label="Copy"
 			on:click={() => {
 				copied = true
 				navigator.clipboard.writeText(value)
