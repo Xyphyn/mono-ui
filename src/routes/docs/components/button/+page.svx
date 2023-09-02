@@ -35,7 +35,7 @@ src={`<Button size="xl">X Large</Button>
 `}
 />
 
-## Colors
+## Types
 
 <ComponentContainer>
 	<Button color="primary">Primary</Button>
@@ -43,6 +43,7 @@ src={`<Button size="xl">X Large</Button>
 	<Button color="tertiary">Tertiary</Button>
 	<Button color="elevated">Elevated</Button>
 	<Button color="danger">Danger</Button>
+	<Button disabled>Disabled</Button>
 	<Button color="none">None</Button>
 </ComponentContainer>
 
@@ -57,7 +58,7 @@ src={`<Button color="primary">Primary</Button>
 `}
 />
 
-## Type
+## Links
 
 A button can become a link if you add `href`.
 

@@ -78,3 +78,10 @@ src={`<TextInput>
 </TextInput>
 `}
 />
+
+## States
+
+<ComponentContainer>
+	<TextInput class="w-full" label="Disabled" disabled>
+	</TextInput>
+</ComponentContainer>
