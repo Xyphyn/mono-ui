@@ -1,0 +1,34 @@
+<script>
+	import {Button, Popover} from '$lib/index'; import ComponentContainer from
+	'../ComponentContainer.svelte';
+</script>
+
+<Popover>
+	<Button slot="target">Popover</Button>
+	<div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-64 gap-2">
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Test</span>
+        <span class="text-xs opacity-80">Test</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Test 2</span>
+        <span class="text-xs opacity-80">Test 2</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Test 3</span>
+        <span class="text-xs opacity-80">Test 3</span>
+      </div>
+    </Button>
+    <Button alignment="left">
+      <div class="flex flex-col gap-2">
+        <span>Test 4</span>
+        <span class="text-xs opacity-80">Test 4</span>
+      </div>
+    </Button>
+  </div>
+</Popover>

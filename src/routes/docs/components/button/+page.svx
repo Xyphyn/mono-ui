@@ -1,6 +1,6 @@
 <script>
-	import {Button} from '$lib/index'; import ComponentContainer from '../ComponentContainer.svelte';
-	import {Codeblock} from '$lib/index';
+	import {(Button, Popover)} from '$lib/index'; import ComponentContainer from
+	'../ComponentContainer.svelte';
 </script>
 
 # Buttons

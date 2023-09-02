@@ -42,6 +42,10 @@
 							name: 'Button'
 						},
 						{
+							url: '/docs/components/popover',
+							name: 'Popover'
+						},
+						{
 							url: '/docs/components/codeblock',
 							name: 'Code Blocks'
 						},
