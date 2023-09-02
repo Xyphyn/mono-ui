@@ -34,20 +34,12 @@
 />
 
 <div
-	on:mouseover={() => {
-		if (openOnHover) open = true
-	}}
-	on:mouseleave={() => {
-		if (openOnHover) open = false
-	}}
-	on:focus={() => {
-		if (openOnHover) open = true
-	}}
-	on:focusout={() => {
-		if (openOnHover) open = false
-	}}
-	on:click={() => (open = !open)}
-	on:keypress={() => (open = !open)}
+	on:mouseover={() => (openOnHover ? (open = true) : false)}
+	on:mouseleave={() => (openOnHover ? (open = false) : false)}
+	on:focus={() => (openOnHover ? (open = true) : false)}
+	on:focusout={() => (openOnHover ? (open = false) : false)}
+	on:click={() => (!openOnHover ? (open = !open) : false)}
+	on:keypress={() => (!openOnHover ? (open = !open) : false)}
 	role="menu"
 	tabindex="0"
 	class="relative z-20 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
