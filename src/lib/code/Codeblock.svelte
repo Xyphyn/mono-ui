@@ -51,5 +51,5 @@
 			</Button>
 		</div>
 	{/if}
-	<pre class="bg-white dark:bg-neutral-950 p-4 text-sm {$$props.class}">{src}</pre>
+	<pre class="bg-white dark:bg-neutral-900 p-4 text-sm {$$props.class}">{src}</pre>
 </Material>

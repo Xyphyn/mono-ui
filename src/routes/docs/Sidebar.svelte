@@ -21,7 +21,7 @@
 	class="{expanded
 		? 'flex'
 		: 'hidden'} md:flex w-1/2 md:w-1/4 h-full border-r px-2 flex-col gap-4 fixed md:sticky
-		top-20 left-0 bg-neutral-50 dark:bg-neutral-900"
+		top-20 left-0 bg-neutral-50 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800"
 >
 	<div class="md:hidden flex flex-col gap-2">
 		<span class="text-sm font-medium">Navigation</span>
