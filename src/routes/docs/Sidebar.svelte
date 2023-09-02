@@ -56,6 +56,11 @@
 								{
 									url: '/docs/components/forms/textinput',
 									name: 'Text Input'
+								},
+
+								{
+									url: '/docs/components/forms/select',
+									name: 'Select Menus'
 								}
 							]
 						}
