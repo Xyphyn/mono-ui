@@ -1,16 +1,25 @@
+<script context="module" lang="ts">
+	export type Origin = keyof typeof popoverOrigins
+
+	export const popoverOrigins = {
+		'top-right': 'bottom-full right-0 origin-bottom-right',
+		'bottom-left': 'top-full origin-top-left',
+		'top-left': 'bottom-full left-0 origin-bottom-left',
+		'bottom-right': 'top-full right-0 origin-top-right',
+		'top-center': 'bottom-full -left-[450%] origin-bottom',
+		'bottom-center': 'top-full -left-[450%] origin-top'
+	}
+</script>
+
 <script lang="ts">
 	import Material from '$lib/materials/Material.svelte'
 	import { expoOut } from 'svelte/easing'
 	import { fly, scale } from 'svelte/transition'
 
 	export let openOnHover: boolean = false
+	export let origin: Origin = 'bottom-left'
 
 	let open = false
-
-	function openMenu() {
-		open = true
-	}
-
 	let el: any
 </script>
 
@@ -32,7 +41,7 @@
 		if (openOnHover) open = false
 	}}
 	on:focus={() => {
-		if (openOnHover) openMenu()
+		if (openOnHover) open = true
 	}}
 	on:focusout={() => {
 		if (openOnHover) open = false
@@ -48,11 +57,14 @@
 		<slot name="target" />
 	</div>
 	<!--Artificial gap-->
-	<div class="h-2" />
+	{#if openOnHover}
+		<div class="h-2" />
+	{/if}
 	{#if open}
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
-			class="absolute left-0 origin-top-left top-full min-w-[12rem]"
+			class="absolute min-w-[12rem] {popoverOrigins[origin]}"
+			class:my-2={!openOnHover}
 		>
 			<slot name="popover">
 				<Material elevation="high">

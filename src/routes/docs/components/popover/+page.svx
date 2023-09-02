@@ -89,6 +89,13 @@ thanks for hovering
 </Popover>`}
 />
 
+## Custom Origins
+
+<Popover origin="top-right">
+  <Button slot="target">Click me</Button>
+  Top right origin
+</Popover>
+
 # Menus
 
 <Menu>
