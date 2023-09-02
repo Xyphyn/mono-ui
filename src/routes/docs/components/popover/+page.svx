@@ -1,5 +1,5 @@
 <script>
-	import {Button, Popover, Codeblock, Menu, MenuButton, MenuDivider} from '$lib/index';
+	import {Button, Popover, Codeblock, Menu, MenuButton, MenuDivider, Note} from '$lib/index';
   import ComponentContainer from '../ComponentContainer.svelte';
   import { Icon, InformationCircle } from 'svelte-hero-icons'
 </script>

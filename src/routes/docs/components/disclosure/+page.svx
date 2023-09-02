@@ -1,5 +1,5 @@
 <script>
-	import {Disclosure} from '$lib/index';
+	import {Disclosure,Note} from '$lib/index';
   import ComponentContainer from '../ComponentContainer.svelte';
   import { Icon, ChevronUp, ChevronDown } from 'svelte-hero-icons'
 </script>

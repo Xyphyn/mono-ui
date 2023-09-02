@@ -1,5 +1,5 @@
 <script>
-  import { Button, toast } from '$lib/index'
+  import { Button, toast, Note } from '$lib/index'
   import ComponentContainer from '../ComponentContainer.svelte'
 </script>
 

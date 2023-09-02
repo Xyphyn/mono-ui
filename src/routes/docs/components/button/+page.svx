@@ -1,5 +1,5 @@
 <script>
-	import {Button, Popover, Codeblock} from '$lib/index'; import ComponentContainer from
+	import {Button, Popover, Codeblock,Note} from '$lib/index'; import ComponentContainer from
 	'../ComponentContainer.svelte';
 </script>
 
