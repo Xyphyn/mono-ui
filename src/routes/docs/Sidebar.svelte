@@ -50,6 +50,10 @@
 							name: 'Code Blocks'
 						},
 						{
+							url: '/docs/components/disclosure',
+							name: 'Disclosure'
+						},
+						{
 							url: '/docs/components/forms',
 							name: 'Forms',
 							children: [
