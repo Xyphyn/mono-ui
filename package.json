@@ -26,7 +26,8 @@
 		"!dist/**/*.spec.*"
 	],
 	"peerDependencies": {
-		"svelte": "^4.0.0"
+		"svelte": "^4.0.0",
+		"svelte-hero-icons": "^5.0.0"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
