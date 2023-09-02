@@ -18,7 +18,8 @@
 	{/if}
 	<select
 		class="px-3 py-1.5 transition-colors rounded-md text-sm
-    w-max min-w-full cursor-pointer {buttonColor.secondary} {$$props.class}"
+    w-max min-w-full cursor-pointer bg-transparent {buttonColor.secondary}
+		 {$$props.class}"
 		bind:value
 		{placeholder}
 	>

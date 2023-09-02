@@ -40,39 +40,38 @@ A component that appears below a target when hovered or clicked.
 
 The `target` slot defines what element will cause the popover to appear when clicked or hovered.
 
-<Codeblock
-filename="Svelte"
-src={`<Popover>
-<Button slot="target">Popover</Button>
+```svelte
+<Popover>
+	<Button slot="target">Popover</Button>
 
-  <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-96 gap-2">
-    <Button alignment="left">
-      <div class="flex flex-col gap-2">
-        <span>Button 1</span>
-        <span class="text-xs opacity-80">A description</span>
-      </div>
-    </Button>
-    <Button alignment="left">
-      <div class="flex flex-col gap-2">
-        <span>Button 2</span>
-        <span class="text-xs opacity-80">Another description</span>
-      </div>
-    </Button>
-    <Button alignment="left">
-      <div class="flex flex-col gap-2">
-        <span>Button 3</span>
-        <span class="text-xs opacity-80">Yet another description</span>
-      </div>
-    </Button>
-    <Button alignment="left">
-      <div class="flex flex-col gap-2">
-        <span>Ok 4</span>
-        <span class="text-xs opacity-80">Ok 4</span>
-      </div>
-    </Button>
-  </div>
-</Popover>`}
-/>
+	<div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 w-96 gap-2">
+		<Button alignment="left">
+			<div class="flex flex-col gap-2">
+				<span>Button 1</span>
+				<span class="text-xs opacity-80">A description</span>
+			</div>
+		</Button>
+		<Button alignment="left">
+			<div class="flex flex-col gap-2">
+				<span>Button 2</span>
+				<span class="text-xs opacity-80">Another description</span>
+			</div>
+		</Button>
+		<Button alignment="left">
+			<div class="flex flex-col gap-2">
+				<span>Button 3</span>
+				<span class="text-xs opacity-80">Yet another description</span>
+			</div>
+		</Button>
+		<Button alignment="left">
+			<div class="flex flex-col gap-2">
+				<span>Ok 4</span>
+				<span class="text-xs opacity-80">Ok 4</span>
+			</div>
+		</Button>
+	</div>
+</Popover>
+```
 
 ## Show on hover
 
@@ -81,20 +80,26 @@ src={`<Popover>
   thanks for hovering
 </Popover>
 
-<Codeblock
-filename="Svelte"
-src={`<Popover openOnHover>
-<Button slot="target">Hover over me</Button>
-thanks for hovering
-</Popover>`}
-/>
+```svelte
+<Popover openOnHover>
+	<Button slot="target">Hover over me</Button>
+	thanks for hovering
+</Popover>
+```
 
 ## Custom Origins
 
-<Popover origin="top-right">
+<Popover origin="top-left">
   <Button slot="target">Click me</Button>
-  Top right origin
+  Top left origin
 </Popover>
+
+```svelte
+<Popover origin="top-left">
+	<Button slot="target">Click me</Button>
+	Top left origin
+</Popover>
+```
 
 # Menus
 
@@ -106,17 +111,13 @@ thanks for hovering
   </MenuButton>
 </Menu>
 
-<Codeblock
-filename="Svelte"
-src={`<Menu>
-<Button slot="target">Menu</Button>
-<MenuDivider>Test Menu</MenuDivider>
-<MenuButton on:click={() => alert('clicked')}>
-Example button
-</MenuButton>
-
-</Menu>`}
-/>
+```svelte
+<Menu>
+	<Button slot="target">Menu</Button>
+	<MenuDivider>Test Menu</MenuDivider>
+	<MenuButton on:click={() => alert('clicked')}>Example button</MenuButton>
+</Menu>
+```
 
 # Tooltips
 
@@ -126,3 +127,10 @@ You can also make tooltips with popovers.
   <Icon src={InformationCircle} size="24" slot="target" />
   this is a tooltip
 </Popover>
+
+```svelte
+<Popover openOnHover>
+	<Icon src={InformationCircle} size="24" slot="target" />
+	this is a tooltip
+</Popover>
+```

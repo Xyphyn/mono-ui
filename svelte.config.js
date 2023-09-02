@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-auto'
 import { mdsvex } from 'mdsvex'
 import { vitePreprocess } from '@sveltejs/kit/vite'
+import escape from 'html-escape'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,6 +14,23 @@ const config = {
 			layout: './src/routes/docs/+page.svelte',
 			smartypants: {
 				dashes: 'oldschool'
+			},
+			highlight: {
+				highlighter: (code, lang) => {
+					if (lang && Prism.languages[lang]) {
+						const parsed = Prism.highlight(code, Prism.languages[lang])
+						const langTag = 'language-' + lang
+						const codeTag = `<code class="${langTag}">${parsed}</code>`
+						const pre = `${codeTag}`
+						// i don't even know why i turn the html to a string just to parse it out again
+						// it's the only thing to make this work
+						return `<Components.Codeblock class=${langTag} filename="${lang}">{@html \`${pre}\` }</Components.Codeblock>`
+					} else {
+						const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;')
+						const pre = `<code>${escaped}</code>`
+						return `<Components.Codeblock filename="${lang}">${pre}</Components.Codeblock>`
+					}
+				}
 			}
 		})
 	],

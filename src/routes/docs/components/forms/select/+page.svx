@@ -9,11 +9,8 @@
   <option value="option1">Option 1</option>
 </Select>
 
-<Codeblock
-filename="Svelte"
-src={`<Select placeholder="test" label="Select Menu">
-
-  <option value="option1">Option 1</option>
+```svelte
+<Select placeholder="test" label="Select Menu">
+	<option value="option1">Option 1</option>
 </Select>
-`}
-/>
+```

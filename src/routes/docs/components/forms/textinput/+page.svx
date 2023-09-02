@@ -15,13 +15,11 @@ The most basic of all inputs.
 	<TextInput placeholder="Small" size="sm" />
 </ComponentContainer>
 
-<Codeblock
-filename="Svelte"
-src={`<TextInput placeholder="Large" size="lg" />
+```svelte
+<TextInput placeholder="Large" size="lg" />
 <TextInput placeholder="Medium" size="md" />
 <TextInput placeholder="Small" size="sm" />
-`}
-/>
+```
 
 ## Labels
 
@@ -35,17 +33,15 @@ src={`<TextInput placeholder="Large" size="lg" />
 	</TextInput>
 </ComponentContainer>
 
-<Codeblock
-filename="Svelte"
-src={`<TextInput label="Label" />
+```svelte
+<TextInput label="Label" />
 <TextInput label="Cool" />
 <TextInput>
 	<span class="text-green-800 dark:text-green-400 font-black" slot="label">
 		It can be used as a slot, too.
 	</span>
 </TextInput>
-`}
-/>
+```
 
 ## Prefix/Suffix
 
@@ -63,21 +59,13 @@ src={`<TextInput label="Label" />
 	</TextInput>
 </ComponentContainer>
 
-<Codeblock
-filename="Svelte"
-src={`<TextInput>
-	<span class="text-green-800 dark:text-green-400 font-black" slot="label">
-		Slot label
-	</span>
-	<span slot="prefix">
-		https://
-	</span>
-	<span slot="suffix">
-		.com
-	</span>
+```svelte
+<TextInput>
+	<span class="text-green-800 dark:text-green-400 font-black" slot="label">Slot label</span>
+	<span slot="prefix">https://</span>
+	<span slot="suffix">.com</span>
 </TextInput>
-`}
-/>
+```
 
 ## States
 

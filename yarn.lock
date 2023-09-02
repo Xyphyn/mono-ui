@@ -265,6 +265,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.1.tgz#aa22750962f3bf0e79d753d3cc067f010c95f194"
   integrity sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==
 
+"@types/html-escape@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/html-escape/-/html-escape-2.0.0.tgz#c19382f49e53acb6e133218273632540f5509bbd"
+  integrity sha512-Z0/eQYqXar0XgAs6ljEm4YaUWw+Xvczkc4GDyKtQnII3v4P85FVId7EjWQMgmegQN/EKgKqYaHHOg07u5LrGnQ==
+
 "@types/node@*":
   version "20.5.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.7.tgz#4b8ecac87fbefbc92f431d09c30e176fc0a7c377"
@@ -669,6 +674,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+html-escape@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/html-escape/-/html-escape-2.0.0.tgz#60c8ddd465edf0cae02af9e99fdf5f883b09be49"
+  integrity sha512-BYh0wceM2Vm4/Q8TNfnKaHXs4DCv2DuYVS87DR40elSvFc+8a6B9mE9ej+8nCOkdqPx7puEx9+hm+GoJ3f9PzA==
 
 ignore-walk@^5.0.1:
   version "5.0.1"

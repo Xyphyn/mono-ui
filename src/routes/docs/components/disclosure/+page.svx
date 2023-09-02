@@ -11,3 +11,13 @@
   </div>
   This is expanded
 </Disclosure>
+
+```svelte
+<Disclosure>
+	<div slot="summary" let:open>
+		<span>Disclosure</span>
+		<Icon src={open ? ChevronUp : ChevronDown} size="20" mini />
+	</div>
+	This is expanded
+</Disclosure>
+```

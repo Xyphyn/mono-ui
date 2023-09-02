@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './catppuccin.css'
 	import { page } from '$app/stores'
 	import Button from '$lib/button/Button.svelte'
 	import Routebar from '$lib/nav/Routebar.svelte'

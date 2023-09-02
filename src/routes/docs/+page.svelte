@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	import Sidebar from './Sidebar.svelte'
 	import h1 from './components/h1.svelte'
 	import h2 from './components/h2.svelte'
@@ -6,8 +6,9 @@
 	import p from './components/p.svelte'
 	import code from './components/code.svelte'
 	import pre from './components/pre.svelte'
+	import { Codeblock } from '$lib/index.js'
 
-	export { h1, h2, h3, p, code, pre }
+	export { h1, h2, h3, p, code, pre, Codeblock }
 </script>
 
 <div class="flex flex-col md:flex-row w-full h-full gap-6">
