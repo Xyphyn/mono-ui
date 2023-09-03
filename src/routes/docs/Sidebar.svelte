@@ -95,6 +95,10 @@
 							name: 'Modal'
 						},
 						{
+							url: '/docs/components/placeholder',
+							name: 'Placeholder'
+						},
+						{
 							url: '/docs/components/popover',
 							name: 'Popover'
 						},

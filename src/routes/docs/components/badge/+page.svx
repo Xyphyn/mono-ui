@@ -20,3 +20,14 @@ A small pill-shaped component to represent the status of something.
   <Badge color="yellow-subtle">yellow-subtle</Badge>
   <Badge color="gray-subtle">gray-subtle</Badge>
 </ComponentContainer>
+
+```svelte
+<Badge color="red">red</Badge>
+<Badge color="green">green</Badge>
+<Badge color="yellow">yellow</Badge>
+<Badge color="gray">gray</Badge>
+<Badge color="red-subtle">red-subtle</Badge>
+<Badge color="green-subtle">green-subtle</Badge>
+<Badge color="yellow-subtle">yellow-subtle</Badge>
+<Badge color="gray-subtle">gray-subtle</Badge>
+```

@@ -27,3 +27,4 @@ export { default as ToastContainer } from './toast/ToastContainer.svelte'
 
 export { default as Note } from './note/Note.svelte'
 export { default as Badge } from './badge/Badge.svelte'
+export { default as Placeholder } from './placeholder/Placeholder.svelte'

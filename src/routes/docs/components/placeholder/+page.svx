@@ -1,0 +1,39 @@
+<script>
+  import ComponentContainer from '../ComponentContainer.svelte'
+  import { Placeholder, Button } from '$lib/index'
+  import { ChartBar, ArrowRight, Icon } from 'svelte-hero-icons'
+</script>
+
+# Placeholders
+
+<ComponentContainer class="w-max">
+<Placeholder icon={ChartBar} title="Placeholder" description="A placeholder is used to put something into empty space.">
+  <Button>
+    Learn more
+    <Icon src={ArrowRight} size="16" mini slot="suffix" />
+  </Button>
+</Placeholder>
+</ComponentContainer>
+
+```svelte
+<Placeholder
+	icon={ChartBar}
+	title="Placeholder"
+	description="A placeholder is used to put something into empty space."
+>
+	<Button>
+		Learn more
+		<Icon src={ArrowRight} size="16" mini slot="suffix" />
+	</Button>
+</Placeholder>
+```
+
+## Available slots
+
+The following slots are available:
+
+- `icon`
+- `title`
+- `description`
+
+They can also be used as props.

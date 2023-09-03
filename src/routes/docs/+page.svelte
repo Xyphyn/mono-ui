@@ -6,9 +6,10 @@
 	import p from './components/p.svelte'
 	import code from './components/code.svelte'
 	import pre from './components/pre.svelte'
+	import ul from './components/ul.svelte'
 	import { Codeblock } from '$lib/index.js'
 
-	export { h1, h2, h3, p, code, pre, Codeblock }
+	export { h1, h2, h3, p, code, pre, ul, Codeblock }
 </script>
 
 <div class="flex flex-col md:flex-row w-full h-full gap-6">
