@@ -87,6 +87,10 @@
 								{
 									url: '/docs/components/forms/select',
 									name: 'Select Menus'
+								},
+								{
+									url: '/docs/components/forms/radio',
+									name: 'Radio Inputs'
 								}
 							]
 						},

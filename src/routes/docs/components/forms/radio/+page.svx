@@ -1,0 +1,71 @@
+<script>
+	import ComponentContainer from '../../ComponentContainer.svelte';
+  import {Codeblock,Radio,RadioGroup,Button,Choicebox,ChoiceboxGroup} from '$lib/index'
+
+  let example1 = undefined
+  let example2 = undefined
+</script>
+
+# Radio Inputs
+
+`value` Is the value of the radio.
+
+<ComponentContainer>
+<RadioGroup group="group1" let:group>
+  <Radio value="option1" name={group} bind:group={example1}>Option 1</Radio>
+  <Radio value="option2" name={group} bind:group={example1}>Option 2</Radio>
+  <Radio value="option3" name={group} bind:group={example1} disabled>Option 3</Radio>
+</RadioGroup>
+</ComponentContainer>
+
+You selected {example1}
+
+```svelte
+<RadioGroup group="group1" let:group>
+	<Radio value="option1" name={group} bind:group={example1}>Option 1</Radio>
+	<Radio value="option2" name={group} bind:group={example1}>Option 2</Radio>
+</RadioGroup>
+```
+
+## Choicebox
+
+A choicebox is an alternative form of Radio or Checkbox, with a larger tap target.
+
+<ComponentContainer>
+  <ChoiceboxGroup group="group2" let:group class="w-max max-w-full">
+    <Choicebox name={group} bind:group={example2} value="option1" type="radio">
+      <svelte:fragment slot="title">Option 1</svelte:fragment>
+      <svelte:fragment slot="description">You see, this is a
+       <span class="bg-gradient-to-r text-transparent bg-clip-text from-violet-500 to-pink-600">
+       very cool
+       </span>
+       component.
+       </svelte:fragment>
+    </Choicebox>
+    <Choicebox name={group} bind:group={example2} value="option2" type="radio">
+      <svelte:fragment slot="title">Option 2</svelte:fragment>
+      <svelte:fragment slot="description">This is
+       <span class="bg-gradient-to-r text-transparent bg-clip-text from-violet-500 to-pink-600">
+       also
+       </span>
+       a
+       component.
+       </svelte:fragment>
+    </Choicebox>
+  </ChoiceboxGroup>
+</ComponentContainer>
+
+You selected {example2}
+
+```svelte
+<ChoiceboxGroup group="group2" let:group>
+	<Choicebox name={group} bind:group={example2} value="option1" type="radio">
+		<span slot="title">Option 1</span>
+		<span slot="description">You see, this is a very cool component.</span>
+	</Choicebox>
+	<Choicebox name={group} bind:group={example2} value="option2" type="radio">
+		<span slot="title">Option 2</span>
+		<span slot="description">This is also a component.</span>
+	</Choicebox>
+</ChoiceboxGroup>
+```
