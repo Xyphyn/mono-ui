@@ -1,6 +1,6 @@
 <script>
-	import ComponentContainer from '../../ComponentContainer.svelte';import {TextInput, Codeblock}
-	from '$lib/index'
+	import ComponentContainer from '../../ComponentContainer.svelte';
+	import { TextInput, TextArea, Codeblock, Button } from '$lib/index'
 </script>
 
 # Text Input
@@ -90,3 +90,14 @@ The most basic of all inputs.
 	<TextInput label="Invalid" pattern="" placeholder="Input">
 	</TextInput>
 </ComponentContainer>
+
+# Text Area
+
+A multi-row input.
+
+<TextArea label="Text Area">
+	<svelte:fragment slot="suffix">
+		<div class="mr-auto">Suffix slot.</div>
+		<Button class="ml-auto">cool</Button>
+	</svelte:fragment>
+</TextArea>
