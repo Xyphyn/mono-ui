@@ -8,9 +8,12 @@ export { default as Routebar } from './nav/Routebar.svelte'
 export { default as Material } from './materials/Material.svelte'
 
 export { default as Form } from './forms/Form.svelte'
+export { default as Label } from './forms/Label.svelte'
+export { default as FileInput } from './forms/FileInput.svelte'
 export { default as TextInput } from './forms/TextInput.svelte'
 export { default as Select } from './forms/Select.svelte'
 export { default as Checkbox } from './forms/Checkbox.svelte'
+export { default as ImageInput } from './forms/ImageInput.svelte'
 
 export { default as Popover } from './popover/Popover.svelte'
 export { default as Menu } from './popover/Menu.svelte'

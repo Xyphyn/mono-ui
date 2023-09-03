@@ -67,9 +67,26 @@ The most basic of all inputs.
 </TextInput>
 ```
 
+### Inline
+
+<ComponentContainer>
+	<TextInput inlineAffixes={true} placeholder="User" label="Username">
+		<span slot="prefix">
+			@
+		</span>
+		<span slot="suffix">
+			@lemmy.world
+		</span>
+	</TextInput>
+</ComponentContainer>
+
 ## States
 
 <ComponentContainer>
-	<TextInput class="w-full" label="Disabled" disabled>
+	<TextInput label="Disabled" disabled>
+	</TextInput>
+	<TextInput label="Required" required placeholder="Input">
+	</TextInput>
+	<TextInput label="Invalid" pattern="" placeholder="Input">
 	</TextInput>
 </ComponentContainer>

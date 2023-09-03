@@ -1,0 +1,22 @@
+<script>
+	import ComponentContainer from '../../ComponentContainer.svelte';import {TextInput, Codeblock, FileInput, ImageInput}
+	from '$lib/index'
+</script>
+
+# File Input
+
+## With Previews
+
+<ComponentContainer>
+  <FileInput label="Example" multiple />
+</ComponentContainer>
+
+```svelte
+<FileInput label="Example" multiple />
+```
+
+## Image Input
+
+<ComponentContainer>
+	<ImageInput label="Example" />
+</ComponentContainer>
