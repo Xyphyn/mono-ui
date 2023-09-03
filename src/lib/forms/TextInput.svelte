@@ -33,7 +33,7 @@
 			text={label}
 			class="peer-invalid:text-red-500 {required
 				? "after:content-['*'] after:text-red-500 after:ml-1"
-				: ''} "
+				: ''}"
 		>
 			<slot name="label" />
 		</Label>
@@ -81,4 +81,5 @@
 			</div>
 		{/if}
 	</div>
+	<slot />
 </div>

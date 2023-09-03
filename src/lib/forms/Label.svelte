@@ -1,5 +1,5 @@
 <script lang="ts">
-	let forID: string
+	let forID: string | undefined = undefined
 	export { forID as for }
 	/**
 	 * The `text` prop will take precedence over the slot.
@@ -7,14 +7,15 @@
 	export let text: string | undefined = undefined
 </script>
 
-<label
+<svelte:element
+	this={forID ? 'label' : 'span'}
 	{...$$restProps}
 	for={forID}
-	class="text-sm text-gray-600 dark:text-gray-400 font-medium {$$props.class}"
+	class="text-sm text-gray-600 dark:text-gray-400 font-medium w-full {$$props.class || ''}"
 >
 	{#if text}
 		{text}
 	{:else if $$slots.default}
 		<slot />
 	{/if}
-</label>
+</svelte:element>

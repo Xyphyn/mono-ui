@@ -37,15 +37,10 @@
 
 		none: ''
 	}
-</script>
 
-<script lang="ts">
-	import Spinner from '$lib/loader/Spinner.svelte'
+	export type ButtonSize = keyof typeof buttonSize
 
-	type ButtonRoundness = keyof typeof buttonRoundness
-	type ButtonSize = keyof typeof buttonSize
-
-	const buttonSize = {
+	export const buttonSize = {
 		sm: 'px-2 py-1',
 		md: 'px-3 py-1.5',
 		lg: 'px-4 py-2',
@@ -56,6 +51,12 @@
 		'square-xl': 'w-12 h-12',
 		custom: ''
 	}
+</script>
+
+<script lang="ts">
+	import Spinner from '$lib/loader/Spinner.svelte'
+
+	type ButtonRoundness = keyof typeof buttonRoundness
 
 	const buttonRoundness = {
 		pill: 'rounded-full',

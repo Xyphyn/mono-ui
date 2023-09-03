@@ -1,5 +1,5 @@
 <script>
-  import { Form, TextInput, Select, Button, Checkbox } from '$lib/index'
+  import { Form, TextInput, Select, Button, Checkbox, Label } from '$lib/index'
 
   let loading = false
 </script>
@@ -14,7 +14,9 @@ Inputs, switches, checkboxes, etc for use in forms.
     e.preventDefault(); alert('submitted'); loading = false
   }, 1000)
 }} title="Example Form" class="flex-row flex-wrap">
-  <TextInput label="Input 1" placeholder="Placeholder 1" class="w-full" />
+  <TextInput placeholder="Placeholder 1" class="w-full" label="Input 1">
+    <Label>this is some extra text</Label>
+  </TextInput>
   <TextInput label="Input 2" placeholder="Placeholder 2" class="w-full" />
   <Select label="Select 3">
     <option value="option1">Option 1</option>
@@ -24,6 +26,9 @@ Inputs, switches, checkboxes, etc for use in forms.
   <TextInput label="Input 4" placeholder="Placeholder 4" class="w-full" />
   <Checkbox>
     Checkbox 5
+    <svelte:fragment slot="description">
+      This is a test description.
+    </svelte:fragment>
   </Checkbox>
   <Button size="lg" color="primary" submit {loading} disabled={loading}>
     Submit
