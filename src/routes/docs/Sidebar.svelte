@@ -107,6 +107,10 @@
 							name: 'Popover'
 						},
 						{
+							url: '/docs/components/search',
+							name: 'Search'
+						},
+						{
 							url: '/docs/components/toasts',
 							name: 'Toasts'
 						}

@@ -1,0 +1,65 @@
+<script>
+  import ComponentContainer from '../ComponentContainer.svelte'
+  import { Search, MenuButton } from '$lib/index'
+
+  const items = ['item1', 'item2', 'item3']
+
+  const search = async (q) => {
+    await new Promise((res, rej) => setTimeout(() => res(null), 1000))
+
+    return items.filter((i) => i.includes(q))
+  }
+
+  const extractName = (i) => i
+</script>
+
+# Search
+
+A component to search. It is different from a combobox, as it requires a function.
+
+<Search {search} {extractName} label="Search" placeholder="Example" />
+
+```svelte
+<script>
+	const items = ['item1', 'item2', 'item3']
+
+	const search = async (q) => {
+		await new Promise((res, rej) => setTimeout(() => res(null), 1000))
+
+		return items.filter((i) => i.includes(q))
+	}
+
+	const extractName = (i) => i
+</script>
+
+<Search {search} {extractName} label="Search" placeholder="Example" />
+```
+
+## Custom Slot
+
+<Search {search} {extractName} label="Search" placeholder="Example" let:item let:extractName let:select>
+<MenuButton on:click={() => select(item)}>
+<img src="https://api.dicebear.com/7.x/thumbs/svg?seed={extractName(item)}" class="w-6 h-6 rounded-full" />
+{extractName(item)}
+</MenuButton>
+</Search>
+
+```svelte
+<Search
+	{search}
+	{extractName}
+	label="Search"
+	placeholder="Example"
+	let:item
+	let:extractName
+	let:select
+>
+	<MenuButton on:click={() => select(item)}>
+		<img
+			src="https://api.dicebear.com/7.x/thumbs/svg?seed={extractName(item)}"
+			class="w-6 h-6 rounded-full"
+		/>
+		{extractName(item)}
+	</MenuButton>
+</Search>
+```

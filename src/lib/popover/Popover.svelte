@@ -18,8 +18,8 @@
 
 	export let openOnHover: boolean = false
 	export let origin: Origin = 'bottom-left'
+	export let open = false
 
-	let open = false
 	let el: any
 </script>
 

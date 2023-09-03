@@ -4,9 +4,10 @@
 
 	export let openOnHover: boolean = false
 	export let origin: Origin = 'bottom-left'
+	export let open = false
 </script>
 
-<Popover {openOnHover} {origin}>
+<Popover {openOnHover} {origin} bind:open>
 	<slot name="target" slot="target" />
 	<div slot="popover" class="min-w-[16rem] origin-top-left">
 		<Material color="distinct" padding="none" rounding="md" class="py-2" elevation="max">
