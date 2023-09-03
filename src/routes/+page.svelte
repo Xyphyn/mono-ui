@@ -13,7 +13,7 @@
 				everything
 			</span>
 		</h1>
-		<p class="text-gray-600 dark:text-gray-400 text-lg">
+		<p class="text-slate-600 dark:text-zinc-400 text-lg">
 			Whether it's a landing page or a big web app, Mono is a great choice for any project. It
 			follows best Svelte practices-with a low bundle size.
 		</p>

@@ -30,7 +30,7 @@
 	>
 		<slot />
 		{#if $$slots.description}
-			<span class="font-normal text-gray-600 dark:text-gray-400">
+			<span class="font-normal text-slate-600 dark:text-zinc-400">
 				<slot name="description" />
 			</span>
 		{/if}

@@ -31,8 +31,8 @@
 	}
 
 	const colorClass = {
-		default: 'bg-gray-50 dark:bg-gray-950',
-		distinct: 'bg-white dark:bg-gray-900'
+		default: 'bg-slate-50 dark:bg-zinc-950',
+		distinct: 'bg-white dark:bg-zinc-900'
 	}
 
 	export let elevation: Elevation = 'flat'
@@ -46,7 +46,7 @@
   {paddingClass[padding]}
   {roundedClass[rounding]}
   {colorClass[color]}
-  border border-gray-200 dark:border-gray-800 text-sm
+  border border-slate-200 dark:border-zinc-800 text-sm
   {$$props.class}
   "
 >

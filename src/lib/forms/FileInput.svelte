@@ -33,13 +33,13 @@
 						on:load={() => URL.revokeObjectURL(file)}
 						alt={file}
 						class="w-8 h-8 object-cover rounded-full hover:w-16
-            hover:h-16 transition-all border border-gray-200 ring-1
-            ring-gray-50 dark:ring-gray-950 bg-white dark:bg-gray-950"
+            hover:h-16 transition-all border border-slate-200 ring-1
+            ring-slate-50 dark:ring-zinc-950 bg-white dark:bg-zinc-950"
 					/>
 				{/each}
 			</div>
 		{/if}
-		<span class="flex flex-row items-center text-gray-600 dark:text-gray-400">
+		<span class="flex flex-row items-center text-slate-600 dark:text-zinc-400">
 			<slot name="choose">
 				{#if (files ?? []).length == 0}
 					No file selected.

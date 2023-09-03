@@ -23,7 +23,7 @@
 		<select
 			{id}
 			class="{buttonSize[size]} appearance-none transition-colors rounded-md text-sm
-	w-full min-w-full cursor-pointer bg-white dark:bg-gray-950 {buttonColor.secondary}
+	w-full min-w-full cursor-pointer bg-white dark:bg-zinc-950 {buttonColor.secondary}
 	{$$props.class}"
 			bind:value
 			on:change

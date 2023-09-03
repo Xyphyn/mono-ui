@@ -9,7 +9,7 @@
 	<div class="inline-flex {inlineDescription ? 'flex-row' : 'flex-col'} font-medium gap-1">
 		<slot />
 		{#if $$slots.description}
-			<span class="font-normal text-gray-600 dark:text-gray-400"><slot name="description" /></span>
+			<span class="font-normal text-slate-600 dark:text-zinc-400"><slot name="description" /></span>
 		{/if}
 	</div>
 </label>

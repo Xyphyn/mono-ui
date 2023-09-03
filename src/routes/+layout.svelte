@@ -13,8 +13,8 @@
 		<slot />
 	</div>
 	<footer
-		class="mt-auto p-6 bg-gray-100 dark:bg-black border-t
-	 border-gray-200 dark:border-gray-800"
+		class="mt-auto p-6 bg-slate-100 dark:bg-black border-t
+	 border-slate-200 dark:border-zinc-800"
 	>
 		Mono
 	</footer>

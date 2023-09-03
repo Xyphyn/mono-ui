@@ -20,7 +20,7 @@
 	<div
 		role="dialog"
 		class="overflow-hidden fixed top-0 left-0 w-screen h-screen z-50
-flex flex-col items-center justify-center bg-black/30 box-border p-4"
+flex flex-col items-center justify-center bg-black/50 box-border p-4"
 		transition:fade={{ duration: 200 }}
 		on:click={(e) => {
 			if (!el.contains(e.target)) open = false
@@ -34,17 +34,17 @@ flex flex-col items-center justify-center bg-black/30 box-border p-4"
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
 				bind:this={el}
-				class="w-full dark:bg-gray-950 rounded-xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
+				class="w-full dark:bg-zinc-950 rounded-xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
 			>
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
-					class="p-6 rounded-xl flex flex-col gap-4 w-full dark:bg-gray-950
-          bg-white border border-gray-200 dark:border-gray-800"
+					class="p-6 rounded-xl flex flex-col gap-4 w-full dark:bg-zinc-950
+          bg-white border border-slate-200 dark:border-zinc-800"
 					class:rounded-b-none={action}
 					class:border-b-0={action}
 				>
 					<div
-						class="flex flex-row max-w-full sticky top-0 left-0 dark:bg-gray-950
+						class="flex flex-row max-w-full sticky top-0 left-0 dark:bg-zinc-950
           bg-white"
 					>
 						<h1 class="font-bold text-2xl w-max max-w-full">
@@ -62,7 +62,7 @@ flex flex-col items-center justify-center bg-black/30 box-border p-4"
 				</div>
 				{#if action}
 					<div
-						class="border bg-gray-50 dark:bg-gray-900 dark:border-gray-800 p-3 py-2 flex justify-end rounded-b-xl"
+						class="border bg-slate-50 dark:bg-zinc-900 dark:border-zinc-800 p-3 py-2 flex justify-end rounded-b-xl"
 					>
 						<slot name="action">
 							<Button on:click={(e) => dispatcher('action', e)} color="primary" size="lg">

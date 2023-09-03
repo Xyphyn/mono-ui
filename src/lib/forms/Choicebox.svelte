@@ -58,7 +58,7 @@
 				</h1>
 			{/if}
 			{#if $$slots.description || description}
-				<p class="text-sm text-gray-600 dark:text-gray-400">
+				<p class="text-sm text-slate-600 dark:text-zinc-400">
 					{#if $$slots.description}
 						<slot name="description" />
 					{:else if description}

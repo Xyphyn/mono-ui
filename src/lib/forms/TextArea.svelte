@@ -22,7 +22,7 @@
 	export let rows: number = 4
 
 	const borderClass = `
-	border border-gray-200 dark:border-gray-800
+	border border-slate-200 dark:border-zinc-800
 	`
 </script>
 
@@ -39,7 +39,7 @@
 		</Label>
 	{/if}
 	<div
-		class="rounded-md flex flex-col items-center text-sm bg-white dark:bg-gray-950 {$$props.class}"
+		class="rounded-md flex flex-col items-center text-sm bg-white dark:bg-zinc-950 {$$props.class}"
 	>
 		<textarea
 			{id}
@@ -51,11 +51,11 @@
 			on:change
 			on:focus
 			{...$$restProps}
-			class="{sizeClass[size]} {borderClass} focus:border-gray-800
-			focus:dark:border-gray-200 bg-white dark:bg-gray-950
-		 focus:outline-none focus:ring-2 ring-gray-800/50 rounded-md
-		dark:ring-gray-200/50 transition-all text-sm w-full disabled:bg-gray-100
-		disabled:cursor-not-allowed disabled:dark:bg-gray-900 invalid:!border-red-500
+			class="{sizeClass[size]} {borderClass} focus:border-slate-800
+			focus:dark:border-zinc-200 bg-white dark:bg-zinc-950
+		 focus:outline-none focus:ring-2 ring-slate-800/50 rounded-md
+		dark:ring-zinc-200/50 transition-all text-sm w-full disabled:bg-slate-100
+		disabled:cursor-not-allowed disabled:dark:bg-zinc-900 invalid:!border-red-500
 		peer invalid:text-red-500 z-10
 		{$$props.class || ''}"
 			class:rounded-b-none={$$slots.suffix}

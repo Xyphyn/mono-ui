@@ -22,7 +22,7 @@
 </script>
 
 <Material
-	class="overflow-hidden flex flex-col divide-y divide-gray-200 dark:divide-gray-800"
+	class="overflow-hidden flex flex-col divide-y divide-slate-200 dark:divide-zinc-800"
 	padding="none"
 	rounding="md"
 >
@@ -58,7 +58,7 @@
 	<pre
 		bind:this={pre}
 		{...$$restProps}
-		class="{$$props.class} bg-white dark:bg-gray-900 px-4 overflow-auto max-h-96">
+		class="{$$props.class} bg-white dark:bg-zinc-900 px-4 overflow-auto max-h-96">
 		{#if htmlSrc}
 			{@html htmlSrc}
 		{:else if $$slots.default}

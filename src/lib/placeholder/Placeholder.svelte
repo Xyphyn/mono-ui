@@ -5,9 +5,9 @@
 	export let description: string | undefined = undefined
 </script>
 
-<div class="text-gray-700 dark:text-gray-300 flex flex-col justify-center items-center gap-2">
+<div class="text-slate-700 dark:text-zinc-300 flex flex-col justify-center items-center gap-2">
 	{#if icon || $$slots.icon}
-		<div class="border border-gray-200 dark:border-gray-700 dark:bg-gray-800 p-3 rounded-full">
+		<div class="border border-slate-200 dark:border-zinc-700 dark:bg-zinc-800 p-3 rounded-full">
 			{#if $$slots.icon}
 				<slot name="icon" />
 			{:else if icon}
@@ -16,7 +16,7 @@
 		</div>
 	{/if}
 	<div class="flex flex-col gap-1 text-center">
-		<h1 class="text-gray-900 dark:text-gray-100 text-lg font-medium">
+		<h1 class="text-slate-900 dark:text-zinc-100 text-lg font-medium">
 			{#if $$slots.title}
 				<slot name="title" />
 			{:else if title}

@@ -86,13 +86,13 @@ pre[class^='language-diff-'] > code {
 }
 
 pre[class*='language-'] {
-	@apply rounded-md border border-gray-200 dark:border-gray-900 p-4 max-w-full overflow-auto;
+	@apply rounded-md border border-slate-200 dark:border-zinc-900 p-4 max-w-full overflow-auto;
 }
 
 code[class*='language-'],
 pre[class*='language-'] {
 	@apply relative block whitespace-pre text-left bg-white
-	dark:bg-gray-900;
+	dark:bg-zinc-900;
 	word-spacing: normal;
 	word-break: normal;
 	line-height: 1.5;

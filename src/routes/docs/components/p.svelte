@@ -1,1 +1,1 @@
-<p class="leading-[2] text-gray-700 dark:text-gray-400"><slot /></p>
+<p class="leading-[2] text-slate-700 dark:text-zinc-400"><slot /></p>

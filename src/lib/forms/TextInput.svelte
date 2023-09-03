@@ -22,7 +22,7 @@
 	export let inlineAffixes: boolean = false
 
 	const borderClass = `
-	border border-gray-200 dark:border-gray-800
+	border border-slate-200 dark:border-zinc-800
 	`
 </script>
 
@@ -42,8 +42,8 @@
 		{#if $$slots.prefix}
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
-			border-r-0 text-gray-600 dark:text-gray-400 {inlineAffixes
-					? 'bg-white dark:bg-gray-950 pr-0'
+			border-r-0 text-slate-600 dark:text-zinc-400 {inlineAffixes
+					? 'bg-white dark:bg-zinc-950 pr-0'
 					: ''} {sizeClass[size]}"
 			>
 				<slot name="prefix" />
@@ -59,11 +59,11 @@
 			on:change
 			on:focus
 			{...$$restProps}
-			class="{sizeClass[size]} {borderClass} focus:border-gray-800
-			focus:dark:border-gray-200 bg-white dark:bg-gray-950
-		 focus:outline-none focus:ring-2 ring-gray-800/50 rounded-md
-		dark:ring-gray-200/50 transition-all text-sm w-full disabled:bg-gray-100
-		disabled:cursor-not-allowed disabled:dark:bg-gray-900 invalid:!border-red-500
+			class="{sizeClass[size]} {borderClass} focus:border-slate-800
+			focus:dark:border-zinc-200 bg-white dark:bg-zinc-950
+		 focus:outline-none focus:ring-2 ring-slate-800/50 rounded-md
+		dark:ring-zinc-200/50 transition-all text-sm w-full disabled:bg-slate-100
+		disabled:cursor-not-allowed disabled:dark:bg-zinc-900 invalid:!border-red-500
 		peer invalid:text-red-500 z-10
 		{$$props.class || ''}"
 			class:rounded-l-none={$$slots.prefix}
@@ -74,8 +74,8 @@
 		{#if $$slots.suffix}
 			<div
 				class="rounded-md rounded-l-none border {borderClass}
-			border-l-0 text-gray-600 dark:text-gray-400 {inlineAffixes
-					? 'bg-white dark:bg-gray-950 pl-0'
+			border-l-0 text-slate-600 dark:text-zinc-400 {inlineAffixes
+					? 'bg-white dark:bg-zinc-950 pl-0'
 					: ''} {sizeClass[size]}"
 			>
 				<slot name="suffix" />
