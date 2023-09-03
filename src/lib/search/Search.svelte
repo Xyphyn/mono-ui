@@ -45,6 +45,12 @@
 				dispatcher('input', e)
 				debounceFunc()
 			}}
+			on:focus={(e) => {
+				searching = true
+				openMenu = true
+				dispatcher('input', e)
+				debounceFunc()
+			}}
 			{...$$restProps}
 		/>
 	</slot>

@@ -57,6 +57,7 @@
 			bind:value
 			on:input
 			on:change
+			on:focus
 			{...$$restProps}
 			class="{sizeClass[size]} {borderClass} focus:border-gray-800
 			focus:dark:border-gray-200 bg-white dark:bg-gray-950
