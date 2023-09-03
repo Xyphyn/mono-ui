@@ -14,25 +14,25 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/-/user/org.couchdb.user:xylight: failed to authenticate: Could not authenticate xylight: bad password
-      at params.callback [as _callback] (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:66145:18)
-      at self.callback (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:140890:22)
-      at Request.emit (node:events:514:28)
-      at Request.<anonymous> (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:141862:10)
-      at Request.emit (node:events:514:28)
-      at IncomingMessage.<anonymous> (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:628:28)
-      at IncomingMessage.emit (node:events:526:35)
-      at endReadableNT (node:internal/streams/readable:1359:12)
-      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+  Error: canceled
+      at Interface.<anonymous> (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:137150:13)
+      at Interface.emit (node:events:514:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1131:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:270:20)
+      at ReadStream.emit (node:events:514:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:324:12)
 
 npm manifest: 
   {
   	"name": "mono-svelte",
-  	"version": "0.0.7",
+  	"version": "0.0.9",
   	"license": "MIT",
   	"scripts": {
-  		"dev": "vite dev",
+  		"dev": "NODE_ENV=development vite dev",
   		"build": "vite build && npm run package",
   		"preview": "vite preview",
   		"package": "svelte-kit sync && svelte-package && publint",
