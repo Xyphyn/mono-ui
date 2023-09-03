@@ -1,0 +1,22 @@
+<script>
+	import { Badge } from '$lib/index'; import ComponentContainer from
+	'../ComponentContainer.svelte';
+</script>
+
+# Badge
+
+A small pill-shaped component to represent the status of something.
+
+## Colors
+
+<ComponentContainer class="!gap-2">
+<Badge color="red">red</Badge>
+  <Badge color="green">green</Badge>
+  <Badge color="yellow">yellow</Badge>
+  <Badge color="gray">gray</Badge>
+  <div class="w-full" />
+  <Badge color="red-subtle">red-subtle</Badge>
+  <Badge color="green-subtle">green-subtle</Badge>
+  <Badge color="yellow-subtle">yellow-subtle</Badge>
+  <Badge color="gray-subtle">gray-subtle</Badge>
+</ComponentContainer>

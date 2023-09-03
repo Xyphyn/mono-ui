@@ -61,6 +61,10 @@
 							name: 'Button'
 						},
 						{
+							url: '/docs/components/badge',
+							name: 'Badge'
+						},
+						{
 							url: '/docs/components/codeblock',
 							name: 'Code Blocks'
 						},
