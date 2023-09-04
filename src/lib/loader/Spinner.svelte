@@ -33,7 +33,17 @@
 		opacity: 0;
 		border-radius: 50px;
 		animation: fade 1s linear infinite;
-		@apply bg-black dark:bg-white;
+		background-color: black;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		div.spinner div {
+			background-color: white;
+		}
+	}
+
+	.dark div.spinner div {
+		background-color: white;
 	}
 
 	@keyframes fade {
