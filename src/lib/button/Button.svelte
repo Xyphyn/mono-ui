@@ -22,6 +22,11 @@
 			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-zinc-800 dark:text-zinc-200',
 
 		danger: 'border border-red-500 bg-red-500 hover:text-red-500 hover:bg-transparent text-white',
+		'danger-subtle': 'text-red-500 hover:bg-red-500 hover:!text-inherit text-white',
+
+		'success-subtle': 'text-green-500 hover:bg-green-500 hover:!text-inherit text-white',
+
+		'warning-subtle': 'text-warning-500 hover:bg-warning-500 hover:!text-inherit text-white',
 
 		ghost: `border border-slate-200 dark:border-zinc-800 bg-transparent
 		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 dark:text-zinc-400 hover:text-inherit
