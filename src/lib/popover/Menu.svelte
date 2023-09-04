@@ -17,7 +17,13 @@
 >
 	<slot name="target" slot="target" />
 	<div slot="popover" class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none">
-		<Material color="distinct" padding="none" rounding="lg" class="py-2 list-none" elevation="max">
+		<Material
+			class="flex flex-col py-2 list-none"
+			color="distinct"
+			padding="none"
+			rounding="lg"
+			elevation="max"
+		>
 			<slot />
 		</Material>
 	</div>
