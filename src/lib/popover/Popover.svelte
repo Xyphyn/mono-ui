@@ -43,7 +43,7 @@
 	on:keypress={() => (!openOnHover ? (open = !open) : false)}
 	role="menu"
 	tabindex="0"
-	class="relative z-20 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
+	class="relative z-50 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
 	bind:this={el}
 >
 	<div tabindex="-1" class={targetClass}>
