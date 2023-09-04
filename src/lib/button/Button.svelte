@@ -100,7 +100,7 @@
 	<div
 		class="flex {column
 			? 'flex-col justify-center'
-			: 'flex-row items-center'} gap-1.5 {buttonAlignment[alignment]}"
+			: 'flex-row items-center'} h-full gap-1.5 {buttonAlignment[alignment]}"
 	>
 		{#if loading}
 			<Spinner

@@ -32,7 +32,8 @@
 
 	const colorClass = {
 		default: 'bg-slate-50 dark:bg-zinc-950',
-		distinct: 'bg-white dark:bg-zinc-900'
+		distinct: 'bg-white dark:bg-zinc-900',
+		none: ''
 	}
 
 	export let elevation: Elevation = 'flat'
