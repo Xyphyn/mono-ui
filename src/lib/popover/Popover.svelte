@@ -52,7 +52,7 @@
 	{#if open}
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
-			class="absolute min-w-[12rem] my-2 {popoverOrigins[origin]}"
+			class="absolute min-w-[12rem] my-2 z-50 {popoverOrigins[origin]}"
 		>
 			<slot name="popover">
 				<Material elevation="high">

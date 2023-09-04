@@ -11,7 +11,7 @@
 <Popover
 	{openOnHover}
 	{origin}
-	targetClass="z-30 {targetClass}"
+	targetClass="z-20 {targetClass}"
 	bind:open
 	class="z-50 {$$props.class}"
 >
