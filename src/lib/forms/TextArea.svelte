@@ -21,6 +21,8 @@
 	export let id: string = generateID()
 	export let rows: number = 4
 
+	export let element: HTMLTextAreaElement | undefined = undefined
+
 	const borderClass = `
 	border border-slate-200 dark:border-zinc-800
 	`
@@ -51,6 +53,7 @@
 			on:change
 			on:keydown
 			on:focus
+			bind:this={element}
 			{...$$restProps}
 			class="{sizeClass[size]} {borderClass} focus:border-slate-800
 			focus:dark:border-zinc-200 bg-white dark:bg-zinc-950
