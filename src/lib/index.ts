@@ -28,7 +28,7 @@ export { default as MenuButton } from './popover/MenuButton.svelte'
 export { default as Disclosure } from './disclosure/Disclosure.svelte'
 export { default as Modal } from './modal/Modal.svelte'
 
-export { toast } from './toast/toasts.js'
+export { toast, removeToast, toasts, toastColors } from './toast/toasts.js'
 export { default as ToastContainer } from './toast/ToastContainer.svelte'
 
 export { default as Note } from './note/Note.svelte'
