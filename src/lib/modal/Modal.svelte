@@ -19,7 +19,7 @@
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
 		role="dialog"
-		class="overflow-hidden fixed top-0 left-0 w-screen h-screen z-50
+		class="overflow-hidden fixed top-0 left-0 w-screen h-screen z-[100]
 flex flex-col items-center justify-center bg-black/50 box-border p-4"
 		transition:fade|global={{ duration: 200 }}
 		on:click={(e) => {
