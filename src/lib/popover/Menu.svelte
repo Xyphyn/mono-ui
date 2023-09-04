@@ -8,13 +8,7 @@
 	export let targetClass: string = ''
 </script>
 
-<Popover
-	{openOnHover}
-	{origin}
-	targetClass="z-20 {targetClass}"
-	bind:open
-	class="z-50 {$$props.class}"
->
+<Popover {openOnHover} {origin} {targetClass} bind:open class={$$props.class}>
 	<slot name="target" slot="target" />
 	<div slot="popover" class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none">
 		<Material

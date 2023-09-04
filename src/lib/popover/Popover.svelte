@@ -43,7 +43,7 @@
 	on:keypress={() => (!openOnHover ? (open = !open) : false)}
 	role="menu"
 	tabindex="0"
-	class="relative z-40 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
+	class="relative cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
 	bind:this={el}
 >
 	<div tabindex="-1" class={targetClass}>
@@ -52,7 +52,7 @@
 	{#if open}
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
-			class="absolute min-w-[12rem] my-2 z-50 {popoverOrigins[origin]}"
+			class="absolute min-w-[12rem] my-2 z-30 {popoverOrigins[origin]}"
 		>
 			<slot name="popover">
 				<Material elevation="high">
