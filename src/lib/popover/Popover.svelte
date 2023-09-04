@@ -19,6 +19,7 @@
 	export let openOnHover: boolean = false
 	export let origin: Origin = 'bottom-left'
 	export let open = false
+	export let targetClass: string = ''
 
 	let el: any
 </script>
@@ -45,7 +46,7 @@
 	class="relative z-20 cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
 	bind:this={el}
 >
-	<div tabindex="-1">
+	<div tabindex="-1" class={targetClass}>
 		<slot name="target" />
 	</div>
 	<!--Artificial gap-->
