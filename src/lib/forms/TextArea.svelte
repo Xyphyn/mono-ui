@@ -49,6 +49,7 @@
 			bind:value
 			on:input
 			on:change
+			on:keydown
 			on:focus
 			{...$$restProps}
 			class="{sizeClass[size]} {borderClass} focus:border-slate-800
