@@ -9,7 +9,7 @@
 	on:click
 	{color}
 	rounding="none"
-	class="w-full font-normal px-4 {$$props.class}"
+	class="w-full font-normal px-4 min-h-[36px] {$$props.class}"
 	{alignment}
 >
 	<slot name="prefix" slot="prefix" />

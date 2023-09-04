@@ -113,6 +113,9 @@ The `target` slot defines what element will cause the popover to appear when cli
   <MenuButton on:click={() => alert('clicked')}>
   Example button
   </MenuButton>
+  <MenuButton on:click={() => alert('clicked')}>
+  This is another button. This time, it's long, so it should wrap.
+  </MenuButton>
 </Menu>
 
 ```svelte
