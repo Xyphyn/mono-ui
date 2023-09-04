@@ -21,14 +21,14 @@
 		role="dialog"
 		class="overflow-hidden fixed top-0 left-0 w-screen h-screen z-50
 flex flex-col items-center justify-center bg-black/50 box-border p-4"
-		transition:fade={{ duration: 200 }}
+		transition:fade|global={{ duration: 200 }}
 		on:click={(e) => {
 			if (!el.contains(e.target)) open = false
 		}}
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div
-			transition:scale={{ start: 0.95, easing: expoOut }}
+			transition:scale|global={{ start: 0.95, easing: expoOut }}
 			class="overflow-y-auto {$$props.class} rounded-xl max-w-full box-border w-full overscroll-contain"
 		>
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
