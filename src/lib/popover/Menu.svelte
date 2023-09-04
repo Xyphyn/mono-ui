@@ -9,8 +9,8 @@
 
 <Popover {openOnHover} {origin} bind:open>
 	<slot name="target" slot="target" />
-	<div slot="popover" class="min-w-[16rem] origin-top-left">
-		<Material color="distinct" padding="none" rounding="md" class="py-2" elevation="max">
+	<div slot="popover" class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none">
+		<Material color="distinct" padding="none" rounding="md" class="py-2 list-none" elevation="max">
 			<slot />
 		</Material>
 	</div>
