@@ -19,7 +19,7 @@
 		</Label>
 	{/if}
 
-	<div class="w-max relative">
+	<div class="w-full relative">
 		<select
 			{id}
 			class="{buttonSize[size]} appearance-none transition-colors rounded-md text-sm
