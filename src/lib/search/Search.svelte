@@ -28,8 +28,8 @@
 	}
 
 	const debounceFunc = debounce(async () => {
-		openMenu = true
 		searching = true
+		openMenu = true
 		items = await search(query)
 		searching = false
 	})

@@ -7,7 +7,7 @@
 	export let open: boolean = false
 </script>
 
-<Popover {openOnHover} {origin} {open}>
+<Popover {openOnHover} {origin} bind:open>
 	<slot name="target" slot="target" />
 	<div slot="popover" class="min-w-[16rem] origin-top-left">
 		<Material color="distinct" padding="none" rounding="md" class="py-2" elevation="max">
