@@ -49,15 +49,10 @@
 	<div tabindex="-1" class={targetClass}>
 		<slot name="target" />
 	</div>
-	<!--Artificial gap-->
-	{#if openOnHover}
-		<div class="h-2" />
-	{/if}
 	{#if open}
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
-			class="absolute min-w-[12rem] {popoverOrigins[origin]}"
-			class:my-2={!openOnHover}
+			class="absolute min-w-[12rem] my-2 {popoverOrigins[origin]}"
 		>
 			<slot name="popover">
 				<Material elevation="high">
