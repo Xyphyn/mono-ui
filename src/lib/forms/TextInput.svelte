@@ -22,7 +22,7 @@
 	export let inlineAffixes: boolean = false
 
 	const borderClass = `
-	border border-slate-200 dark:border-zinc-800
+	border border-slate-300 dark:border-zinc-700
 	`
 </script>
 
