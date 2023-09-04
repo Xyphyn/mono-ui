@@ -26,7 +26,7 @@
 
 		'success-subtle': 'text-green-500 hover:bg-green-500 hover:!text-inherit',
 
-		'warning-subtle': 'text-warning-500 hover:bg-warning-500 hover:!text-inherit',
+		'warning-subtle': 'text-yellow-500 hover:bg-yellow-500 hover:!text-inherit',
 
 		ghost: `border border-slate-200 dark:border-zinc-800 bg-transparent
 		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 dark:text-zinc-400 hover:text-inherit
