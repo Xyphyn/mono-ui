@@ -5,7 +5,13 @@
 	export let alignment: ButtonAlignment = 'left'
 </script>
 
-<Button on:click {color} rounding="none" class="w-full font-normal px-4" {alignment}>
+<Button
+	on:click
+	{color}
+	rounding="none"
+	class="w-full font-normal px-4 {$$props.class}"
+	{alignment}
+>
 	<slot name="prefix" slot="prefix" />
 	<slot />
 	<slot name="suffix" slot="suffix" />
