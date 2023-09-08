@@ -21,7 +21,7 @@
 <div
 	class="{expanded
 		? 'flex'
-		: 'hidden'} md:flex w-1/2 md:w-1/4 h-full border-r px-2 flex-col gap-4 fixed md:sticky
+		: 'hidden'} md:flex w-1/2 md:w-1/4 h-full max-h-[100vh-160px] overflow-auto border-r px-2 flex-col gap-4 fixed md:sticky
 		top-20 left-0 bg-slate-50 dark:bg-zinc-950 border-slate-200 dark:border-zinc-800 z-20"
 >
 	<div class="md:hidden flex flex-col gap-2">

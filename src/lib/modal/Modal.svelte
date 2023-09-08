@@ -34,12 +34,12 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
 				bind:this={el}
-				class="w-full dark:bg-zinc-950 rounded-xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
+				class="w-full border border-slate-200 dark:border-zinc-800 dark:bg-zinc-950 rounded-xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
 			>
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
 					class="p-6 rounded-xl flex flex-col gap-4 w-full dark:bg-zinc-950
-          bg-white border border-slate-200 dark:border-zinc-800"
+          bg-white"
 					class:rounded-b-none={action}
 					class:border-b-0={action}
 				>
@@ -61,11 +61,14 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 					<slot />
 				</div>
 				{#if action}
-					<div
-						class="border bg-slate-50 dark:bg-zinc-900 dark:border-zinc-800 p-3 py-2 flex justify-end rounded-b-xl"
-					>
-						<slot name="action">
-							<Button on:click={(e) => dispatcher('action', e)} color="primary" size="lg">
+					<div class="bg-white dark:bg-zinc-950 dark:border-zinc-800 p-4 flex w-full rounded-b-xl">
+						<slot name="action" {action}>
+							<Button
+								class="w-full"
+								on:click={(e) => dispatcher('action', e)}
+								color="primary"
+								size="lg"
+							>
 								{action}
 							</Button>
 						</slot>

@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
 	export type ButtonColor = keyof typeof buttonColor
 	export type ButtonAlignment = keyof typeof buttonAlignment
+	export type ButtonShadow = keyof typeof buttonShadow
 
 	export const buttonAlignment = {
 		left: 'justify-start text-left',
@@ -43,6 +44,11 @@
 		none: ''
 	}
 
+	export const buttonShadow = {
+		sm: 'shadow-sm',
+		none: 'shadow-none'
+	}
+
 	export type ButtonSize = keyof typeof buttonSize
 
 	export const buttonSize = {
@@ -77,6 +83,7 @@
 	export let size: ButtonSize = 'md'
 	export let rounding: ButtonRoundness = 'md'
 	export let alignment: ButtonAlignment = 'center'
+	export let shadow: ButtonShadow = color == 'tertiary' ? 'none' : 'sm'
 	export let column: boolean = false
 
 	export let loaderWidth: number | undefined = undefined
@@ -94,6 +101,7 @@
       {buttonColor[color]}
       {buttonSize[size]}
       {buttonRoundness[rounding]}
+			{buttonShadow[shadow]}
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit

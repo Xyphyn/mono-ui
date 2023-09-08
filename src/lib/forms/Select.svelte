@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { buttonColor, buttonSize, type ButtonSize } from '$lib/button/Button.svelte'
+	import {
+		buttonColor,
+		buttonSize,
+		type ButtonShadow,
+		type ButtonSize,
+		buttonShadow
+	} from '$lib/button/Button.svelte'
 	import Label from '$lib/forms/Label.svelte'
 	import { generateID } from '$lib/forms/helper.js'
 	import { ChevronDown, ChevronUpDown, Icon } from 'svelte-hero-icons'
@@ -8,6 +14,7 @@
 	export let placeholder: string | undefined = undefined
 	export let label: string | undefined = undefined
 	export let size: ButtonSize = 'md'
+	export let shadow: ButtonShadow = 'sm'
 
 	export let id: string = generateID()
 </script>
@@ -22,7 +29,9 @@
 	<div class="w-full relative">
 		<select
 			{id}
-			class="{buttonSize[size]} appearance-none transition-colors rounded-md text-sm
+			class="{buttonSize[size]} {buttonShadow[
+				shadow
+			]} appearance-none transition-colors rounded-md text-sm
 	w-full min-w-full cursor-pointer bg-white dark:bg-zinc-950 pr-8 {buttonColor.secondary}
 	{$$props.class}"
 			bind:value

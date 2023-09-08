@@ -1,10 +1,16 @@
 <script context="module" lang="ts">
 	export type Size = keyof typeof sizeClass
+	export type Shadow = keyof typeof shadowClass
 
 	export const sizeClass = {
 		sm: 'px-3 py-1.5',
 		md: 'px-4 py-2',
 		lg: 'px-5 py-3'
+	}
+
+	export const shadowClass = {
+		sm: 'shadow-sm',
+		none: 'shadow-none'
 	}
 </script>
 
@@ -20,6 +26,7 @@
 	export let size: Size = 'md'
 	export let id: string = generateID()
 	export let inlineAffixes: boolean = false
+	export let shadow: Shadow = 'sm'
 
 	const borderClass = `
 	border border-slate-300 dark:border-zinc-700
@@ -38,7 +45,7 @@
 			<slot name="label" />
 		</Label>
 	{/if}
-	<div class="rounded-md flex flex-row items-center text-sm {$$props.class}">
+	<div class="{shadowClass[shadow]} flex flex-row items-center text-sm {$$props.class}">
 		{#if $$slots.prefix}
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
