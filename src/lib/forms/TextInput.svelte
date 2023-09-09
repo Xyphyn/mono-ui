@@ -29,7 +29,7 @@
 	export let shadow: Shadow = 'sm'
 
 	const borderClass = `
-	border border-slate-200 dark:border-zinc-800
+	border border-slate-200 dark:border-zinc-700
 	`
 </script>
 
