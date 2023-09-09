@@ -11,7 +11,7 @@
 	this={forID ? 'label' : 'span'}
 	{...$$restProps}
 	for={forID}
-	class="text-sm text-slate-600 dark:text-zinc-400 font-medium w-full {$$props.class || ''}"
+	class="text-sm text-slate-800 dark:text-zinc-200 font-medium w-full {$$props.class || ''}"
 >
 	{#if text}
 		{text}

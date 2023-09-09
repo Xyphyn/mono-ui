@@ -2,6 +2,7 @@
 	import { Menu, TextInput, Spinner, MenuButton } from '$lib/index.js'
 	import { debounce } from '$lib/util/time.js'
 	import { createEventDispatcher } from 'svelte'
+	import { Icon, MagnifyingGlass } from 'svelte-hero-icons'
 
 	export let query: string = ''
 
@@ -52,7 +53,12 @@
 				debounceFunc()
 			}}
 			{...$$restProps}
-		/>
+			inlineAffixes
+		>
+			<div slot="prefix" class="h-5 flex items-center">
+				<Icon src={MagnifyingGlass} mini size="16" />
+			</div>
+		</TextInput>
 	</slot>
 	<Menu origin="bottom-left" bind:open={openMenu}>
 		{#if searching}

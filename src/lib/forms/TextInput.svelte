@@ -29,7 +29,7 @@
 	export let shadow: Shadow = 'sm'
 
 	const borderClass = `
-	border border-slate-300 dark:border-zinc-700
+	border border-slate-200 dark:border-zinc-800
 	`
 </script>
 
@@ -50,7 +50,7 @@
 			<div
 				class="rounded-md rounded-r-none border {borderClass}
 			border-r-0 text-slate-600 dark:text-zinc-400 {inlineAffixes
-					? 'bg-white dark:bg-zinc-950 pr-0'
+					? 'bg-white dark:bg-zinc-950 pr-0 w-8'
 					: ''} {sizeClass[size]}"
 			>
 				<slot name="prefix" />

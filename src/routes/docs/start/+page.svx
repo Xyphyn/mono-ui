@@ -7,7 +7,6 @@ A quick guide on how to setup Mono for use in your app.
 If you already have a Svelte app ready, you can skip this step. We recommend using [SvelteKit](https://kit.svelte.dev):
 
 ```bash
-
 yarn create svelte my-app
 cd my-app
 yarn
@@ -18,7 +17,6 @@ yarn
 **Mono** is available on **npm**. Run:
 
 ```bash
-
 yarn add --dev mono-svelte
 ```
 
@@ -29,7 +27,6 @@ yarn add --dev mono-svelte
 ### Install
 
 ```bash
-
 yarn add --dev tailwindcss postcss autoprefixer
 ```
 
@@ -38,7 +35,6 @@ yarn add --dev tailwindcss postcss autoprefixer
 To create the default config file, run:
 
 ```bash
-
 npx tailwindcss init -p
 ```
 
