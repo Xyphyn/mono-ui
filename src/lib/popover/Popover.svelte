@@ -55,7 +55,7 @@
 			class="absolute min-w-[12rem] my-2 z-30 {popoverOrigins[origin]}"
 		>
 			<slot name="popover">
-				<Material elevation="high">
+				<Material elevation="high" color="distinct">
 					<slot />
 				</Material>
 			</slot>
