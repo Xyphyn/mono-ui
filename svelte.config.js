@@ -12,7 +12,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md', '.svx'],
-			layout: './src/routes/docs/+page.svelte',
+			layout: 'src/routes/docs/+page.svelte',
 			smartypants: {
 				dashes: 'oldschool'
 			}
