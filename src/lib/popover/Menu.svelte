@@ -10,14 +10,11 @@
 
 <Popover {openOnHover} {origin} {targetClass} bind:open class={$$props.class}>
 	<slot name="target" slot="target" />
-	<div slot="popover" class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none">
-		<Material
-			class="flex flex-col py-2 list-none"
-			color="distinct"
-			padding="none"
-			rounding="lg"
-			elevation="max"
-		>
+	<div
+		slot="popover"
+		class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg"
+	>
+		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">
 			<slot />
 		</Material>
 	</div>
