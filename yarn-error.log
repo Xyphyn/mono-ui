@@ -1,8 +1,8 @@
 Arguments: 
-  /nix/store/51nhk6ycfnj895q07v94jsrwmk2jmz8j-nodejs-18.17.1/bin/node /nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/bin/yarn publish
+  /nix/store/fg86njc0q2djbyfaqvnaq7x0khpc6sf4-nodejs-18.17.1/bin/node /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin/yarn
 
 PATH: 
-  /nix/store/anvg6mpa8q2lvhp1h0yr3yn960zskrfj-bash-interactive-5.2-p15/bin:/nix/store/dhg99sq2invv3scrlv6abxsb5pcz8ip6-patchelf-0.15.0/bin:/nix/store/civqmfc14c8x7l59nfiwb3qggr8sghrg-gcc-wrapper-12.3.0/bin:/nix/store/ha21dh86hkl3065bgzfrg7zh6f45lmbf-gcc-12.3.0/bin:/nix/store/qw92z3pwsd74a1cyg07riri1d0gma9w6-glibc-2.37-8-bin/bin:/nix/store/5wspmqhgsfs7dza9gcyrj5yxbyd00q7y-coreutils-9.3/bin:/nix/store/cyb4bb44krf4ghw8qasa03sxi2k4g6a4-binutils-wrapper-2.40/bin:/nix/store/9g6n42payxs0czfaghxhhb1jxc9rx53h-binutils-2.40/bin:/nix/store/yckydi5rj55p4k6q4iaxx7425r19rmxf-nodejs-20.5.1/bin:/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/bin:/nix/store/5wspmqhgsfs7dza9gcyrj5yxbyd00q7y-coreutils-9.3/bin:/nix/store/039nii0j16pkzabxi9nm5dkh0z8awaww-findutils-4.9.0/bin:/nix/store/pmkqwxzi27lzdzkh2zpqajks9b3521jz-diffutils-3.10/bin:/nix/store/5ccllrgswk61a44yl7jcxs20jql1y32b-gnused-4.9/bin:/nix/store/m88w8in2zf5dwijxypyba02f0ff260rm-gnugrep-3.11/bin:/nix/store/scv8hzzf0vpxaqj96qjhzdcf04aygga1-gawk-5.2.2/bin:/nix/store/ygjmhqdm8labz14xxscz003srl1p2c94-gnutar-1.35/bin:/nix/store/pm6pfypn61d9n9gy19i01ak8hwc6g688-gzip-1.12/bin:/nix/store/ir3achw4jh3qyyac0vkj8jb46l06psqh-bzip2-1.0.8-bin/bin:/nix/store/k51cq3ap20c69wffjsl8qjs21wy5wlrq-gnumake-4.4.1/bin:/nix/store/r4vxljid3iq94jp7qvd639sps0fscwy3-bash-5.2-p15/bin:/nix/store/l6wb1grmnawfvy6xqp5x29jsq9p5dym8-patch-2.7.6/bin:/nix/store/ikzmh72n5f785gkfm02kzg4cl8d7hzmg-xz-5.4.4-bin/bin:/nix/store/yyrljddc4wqraxs72d8kzcf3filcncky-file-5.45/bin:/nix/store/kxm6ikh9p3931w8409nc1iis9wkhmqaf-glib-2.76.2-bin/bin:/run/wrappers/bin:/home/james/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/home/james/.nix-profile/bin:/etc/profiles/per-user/james/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin
+  /nix/store/sy10idja58n4nw76x6gh8p857bnwgw38-bash-interactive-5.2-p15/bin:/nix/store/v553h3r3f0xqxpvb9pgzx006qrmmv12m-patchelf-0.15.0/bin:/nix/store/75slks1wr3b3sxr5advswjzg9lvbv9jc-gcc-wrapper-12.3.0/bin:/nix/store/n8dryz4xf7ln028j37zapgzg4j47p743-gcc-12.3.0/bin:/nix/store/3xdipdscl5v1ghhkwmc7d9ag4qigmvyc-glibc-2.37-8-bin/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/5rykrx2q8y58zkkpd5968iaprb33xa9l-binutils-wrapper-2.40/bin:/nix/store/rhhll3vwpj38ri72ahrrrvcbkhz4fhh6-binutils-2.40/bin:/nix/store/nwm5z051xxvyk3i7gh59m911nmpl9wrs-nodejs-20.6.1/bin:/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/xvhh3dzdqfaz78nhya1xildz2r38sy3s-findutils-4.9.0/bin:/nix/store/5ca2vh08sq8m20mv4z3wd1lij6wngym0-diffutils-3.10/bin:/nix/store/7snlgj0l0ys6lbcl5pyy8vwnmk26wh8x-gnused-4.9/bin:/nix/store/4hx292xs95frrd1hqwwfc2fpcz0niwgp-gnugrep-3.11/bin:/nix/store/47pwjwir6m3r0czs8zir5wzfvk7i5z6i-gawk-5.2.2/bin:/nix/store/d960k69nahxms669k9fl5rqhk0fkfzr5-gnutar-1.35/bin:/nix/store/7nfcdvrmdbpms7wcrjjsqwkv07lswhli-gzip-1.13/bin:/nix/store/dwxydys9kcz5l2901asxdvh3qdh981b1-bzip2-1.0.8-bin/bin:/nix/store/s806iqg5vwsnp434i5whcn1rf605y9s6-gnumake-4.4.1/bin:/nix/store/vqvj60h076bhqj6977caz0pfxs6543nb-bash-5.2-p15/bin:/nix/store/63m0np3ypqr741nn1a3xmg39p6f97ix1-patch-2.7.6/bin:/nix/store/b1rpgx8n48m6520gakkf9rsqf7kv7sra-xz-5.4.4-bin/bin:/nix/store/vzjkllqadhpmy9jbzqvq94xipvd5xk5f-file-5.45/bin:/run/wrappers/bin:/home/james/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/home/james/.nix-profile/bin:/etc/profiles/per-user/james/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/james/.cargo/bin
 
 Yarn version: 
   1.22.19
@@ -14,22 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/nix/store/516xqbhfpvsjypq9gjwjngq20syyc1rh-yarn-1.22.19/libexec/yarn/lib/cli.js:137150:13)
-      at Interface.emit (node:events:514:28)
-      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1131:18)
-      at ReadStream.onkeypress (node:internal/readline/interface:270:20)
-      at ReadStream.emit (node:events:514:28)
-      at emitKeys (node:internal/readline/utils:357:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
-      at ReadStream.emit (node:events:514:28)
-      at addChunk (node:internal/streams/readable:324:12)
+  SyntaxError: /home/james/code/mono-ui/package.json: Unexpected token } in JSON at position 1619
+      at JSON.parse (<anonymous>)
+      at /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:310:30)
+      at /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
   	"name": "mono-svelte",
-  	"version": "0.0.9",
+  	"version": "0.3.7",
   	"license": "MIT",
   	"scripts": {
   		"dev": "NODE_ENV=development vite dev",
@@ -76,7 +71,6 @@ npm manifest:
   		"publint": "^0.1.9",
   		"svelte": "^4.0.5",
   		"svelte-check": "^3.4.3",
-  		"svelte-hero-icons": "^5.0.0",
   		"tailwindcss": "^3.3.3",
   		"tslib": "^2.4.1",
   		"typescript": "^5.0.0",
@@ -85,7 +79,10 @@ npm manifest:
   	"svelte": "./dist/index.js",
   	"types": "./dist/index.d.ts",
   	"type": "module",
-  	"dependencies": {}
+  	"dependencies": {
+  		"svelte-focus-trap": "^1.2.0",
+  		"svelte-hero-icons": "^5.0.0",
+  	}
   }
 
 yarn manifest: 
@@ -967,6 +964,11 @@ Lockfile:
     dependencies:
       minimist "^1.2.6"
   
+  mousetrap@^1.6.5:
+    version "1.6.5"
+    resolved "https://registry.yarnpkg.com/mousetrap/-/mousetrap-1.6.5.tgz#8a766d8c272b08393d5f56074e0b5ec183485bf9"
+    integrity sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==
+  
   mri@^1.1.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -1359,6 +1361,13 @@ Lockfile:
       sade "^1.7.4"
       svelte-preprocess "^5.0.4"
       typescript "^5.0.3"
+  
+  svelte-focus-trap@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/svelte-focus-trap/-/svelte-focus-trap-1.2.0.tgz#8794510edea7afb527a53c60c1207aa9b9c9cda5"
+    integrity sha512-/hIUHgKcFlewsQreq8v7DYNBkQe7rR0c94PNBOCsmeUwoIYAy6iXJ1pH0k3rWpjwZHKtUxeXbX1iRFlFhipbeg==
+    dependencies:
+      mousetrap "^1.6.5"
   
   svelte-hero-icons@^5.0.0:
     version "5.0.0"

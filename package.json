@@ -57,6 +57,6 @@
 	"type": "module",
 	"dependencies": {
 		"svelte-focus-trap": "^1.2.0",
-		"svelte-hero-icons": "^5.0.0",
+		"svelte-hero-icons": "^5.0.0"
 	}
 }
