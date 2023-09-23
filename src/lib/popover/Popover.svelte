@@ -41,6 +41,9 @@
 	on:focusout={() => (openOnHover ? (open = false) : false)}
 	on:click={() => (!openOnHover ? (open = !open) : false)}
 	on:keypress={() => (!openOnHover ? (open = !open) : false)}
+	on:keydown={(e) => {
+		if (e.key == 'Escape') open = !open
+	}}
 	role="menu"
 	tabindex="0"
 	class="relative cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
