@@ -14,11 +14,15 @@ A small pill-shaped component to represent the status of something.
   <Badge color="green">green</Badge>
   <Badge color="yellow">yellow</Badge>
   <Badge color="gray">gray</Badge>
+  <Badge color="blue">blue</Badge>
+  <Badge color="purple">purple</Badge>
   <div class="w-full" />
   <Badge color="red-subtle">red-subtle</Badge>
   <Badge color="green-subtle">green-subtle</Badge>
   <Badge color="yellow-subtle">yellow-subtle</Badge>
   <Badge color="gray-subtle">gray-subtle</Badge>
+  <Badge color="blue-subtle">blue-subtle</Badge>
+  <Badge color="purple-subtle">purple-subtle</Badge>
 </ComponentContainer>
 
 ```svelte
@@ -26,8 +30,12 @@ A small pill-shaped component to represent the status of something.
 <Badge color="green">green</Badge>
 <Badge color="yellow">yellow</Badge>
 <Badge color="gray">gray</Badge>
+<Badge color="blue">blue</Badge>
+<Badge color="purple">purple</Badge>
 <Badge color="red-subtle">red-subtle</Badge>
 <Badge color="green-subtle">green-subtle</Badge>
 <Badge color="yellow-subtle">yellow-subtle</Badge>
 <Badge color="gray-subtle">gray-subtle</Badge>
+<Badge color="blue-subtle">blue-subtle</Badge>
+<Badge color="purple-subtle">purple-subtle</Badge>
 ```
