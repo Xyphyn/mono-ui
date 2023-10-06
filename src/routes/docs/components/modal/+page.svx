@@ -1,5 +1,5 @@
 <script>
-  import { Modal, Button, Note } from '$lib/index'
+  import { Modal, Button, Note, modal, action } from '$lib/index'
 
   let open = false
 </script>
@@ -41,3 +41,27 @@ Open Modal
 
 <Button class="w-max" color="primary" on:click={() => (open = !open)}>Open Modal</Button>
 ```
+
+## Modal function
+
+<Button class="w-max" color="primary" on:click={() => {
+modal({
+title: 'Example',
+body: 'This is an example modal with three actions.',
+actions: [
+action({
+content: 'Test'
+}),
+action({
+content: 'OK',
+type: 'danger'
+}),
+action({
+content: 'wow',
+type: 'primary'
+})
+]
+})
+}}>
+Open Modal
+</Button>

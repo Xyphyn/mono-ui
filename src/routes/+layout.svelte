@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ModalContainer from '$lib/modal/ModalContainer.svelte'
 	import ToastContainer from '$lib/toast/ToastContainer.svelte'
 	import '../style/app.css'
 	import Navbar from './page/components/Navbar.svelte'
@@ -6,6 +7,7 @@
 
 <svelte:head><title>Mono UI</title></svelte:head>
 
+<ModalContainer />
 <ToastContainer />
 <div class="flex flex-col max-w-full min-w-0 min-h-screen">
 	<Navbar />

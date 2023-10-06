@@ -9,10 +9,11 @@
 	export let action: string | undefined = undefined
 	export let open = false
 	export let title: string | undefined = undefined
+	export let dismissable: boolean = false
 
 	let el: any
 
-	const dispatcher = createEventDispatcher()
+	const dispatcher = createEventDispatcher<{ action: any; dismissed: any }>()
 </script>
 
 {#if open}
@@ -24,7 +25,11 @@
 flex flex-col items-center justify-center bg-black/50 box-border p-4"
 		transition:fade|global={{ duration: 200 }}
 		on:click={(e) => {
-			if (!el.contains(e.target)) open = false
+			if (!el.contains(e.target)) {
+				open = false
+
+				dispatcher('dismissed')
+			}
 		}}
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -56,9 +61,18 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 								{title}
 							{/if}
 						</h1>
-						<Button size="square-md" class="ml-auto" on:click={() => (open = false)}>
-							<Icon src={XMark} mini size="16" />
-						</Button>
+						{#if dismissable}
+							<Button
+								size="square-md"
+								class="ml-auto"
+								on:click={() => {
+									open = false
+									dispatcher('dismissed')
+								}}
+							>
+								<Icon src={XMark} mini size="16" />
+							</Button>
+						{/if}
 					</div>
 					<slot />
 				</div>
