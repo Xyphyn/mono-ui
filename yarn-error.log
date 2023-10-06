@@ -1,8 +1,8 @@
 Arguments: 
-  /nix/store/fg86njc0q2djbyfaqvnaq7x0khpc6sf4-nodejs-18.17.1/bin/node /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin/yarn
+  /nix/store/fg86njc0q2djbyfaqvnaq7x0khpc6sf4-nodejs-18.17.1/bin/node /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin/yarn add --dev @types/svelte-floating-ui
 
 PATH: 
-  /nix/store/sy10idja58n4nw76x6gh8p857bnwgw38-bash-interactive-5.2-p15/bin:/nix/store/v553h3r3f0xqxpvb9pgzx006qrmmv12m-patchelf-0.15.0/bin:/nix/store/75slks1wr3b3sxr5advswjzg9lvbv9jc-gcc-wrapper-12.3.0/bin:/nix/store/n8dryz4xf7ln028j37zapgzg4j47p743-gcc-12.3.0/bin:/nix/store/3xdipdscl5v1ghhkwmc7d9ag4qigmvyc-glibc-2.37-8-bin/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/5rykrx2q8y58zkkpd5968iaprb33xa9l-binutils-wrapper-2.40/bin:/nix/store/rhhll3vwpj38ri72ahrrrvcbkhz4fhh6-binutils-2.40/bin:/nix/store/nwm5z051xxvyk3i7gh59m911nmpl9wrs-nodejs-20.6.1/bin:/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/xvhh3dzdqfaz78nhya1xildz2r38sy3s-findutils-4.9.0/bin:/nix/store/5ca2vh08sq8m20mv4z3wd1lij6wngym0-diffutils-3.10/bin:/nix/store/7snlgj0l0ys6lbcl5pyy8vwnmk26wh8x-gnused-4.9/bin:/nix/store/4hx292xs95frrd1hqwwfc2fpcz0niwgp-gnugrep-3.11/bin:/nix/store/47pwjwir6m3r0czs8zir5wzfvk7i5z6i-gawk-5.2.2/bin:/nix/store/d960k69nahxms669k9fl5rqhk0fkfzr5-gnutar-1.35/bin:/nix/store/7nfcdvrmdbpms7wcrjjsqwkv07lswhli-gzip-1.13/bin:/nix/store/dwxydys9kcz5l2901asxdvh3qdh981b1-bzip2-1.0.8-bin/bin:/nix/store/s806iqg5vwsnp434i5whcn1rf605y9s6-gnumake-4.4.1/bin:/nix/store/vqvj60h076bhqj6977caz0pfxs6543nb-bash-5.2-p15/bin:/nix/store/63m0np3ypqr741nn1a3xmg39p6f97ix1-patch-2.7.6/bin:/nix/store/b1rpgx8n48m6520gakkf9rsqf7kv7sra-xz-5.4.4-bin/bin:/nix/store/vzjkllqadhpmy9jbzqvq94xipvd5xk5f-file-5.45/bin:/run/wrappers/bin:/home/james/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/home/james/.nix-profile/bin:/etc/profiles/per-user/james/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/james/.cargo/bin
+  /nix/store/sy10idja58n4nw76x6gh8p857bnwgw38-bash-interactive-5.2-p15/bin:/nix/store/v553h3r3f0xqxpvb9pgzx006qrmmv12m-patchelf-0.15.0/bin:/nix/store/75slks1wr3b3sxr5advswjzg9lvbv9jc-gcc-wrapper-12.3.0/bin:/nix/store/n8dryz4xf7ln028j37zapgzg4j47p743-gcc-12.3.0/bin:/nix/store/3xdipdscl5v1ghhkwmc7d9ag4qigmvyc-glibc-2.37-8-bin/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/5rykrx2q8y58zkkpd5968iaprb33xa9l-binutils-wrapper-2.40/bin:/nix/store/rhhll3vwpj38ri72ahrrrvcbkhz4fhh6-binutils-2.40/bin:/nix/store/nwm5z051xxvyk3i7gh59m911nmpl9wrs-nodejs-20.6.1/bin:/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/bin:/nix/store/apn3p2b40xvirn7w740wv2gy330ppib5-coreutils-9.3/bin:/nix/store/xvhh3dzdqfaz78nhya1xildz2r38sy3s-findutils-4.9.0/bin:/nix/store/5ca2vh08sq8m20mv4z3wd1lij6wngym0-diffutils-3.10/bin:/nix/store/7snlgj0l0ys6lbcl5pyy8vwnmk26wh8x-gnused-4.9/bin:/nix/store/4hx292xs95frrd1hqwwfc2fpcz0niwgp-gnugrep-3.11/bin:/nix/store/47pwjwir6m3r0czs8zir5wzfvk7i5z6i-gawk-5.2.2/bin:/nix/store/d960k69nahxms669k9fl5rqhk0fkfzr5-gnutar-1.35/bin:/nix/store/7nfcdvrmdbpms7wcrjjsqwkv07lswhli-gzip-1.13/bin:/nix/store/dwxydys9kcz5l2901asxdvh3qdh981b1-bzip2-1.0.8-bin/bin:/nix/store/s806iqg5vwsnp434i5whcn1rf605y9s6-gnumake-4.4.1/bin:/nix/store/vqvj60h076bhqj6977caz0pfxs6543nb-bash-5.2-p15/bin:/nix/store/63m0np3ypqr741nn1a3xmg39p6f97ix1-patch-2.7.6/bin:/nix/store/b1rpgx8n48m6520gakkf9rsqf7kv7sra-xz-5.4.4-bin/bin:/nix/store/vzjkllqadhpmy9jbzqvq94xipvd5xk5f-file-5.45/bin:/nix/store/kxm6ikh9p3931w8409nc1iis9wkhmqaf-glib-2.76.2-bin/bin:/run/wrappers/bin:/home/james/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/home/james/.nix-profile/bin:/etc/profiles/per-user/james/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/james/.cargo/bin
 
 Yarn version: 
   1.22.19
@@ -14,17 +14,22 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/james/code/mono-ui/package.json: Unexpected token } in JSON at position 1619
-      at JSON.parse (<anonymous>)
-      at /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:310:30)
-      at /nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@types%2fsvelte-floating-ui: Not found
+      at params.callback [as _callback] (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:66145:18)
+      at self.callback (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:514:28)
+      at Request.<anonymous> (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:514:28)
+      at IncomingMessage.<anonymous> (/nix/store/4jas9dsx5pdsl72fgl65d624dk9xjlmz-yarn-1.22.19/libexec/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:628:28)
+      at IncomingMessage.emit (node:events:526:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
   	"name": "mono-svelte",
-  	"version": "0.3.7",
+  	"version": "0.4.1",
   	"license": "MIT",
   	"scripts": {
   		"dev": "NODE_ENV=development vite dev",
@@ -54,6 +59,7 @@ npm manifest:
   		"svelte-hero-icons": "^5.0.0"
   	},
   	"devDependencies": {
+  		"@floating-ui/core": "^1.5.0",
   		"@playwright/test": "^1.28.1",
   		"@sveltejs/adapter-auto": "^2.0.0",
   		"@sveltejs/kit": "^1.20.4",
@@ -71,6 +77,7 @@ npm manifest:
   		"publint": "^0.1.9",
   		"svelte": "^4.0.5",
   		"svelte-check": "^3.4.3",
+  		"svelte-floating-ui": "^1.5.3",
   		"tailwindcss": "^3.3.3",
   		"tslib": "^2.4.1",
   		"typescript": "^5.0.0",
@@ -81,7 +88,7 @@ npm manifest:
   	"type": "module",
   	"dependencies": {
   		"svelte-focus-trap": "^1.2.0",
-  		"svelte-hero-icons": "^5.0.0",
+  		"svelte-hero-icons": "^5.0.0"
   	}
   }
 
@@ -215,6 +222,26 @@ Lockfile:
     version "0.17.19"
     resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz#8cfaf2ff603e9aabb910e9c0558c26cf32744061"
     integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
+  
+  "@floating-ui/core@^1.2.4", "@floating-ui/core@^1.4.2", "@floating-ui/core@^1.5.0":
+    version "1.5.0"
+    resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.5.0.tgz#5c05c60d5ae2d05101c3021c1a2a350ddc027f8c"
+    integrity sha512-kK1h4m36DQ0UHGj5Ah4db7R0rHemTqqO0QLvUqi1/mUUp3LuAWbWxdxSIf/XsnH9VS6rRVPLJCncjRzUvyCLXg==
+    dependencies:
+      "@floating-ui/utils" "^0.1.3"
+  
+  "@floating-ui/dom@^1.2.4":
+    version "1.5.3"
+    resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.5.3.tgz#54e50efcb432c06c23cd33de2b575102005436fa"
+    integrity sha512-ClAbQnEqJAKCJOEbbLo5IUlZHkNszqhuxS4fHAVxRPXPya6Ysf2G8KypnYcOTpx6I8xcgF9bbHb6g/2KpbV8qA==
+    dependencies:
+      "@floating-ui/core" "^1.4.2"
+      "@floating-ui/utils" "^0.1.3"
+  
+  "@floating-ui/utils@^0.1.3":
+    version "0.1.6"
+    resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.6.tgz#22958c042e10b67463997bd6ea7115fe28cbcaf9"
+    integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
   
   "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
     version "0.3.3"
@@ -1361,6 +1388,14 @@ Lockfile:
       sade "^1.7.4"
       svelte-preprocess "^5.0.4"
       typescript "^5.0.3"
+  
+  svelte-floating-ui@^1.5.3:
+    version "1.5.3"
+    resolved "https://registry.yarnpkg.com/svelte-floating-ui/-/svelte-floating-ui-1.5.3.tgz#689d18c3ce318c52a9c6bf7311d02bbe0531cc8b"
+    integrity sha512-yjLeRQ4SNcICbMabp5S2cXc5ubBd2eua+swfTqqGBeg8ZrUvotZYK8jsRWETl/3RgLQsaZbEYKx8OmLA3wL/yw==
+    dependencies:
+      "@floating-ui/core" "^1.2.4"
+      "@floating-ui/dom" "^1.2.4"
   
   svelte-focus-trap@^1.2.0:
     version "1.2.0"

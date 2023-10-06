@@ -15,13 +15,30 @@
 	import Material from '$lib/materials/Material.svelte'
 	import { expoOut } from 'svelte/easing'
 	import { fly, scale } from 'svelte/transition'
+	import { createFloatingActions } from 'svelte-floating-ui'
+	import {
+		offset,
+		type Middleware,
+		flip,
+		shift,
+		type Placement,
+		type Strategy,
+		size
+	} from '@floating-ui/core'
 
 	export let openOnHover: boolean = false
-	export let origin: Origin = 'bottom-left'
 	export let open = false
-	export let targetClass: string = ''
+	export let placement: Placement = 'bottom-start'
+	export let middleware: Middleware[] = [offset(4), flip(), shift()]
+	export let strategy: Strategy = 'absolute'
 
 	let el: any
+
+	const [floatingRef, floatingContent] = createFloatingActions({
+		strategy: strategy,
+		placement: placement,
+		middleware: middleware
+	})
 </script>
 
 <svelte:body
@@ -46,22 +63,23 @@
 	}}
 	role="menu"
 	tabindex="0"
-	class="relative cursor-auto overflow-visible w-max {$$props.class} flex flex-col"
+	class="w-max h-max {$$props.class}"
 	bind:this={el}
+	use:floatingRef
 >
-	<div tabindex="-1" class={targetClass}>
-		<slot name="target" />
-	</div>
-	{#if open}
-		<div
-			transition:scale={{ duration: 200, start: 0.95, easing: expoOut }}
-			class="absolute min-w-[12rem] my-2 z-30 {popoverOrigins[origin]}"
-		>
-			<slot name="popover">
-				<Material elevation="high" color="distinct">
-					<slot />
-				</Material>
-			</slot>
-		</div>
-	{/if}
+	<slot name="target" />
 </div>
+
+{#if open}
+	<div
+		transition:fly={{ duration: 300, y: -4, easing: expoOut }}
+		class="w-48 z-30 absolute"
+		use:floatingContent
+	>
+		<slot name="popover">
+			<Material elevation="high" color="distinct">
+				<slot />
+			</Material>
+		</slot>
+	</div>
+{/if}

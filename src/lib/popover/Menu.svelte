@@ -3,12 +3,10 @@
 	import Popover, { type Origin } from '$lib/popover/Popover.svelte'
 
 	export let openOnHover: boolean = false
-	export let origin: Origin = 'bottom-left'
 	export let open: boolean = false
-	export let targetClass: string = ''
 </script>
 
-<Popover {openOnHover} {origin} {targetClass} bind:open class={$$props.class}>
+<Popover {openOnHover} {origin} bind:open class={$$props.class}>
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
