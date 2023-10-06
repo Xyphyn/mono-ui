@@ -31,7 +31,7 @@
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
-		class="w-80 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
+		class="w-52 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
 		"
 	>
 		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">
