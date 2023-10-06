@@ -7,14 +7,15 @@
 		type Placement,
 		shift,
 		type Strategy,
-		flip
+		flip,
+		autoPlacement
 	} from '@floating-ui/core'
 
 	export let openOnHover: boolean = false
 	export let open: boolean = false
 
-	export let placement: Placement = 'bottom-start'
-	export let middleware: Middleware[] = [offset(4), flip(), shift()]
+	export let placement: Placement = 'bottom-end'
+	export let middleware: Middleware[] = [offset(4), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 </script>
 
@@ -30,7 +31,7 @@
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
-		class="min-w-[16rem] origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
+		class="w-80 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
 		"
 	>
 		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">

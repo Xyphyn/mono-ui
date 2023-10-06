@@ -29,7 +29,7 @@
 	export let openOnHover: boolean = false
 	export let open = false
 	export let placement: Placement = 'bottom-start'
-	export let middleware: Middleware[] = [offset(4), flip(), shift()]
+	export let middleware: Middleware[] = [offset(4), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 
 	let el: any
@@ -39,6 +39,13 @@
 		placement: placement,
 		middleware: middleware
 	})
+
+	const customFloatingRef = (node: HTMLButtonElement) => {
+		const n = node.children.item(0)
+
+		if (n) floatingRef(n)
+		else floatingRef(node)
+	}
 </script>
 
 <svelte:body
@@ -51,33 +58,32 @@
 	}}
 />
 
-<div
+<button
 	on:mouseover={() => (openOnHover ? (open = true) : false)}
 	on:mouseleave={() => (openOnHover ? (open = false) : false)}
 	on:focus={() => (openOnHover ? (open = true) : false)}
 	on:focusout={() => (openOnHover ? (open = false) : false)}
 	on:click={() => (!openOnHover ? (open = !open) : false)}
-	on:keypress={() => (!openOnHover ? (open = !open) : false)}
 	on:keydown={(e) => {
 		if (e.key == 'Escape') open = !open
 	}}
 	role="menu"
-	tabindex="0"
-	class="w-max h-max {$$props.class}"
+	tabindex="-1"
+	class="contents {$$props.class}"
 	bind:this={el}
-	use:floatingRef
+	use:customFloatingRef
 >
 	<slot name="target" />
-</div>
+</button>
 
 {#if open}
 	<div
 		transition:fly={{ duration: 300, y: -4, easing: expoOut }}
-		class="w-48 z-30 absolute"
+		class="z-30 absolute"
 		use:floatingContent
 	>
 		<slot name="popover">
-			<Material elevation="high" color="distinct">
+			<Material elevation="high" color="distinct" class="flex flex-col">
 				<slot />
 			</Material>
 		</slot>
