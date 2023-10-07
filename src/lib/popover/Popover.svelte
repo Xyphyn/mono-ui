@@ -79,6 +79,7 @@
 		if (e.key == 'Escape') open = !open
 	}}
 	role="menu"
+	type="button"
 	tabindex="-1"
 	class="{canUseContents ? 'contents text-left' : 'w-max h-max'} {$$props.class}"
 	bind:this={el}
