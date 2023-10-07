@@ -29,7 +29,7 @@
 	export let openOnHover: boolean = false
 	export let open = false
 	export let placement: Placement = 'bottom-start'
-	export let middleware: Middleware[] = [offset(4), shift(), flip()]
+	export let middleware: Middleware[] = [offset(6), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 
 	let canUseContents = true
@@ -89,7 +89,7 @@
 
 {#if open}
 	<div
-		transition:fly={{ duration: 200, y: -4, easing: expoOut }}
+		transition:fly={{ duration: 200, y: -8, easing: expoOut }}
 		class="z-30 absolute {$$props.popoverClass}"
 		use:customFloatingContent
 	>

@@ -15,7 +15,7 @@
 	export let open: boolean = false
 
 	export let placement: Placement = 'bottom-start'
-	export let middleware: Middleware[] = [offset(4), shift(), flip()]
+	export let middleware: Middleware[] = [offset(6), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 </script>
 
@@ -27,19 +27,13 @@
 	{...$$restProps}
 	bind:open
 	class={$$props.class}
-	popoverClass="backdrop-blur-xl"
 >
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
 		class="w-72 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg"
 	>
-		<Material
-			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-900/80"
-			color="none"
-			padding="none"
-			rounding="lg"
-		>
+		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">
 			<slot />
 		</Material>
 	</div>
