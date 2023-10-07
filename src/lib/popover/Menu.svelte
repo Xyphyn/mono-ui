@@ -32,7 +32,6 @@
 	<div
 		slot="popover"
 		class="w-72 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
-		w-max
 		"
 	>
 		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">
