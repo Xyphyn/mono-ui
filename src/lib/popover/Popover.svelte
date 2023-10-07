@@ -89,8 +89,8 @@
 
 {#if open}
 	<div
-		transition:fly={{ duration: 300, y: -4, easing: expoOut }}
-		class="z-30 absolute"
+		transition:fly={{ duration: 200, y: -4, easing: expoOut }}
+		class="z-30 absolute {$$props.popoverClass}"
 		use:customFloatingContent
 	>
 		<slot name="popover">
