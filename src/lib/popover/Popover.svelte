@@ -32,6 +32,8 @@
 	export let middleware: Middleware[] = [offset(4), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 
+	let canUseContents = true
+
 	let el: any
 
 	const [floatingRef, floatingContent] = createFloatingActions({
@@ -40,11 +42,20 @@
 		middleware: middleware
 	})
 
+	const customFloatingContent = (node: HTMLDivElement) => {
+		// if (!canUseContents) return
+
+		floatingContent(node)
+	}
+
 	const customFloatingRef = (node: HTMLButtonElement) => {
 		const n = node.children.item(0)
 
 		if (n) floatingRef(n)
-		else floatingRef(node)
+		else {
+			canUseContents = false
+			floatingRef(node)
+		}
 	}
 </script>
 
@@ -69,7 +80,7 @@
 	}}
 	role="menu"
 	tabindex="-1"
-	class="contents {$$props.class}"
+	class="{canUseContents ? 'contents text-left' : 'w-max h-max'} {$$props.class}"
 	bind:this={el}
 	use:customFloatingRef
 >
@@ -80,7 +91,7 @@
 	<div
 		transition:fly={{ duration: 300, y: -4, easing: expoOut }}
 		class="z-30 absolute"
-		use:floatingContent
+		use:customFloatingContent
 	>
 		<slot name="popover">
 			<Material elevation="high" color="distinct" class="flex flex-col">

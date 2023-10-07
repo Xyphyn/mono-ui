@@ -37,30 +37,31 @@
 </script>
 
 <div class="relative">
-	<slot name="input">
-		<TextInput
-			bind:value={query}
-			on:input={(e) => {
-				searching = true
-				openMenu = true
-				dispatcher('input', e)
-				debounceFunc()
-			}}
-			on:focus={(e) => {
-				searching = true
-				openMenu = true
-				dispatcher('input', e)
-				debounceFunc()
-			}}
-			{...$$restProps}
-			inlineAffixes
-		>
-			<div slot="prefix" class="h-5 flex items-center">
-				<Icon src={MagnifyingGlass} mini size="16" />
-			</div>
-		</TextInput>
-	</slot>
-	<Menu origin="bottom-left" bind:open={openMenu}>
+	<Menu bind:open={openMenu}>
+		<slot name="input" slot="target">
+			<TextInput
+				bind:value={query}
+				on:input={(e) => {
+					searching = true
+					openMenu = true
+					dispatcher('input', e)
+					debounceFunc()
+				}}
+				on:focus={(e) => {
+					searching = true
+					openMenu = true
+					dispatcher('input', e)
+					debounceFunc()
+				}}
+				{...$$restProps}
+				inlineAffixes
+				slot="target"
+			>
+				<div slot="prefix" class="h-5 flex items-center">
+					<Icon src={MagnifyingGlass} mini size="16" />
+				</div>
+			</TextInput>
+		</slot>
 		{#if searching}
 			<div class="w-full h-24 grid place-items-center">
 				<Spinner width={24} />

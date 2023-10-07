@@ -31,8 +31,8 @@
 			{id}
 			class="{buttonSize[size]} {buttonShadow[
 				shadow
-			]} appearance-none transition-colors rounded-md text-sm
-	w-full min-w-full cursor-pointer bg-white dark:bg-zinc-950 pr-8 {buttonColor.secondary}
+			]} {buttonColor.secondary} appearance-none transition-colors rounded-md text-sm
+	w-full min-w-full cursor-pointer pr-6 {buttonColor.secondary}
 	{$$props.class}"
 			bind:value
 			on:change

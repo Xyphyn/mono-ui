@@ -14,7 +14,7 @@
 	export let openOnHover: boolean = false
 	export let open: boolean = false
 
-	export let placement: Placement = 'bottom-end'
+	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(4), shift(), flip()]
 	export let strategy: Strategy = 'absolute'
 </script>
@@ -32,6 +32,7 @@
 	<div
 		slot="popover"
 		class="w-72 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg
+		w-max
 		"
 	>
 		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="lg">

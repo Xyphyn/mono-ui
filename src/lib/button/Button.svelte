@@ -82,7 +82,7 @@
 	export let size: ButtonSize = 'md'
 	export let rounding: ButtonRoundness = 'md'
 	export let alignment: ButtonAlignment = 'center'
-	export let shadow: ButtonShadow = 'none'
+	export let shadow: ButtonShadow = color == 'secondary' ? 'sm' : 'none'
 	export let column: boolean = false
 
 	export let loaderWidth: number | undefined = undefined

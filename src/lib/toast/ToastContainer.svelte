@@ -6,12 +6,12 @@
 
 <div
 	class="fixed right-0 bottom-0 flex flex-col items-end justify-end z-[200] p-4
-  group overflow-hidden h-screen min-w-[24rem] pointer-events-none"
+  group overflow-hidden h-screen min-w-[24rem] pointer-events-none gap-4"
 >
 	{#each $toasts as toast, index (toast.id)}
 		<div
 			animate:flip={{ duration: 300 }}
-			class="pointer-events-auto -mt-8 transition-all group-hover:pt-12
+			class="pointer-events-auto transition-all
       duration-300"
 		>
 			<Toast {toast} />
