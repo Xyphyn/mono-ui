@@ -27,7 +27,7 @@
 	{...$$restProps}
 	bind:open
 	class={$$props.class}
-	popoverClass="backdrop-blur-md"
+	popoverClass="backdrop-blur-xl"
 >
 	<slot name="target" slot="target" />
 	<div
@@ -35,7 +35,7 @@
 		class="w-72 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-lg"
 	>
 		<Material
-			class="flex flex-col py-2 list-none bg-white/50 dark:bg-zinc-900/50"
+			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-900/80"
 			color="none"
 			padding="none"
 			rounding="lg"
