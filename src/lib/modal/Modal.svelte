@@ -9,7 +9,7 @@
 	export let action: string | undefined = undefined
 	export let open = false
 	export let title: string | undefined = undefined
-	export let dismissable: boolean = false
+	export let dismissable: boolean = true
 
 	let el: any
 
