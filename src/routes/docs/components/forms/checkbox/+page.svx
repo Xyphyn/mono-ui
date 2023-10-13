@@ -1,0 +1,19 @@
+<script>
+	import ComponentContainer from '../../ComponentContainer.svelte';
+  import {Codeblock,Radio,RadioGroup,Button,Choicebox,ChoiceboxGroup,Checkbox,Switch} from '$lib/index'
+</script>
+
+# Checkboxes
+
+<Checkbox>
+Checkbox
+</Checkbox>
+
+<Switch>
+Switch
+</Switch>
+
+<Switch class="flex-row-reverse w-full items-center" labelClass="mr-auto">
+<span>Switch</span>
+<span slot="description">Okay. This is a description to see how it handles this kind of stuff. This is even longer to see more stuff. Okay is it done yet</span>
+</Switch>

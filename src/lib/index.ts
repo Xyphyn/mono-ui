@@ -14,8 +14,10 @@ export { default as FileInput } from './forms/FileInput.svelte'
 export { default as TextInput } from './forms/TextInput.svelte'
 export { default as TextArea } from './forms/TextArea.svelte'
 export { default as Select } from './forms/Select.svelte'
-export { default as Checkbox } from './forms/Checkbox.svelte'
 export { default as ImageInput } from './forms/ImageInput.svelte'
+
+export { default as Checkbox } from './forms/Checkbox.svelte'
+export { default as Switch } from './forms/Switch.svelte'
 
 export { default as Radio } from './forms/Radio.svelte'
 export { default as RadioGroup } from './forms/RadioGroup.svelte'

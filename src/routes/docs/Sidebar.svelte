@@ -77,6 +77,10 @@
 							name: 'Forms',
 							children: [
 								{
+									url: '/docs/components/forms/checkbox',
+									name: 'Checkbox'
+								},
+								{
 									url: '/docs/components/forms/textinput',
 									name: 'Text Input'
 								},
