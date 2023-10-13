@@ -1,6 +1,6 @@
 {
 	"name": "mono-svelte",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"license": "MIT",
 	"scripts": {
 		"dev": "NODE_ENV=development vite dev",
