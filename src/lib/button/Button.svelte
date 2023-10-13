@@ -12,11 +12,10 @@
 	export const buttonColor = {
 		primary: `border border-transparent bg-primary-900 text-white
 		 dark:bg-primary-100 dark:text-black hover:brightness-125 dark:hover:brightness-90 active:brightness-90
-		 active:dark:brightness-75 active:ring-1 ring-offset-1 ring-primary-900 dark:ring-primary-100`,
+		 active:dark:brightness-75`,
 
 		secondary: `border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900
-		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700
-		border-b-slate-300 dark:border-b-zinc-700`,
+		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700`,
 
 		tertiary:
 			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-zinc-800 dark:text-zinc-200',
