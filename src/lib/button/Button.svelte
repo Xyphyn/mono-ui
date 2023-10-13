@@ -10,13 +10,13 @@
 	}
 
 	export const buttonColor = {
-		primary: `border border-primary-900 bg-primary-900 dark:bg-primary-100
-	dark:border-primary-100 dark:text-primary-900 hover:text-inherit hover:dark:text-inherit text-primary-100
-	hover:bg-transparent hover:dark:bg-transparent active:text-inherit active:dark:text-inherit
-	active:bg-primary-900/10 active:dark:bg-primary-100/10`,
+		primary: `border border-transparent bg-primary-900 text-white
+		 dark:bg-primary-100 dark:text-black hover:brightness-125 dark:hover:brightness-90 active:brightness-90
+		 active:dark:brightness-75 active:ring-1 ring-offset-1 ring-primary-900 dark:ring-primary-100`,
 
 		secondary: `border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900
-		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700`,
+		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700
+		border-b-slate-300 dark:border-b-zinc-700`,
 
 		tertiary:
 			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-zinc-800 dark:text-zinc-200',
@@ -71,7 +71,7 @@
 	const buttonRoundness = {
 		pill: 'rounded-full',
 		lg: 'rounded-lg',
-		md: 'rounded-md',
+		md: 'rounded-[7px]',
 		none: ''
 	}
 
@@ -82,7 +82,7 @@
 	export let size: ButtonSize = 'md'
 	export let rounding: ButtonRoundness = 'md'
 	export let alignment: ButtonAlignment = 'center'
-	export let shadow: ButtonShadow = 'none'
+	export let shadow: ButtonShadow = color == 'secondary' ? 'sm' : 'none'
 	export let column: boolean = false
 
 	export let loaderWidth: number | undefined = undefined
@@ -104,7 +104,7 @@
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit
-      font-medium cursor-pointer
+      font-normal cursor-pointer
       {$$props.class}
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"
 	type={submit ? 'submit' : 'button'}
