@@ -1,6 +1,7 @@
 {
 	"name": "mono-svelte",
 	"version": "1.4.2",
+	"author": "Xylight",
 	"license": "MIT",
 	"scripts": {
 		"dev": "NODE_ENV=development vite dev",
