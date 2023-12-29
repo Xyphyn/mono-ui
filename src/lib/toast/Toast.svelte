@@ -18,7 +18,7 @@
 <div
 	class="{toastColors[
 		toast.type
-	]} relative w-80 rounded-md overflow-hidden flex flex-row items-center"
+	]} relative w-80 rounded-lg overflow-hidden flex flex-row items-center"
 	transition:fly={{
 		duration: 300,
 		y: 8,

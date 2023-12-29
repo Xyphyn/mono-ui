@@ -2,12 +2,12 @@
 	export let label: string = ''
 
 	const badgeColor = {
-		red: 'bg-red-500 text-white ring-0',
-		green: 'bg-green-500 text-white dark:text-black ring-0',
-		yellow: 'bg-yellow-500 text-black ring-0',
-		gray: 'bg-gray-600 text-white ring-0',
-		blue: 'bg-blue-500 text-white ring-0',
-		purple: 'bg-purple-500 text-white ring-0',
+		red: 'bg-red-500 text-white ring-transparent',
+		green: 'bg-green-500 text-white dark:text-black ring-transparent',
+		yellow: 'bg-yellow-500 text-black ring-transparent',
+		gray: 'bg-gray-600 text-white ring-transparent',
+		blue: 'bg-blue-500 text-white ring-transparent',
+		purple: 'bg-purple-500 text-white ring-transparent',
 		'red-subtle': `bg-red-100 dark:bg-red-500/20 text-red-800 dark:text-red-400
 		ring-red-400 dark:ring-red-500/30`,
 		'green-subtle': `bg-green-100 dark:bg-green-500/20 text-green-800 dark:text-green-400
