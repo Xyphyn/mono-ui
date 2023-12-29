@@ -41,7 +41,7 @@
 		</Label>
 	{/if}
 	<div
-		class="rounded-md flex flex-col items-center text-sm bg-white dark:bg-zinc-950 {$$props.class}"
+		class="rounded-xl flex flex-col items-center text-sm bg-white dark:bg-zinc-950 {$$props.class}"
 	>
 		<textarea
 			{id}
@@ -57,7 +57,7 @@
 			{...$$restProps}
 			class="{sizeClass[size]} {borderClass} focus:border-slate-800
 			focus:dark:border-zinc-200 bg-white dark:bg-zinc-950
-		 focus:outline-none focus:ring-2 ring-slate-800/50 rounded-md
+		 focus:outline-none focus:ring-2 ring-slate-800/50 rounded-xl
 		dark:ring-zinc-200/50 transition-all text-sm w-full disabled:bg-slate-100
 		disabled:cursor-not-allowed disabled:dark:bg-zinc-900 invalid:!border-red-500
 		peer invalid:text-red-500 z-10
@@ -67,7 +67,7 @@
 		/>
 		{#if $$slots.suffix}
 			<div
-				class="{borderClass} {sizeClass[size]} w-full border-t-0 rounded-md rounded-t-none
+				class="{borderClass} {sizeClass[size]} w-full border-t-0 rounded-xl rounded-t-none
       flex items-center"
 			>
 				<slot name="suffix" />
