@@ -65,13 +65,41 @@
 <script lang="ts">
 	import Spinner from '$lib/loader/Spinner.svelte'
 
-	type ButtonRoundness = keyof typeof buttonRoundness
+	type ButtonRoundness = 'pill' | 'lg' | 'md' | 'none'
+	type ButtonRoundingSide = 'all' | 'left' | 'right' | 'top' | 'bottom'
 
-	const buttonRoundness = {
-		pill: 'rounded-full',
-		lg: 'rounded-lg',
-		md: 'rounded-md',
-		none: ''
+	const buttonRounding = {
+		"pill" : {
+			"all": 'rounded-full',
+			'left': 'rounded-l-full',
+			'right': 'rounded-r-full',
+			'top': 'rounded-t-full',
+			'bottom': 'rounded-b-full',
+		},
+
+		"lg" : {
+			"all": 'rounded-lg',
+			'left': 'rounded-l-lg',
+			'right': 'rounded-r-lg',
+			'top': 'rounded-t-lg',
+			'bottom': 'rounded-b-lg',
+		},
+
+		"md" : {
+			"all": 'rounded-md',
+			'left': 'rounded-l-md',
+			'right': 'rounded-r-md',
+			'top': 'rounded-t-md',
+			'bottom': 'rounded-b-md',
+		},
+
+		"none" : {
+			"all": '',
+			'left': '',
+			'right': '',
+			'top': '',
+			'bottom': '',
+		},
 	}
 
 	export let loading = false
@@ -80,6 +108,7 @@
 	export let color: ButtonColor = 'secondary'
 	export let size: ButtonSize = 'md'
 	export let rounding: ButtonRoundness = 'lg'
+	export let roundingSide: ButtonRoundingSide = 'all'
 	export let alignment: ButtonAlignment = 'center'
 	export let shadow: ButtonShadow = 'none'
 	export let column: boolean = false
@@ -98,7 +127,7 @@
 	class="
       {buttonColor[color]}
       {buttonSize[size]}
-      {buttonRoundness[rounding]}
+      {buttonRounding[rounding][roundingSide]}
 			{buttonShadow[shadow]}
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200

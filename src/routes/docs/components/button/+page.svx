@@ -89,6 +89,24 @@ A button can become a link if you add `href`.
 <Button rounding="none">None</Button>
 ```
 
+## Rounding side
+
+<ComponentContainer>
+	<Button rounding="md" roundingSide="left">Left</Button>
+	<Button rounding="md" roundingSide="right">Right</Button>
+	<Button rounding="md" roundingSide="top">Top</Button>
+	<Button rounding="md" roundingSide="bottom">Bottom</Button>
+	<Button rounding="md" roundingSide="all">All</Button>
+</ComponentContainer>
+
+```svelte
+<Button rounding="md" roundingSide="left">Left</Button>
+<Button rounding="md" roundingSide="right">Right</Button>
+<Button rounding="md" roundingSide="top">Top</Button>
+<Button rounding="md" roundingSide="bottom">Bottom</Button>
+<Button rounding="md" roundingSide="all">All</Button>
+```
+
 ## Squares
 
 Adding `-square` to the end of a `size` will make it square.
