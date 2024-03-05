@@ -53,6 +53,7 @@
 			on:change
 			on:keydown
 			on:focus
+      on:paste
 			bind:this={element}
 			{...$$restProps}
 			class="{sizeClass[size]} {borderClass} focus:border-slate-800
