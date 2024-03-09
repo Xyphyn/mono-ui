@@ -26,10 +26,10 @@
 	export let size: Size = 'md'
 	export let id: string = generateID()
 	export let inlineAffixes: boolean = false
-	export let shadow: Shadow = 'sm'
+	export let shadow: Shadow = 'none'
 
 	const borderClass = `
-	border border-slate-200 dark:border-zinc-700
+	border border-slate-200 border-b-slate-300 dark:border-zinc-800 dark:border-t-zinc-700
 	`
 </script>
 

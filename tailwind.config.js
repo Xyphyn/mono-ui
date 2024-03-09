@@ -22,7 +22,7 @@ export default {
 				},
 				primary: {
 					100: '#f1f5f9',
-					900: '#0f172a'
+					900: '#0f172a',
 				}
 			}
 		}

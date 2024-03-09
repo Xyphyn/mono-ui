@@ -14,7 +14,7 @@
 	export let placeholder: string | undefined = undefined
 	export let label: string | undefined = undefined
 	export let size: ButtonSize = 'md'
-	export let shadow: ButtonShadow = 'sm'
+	export let shadow: ButtonShadow = 'none'
 
 	export let id: string = generateID()
 </script>
@@ -31,7 +31,7 @@
 			{id}
 			class="{buttonSize[size]} {buttonShadow[
 				shadow
-			]} {buttonColor.secondary} appearance-none transition-colors rounded-md text-sm
+			]} {buttonColor.secondary} appearance-none transition-colors rounded-lg text-sm
 	w-full min-w-full cursor-pointer pr-6 {buttonColor.secondary}
 	{$$props.class}"
 			bind:value
