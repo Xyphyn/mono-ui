@@ -8,7 +8,8 @@
 	export let files: FileList | undefined | null = null
 	export let label: string | undefined = undefined
 	export let id: string = generateID()
-  export let url: string | undefined = ''
+  export let url: string | undefined = undefined
+
 
 	let dragover = false
 
