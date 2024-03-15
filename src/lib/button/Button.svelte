@@ -132,7 +132,7 @@
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit
-      font-normal cursor-pointer
+      font-normal cursor-pointer active:scale-[97%]
       {$$props.class}
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"
 	type={submit ? 'submit' : 'button'}

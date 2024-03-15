@@ -31,8 +31,8 @@
 	}
 
 	const colorClass = {
-		default: 'bg-white dark:bg-zinc-950',
-		distinct: 'bg-white dark:bg-zinc-900',
+		default: 'bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 border-b-slate-300 dark:border-t-zinc-700',
+		distinct: 'bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 border-b-slate-300 dark:border-t-zinc-700',
 		none: ''
 	}
 
@@ -47,7 +47,7 @@
   {paddingClass[padding]}
   {roundedClass[rounding]}
   {colorClass[color]}
-  border border-slate-200 dark:border-zinc-800 text-sm
+   text-sm
   {$$props.class}
   "
 >

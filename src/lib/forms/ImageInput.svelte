@@ -54,5 +54,5 @@
 	</label>
 	{#if url != undefined}
   		<TextInput class="rounded-t-none border-t-0 rounded-xl" placeholder="https://example.com/img1.png" />
-	{/#if}
+	{/if}
 </div>
