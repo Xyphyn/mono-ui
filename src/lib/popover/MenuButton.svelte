@@ -10,11 +10,13 @@
 	on:click
 	{color}
 	rounding="none"
-	class="w-full font-normal px-4 min-h-[36px] {$$props.class}"
+	class="w-full px-4 min-h-[36px] {$$props.class}"
 	{alignment}
 	{href}
 >
-	<slot name="prefix" slot="prefix" />
+  <span class="contents text-slate-600 dark:text-zinc-400 flex-shrink-0" slot="prefix">
+	  <slot name="prefix" />
+  </span>
 	<slot />
 	<slot name="suffix" slot="suffix" />
 </Button>

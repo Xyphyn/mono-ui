@@ -1,7 +1,7 @@
 <script>
 	import {Button, Popover, Codeblock, Menu, MenuButton, MenuDivider, Note} from '$lib/index';
   import ComponentContainer from '../ComponentContainer.svelte';
-  import { Icon, InformationCircle } from 'svelte-hero-icons'
+  import { Icon, InformationCircle, UserCircle, Cog6Tooth } from 'svelte-hero-icons'
 </script>
 
 <Note>
@@ -111,10 +111,10 @@ The `target` slot defines what element will cause the popover to appear when cli
   <Button slot="target" class="w-max">Menu</Button>
   <MenuDivider>Test Menu</MenuDivider>
   <MenuButton on:click={() => alert('clicked')}>
-  Example button
+  <Icon src={UserCircle} size="16" mini slot="prefix" /> Example button
   </MenuButton>
   <MenuButton on:click={() => alert('clicked')}>
-  This is another button. This time, it's long, so it should wrap.
+  <Icon class="flex-shrink-0" src={Cog6Tooth} size="16" mini slot="prefix" /> This is another button. This time, it's long, so it should wrap.
   </MenuButton>
 </Menu>
 

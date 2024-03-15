@@ -15,7 +15,7 @@
 		 active:dark:brightness-75`,
 
 		secondary: `border border-slate-200 border-b-slate-300 dark:border-zinc-800 dark:border-t-zinc-700 bg-white dark:bg-zinc-900
-		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700`,
+		hover:bg-slate-100 hover:dark:bg-zinc-800 hover:dark:border-zinc-700 hover:dark:border-zinc-700 active:dark:bg-zinc-900 active:bg-slate-200`,
 
 		tertiary:
 			'border border-transparent bg-transparent hover:bg-slate-100 hover:dark:bg-zinc-800 dark:text-zinc-200',
@@ -132,7 +132,7 @@
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit
-      font-normal cursor-pointer active:scale-[97%]
+      font-normal cursor-pointer
       {$$props.class}
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"
 	type={submit ? 'submit' : 'button'}
