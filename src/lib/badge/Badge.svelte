@@ -38,7 +38,7 @@
 </script>
 
 <span
-	class="{allowIconOnly ? 'max-md:px-1 max-md:py-1' : ''} px-2.5 py-1 {badgeRoundness[
+	class="{allowIconOnly ? 'max-md:px-1.5 max-md:py-1.5' : ''} px-2.5 py-1 {badgeRoundness[
 		rounding
 	]} text-xs font-medium flex items-center gap-1 ring-1 ring-inset {badgeColor[
 		color
