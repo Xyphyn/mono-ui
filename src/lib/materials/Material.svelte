@@ -27,12 +27,14 @@
 		md: 'rounded-md',
 		lg: 'rounded-lg',
 		xl: 'rounded-xl',
-		'2xl': 'rounded-2xl'
+		'2xl': 'rounded-2xl',
+    full: 'rounded-full'
 	}
 
 	const colorClass = {
 		default: 'bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 border-b-slate-300 dark:border-t-zinc-700',
 		distinct: 'bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 border-b-slate-300 dark:border-t-zinc-700',
+    transparent: 'border border-slate-200 dark:border-zinc-900 border-b-slate-300 dark:border-t-zinc-800',
 		none: ''
 	}
 

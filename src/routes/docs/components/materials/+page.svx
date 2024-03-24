@@ -1,0 +1,13 @@
+<script>
+	import { Material } from '$lib/index';
+  import { Icon, CheckBadge } from 'svelte-hero-icons';
+</script>
+
+# Material
+
+A component for containers, etc
+
+<Material rounding="full" color="transparent" padding="md" class="flex gap-1 items-center">
+<Icon src={CheckBadge} mini size="20" />
+hey
+</Material>

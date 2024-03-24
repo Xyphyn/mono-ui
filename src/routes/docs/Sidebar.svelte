@@ -99,6 +99,10 @@
 							]
 						},
 						{
+							url: '/docs/components/materials',
+							name: 'Materials'
+						},
+						{
 							url: '/docs/components/modal',
 							name: 'Modal'
 						},

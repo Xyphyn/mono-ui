@@ -1,6 +1,7 @@
 <script>
 	import { Badge } from '$lib/index'; import ComponentContainer from
 	'../ComponentContainer.svelte';
+  import { Icon, CheckBadge } from 'svelte-hero-icons';
 </script>
 
 # Badge
@@ -39,3 +40,12 @@ A small pill-shaped component to represent the status of something.
 <Badge color="blue-subtle">blue-subtle</Badge>
 <Badge color="purple-subtle">purple-subtle</Badge>
 ```
+
+## allowIconOnly
+
+<ComponentContainer class="!gap-2">
+  <Badge color="red" allowIconOnly>
+    <Icon src={CheckBadge} size="16" mini slot="icon" />
+    hey
+  </Badge>
+</ComponentContainer>
