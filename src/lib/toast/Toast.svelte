@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Spinner } from '$lib/index.js'
+	import { backOut } from 'svelte/easing'
 	import { type Toast, toasts, toastColors } from './toasts.js'
 	import {
 		InformationCircle,
@@ -22,7 +23,7 @@
 	transition:fly={{
 		duration: 300,
 		y: 8,
-		opacity: 0
+		opacity: 0,
 	}}
 >
 	{#if toast.loading}

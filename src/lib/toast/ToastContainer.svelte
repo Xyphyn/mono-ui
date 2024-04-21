@@ -2,6 +2,7 @@
 	import Toast from './Toast.svelte'
 	import { flip } from 'svelte/animate'
 	import { toasts } from './toasts.js'
+	import { backInOut, backOut } from 'svelte/easing'
 </script>
 
 <div
@@ -10,7 +11,7 @@
 >
 	{#each $toasts as toast, index (toast.id)}
 		<div
-			animate:flip={{ duration: 300 }}
+			animate:flip={{ duration: 500, easing: backOut }}
 			class="pointer-events-auto transition-all
       duration-300"
 		>

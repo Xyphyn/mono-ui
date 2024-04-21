@@ -45,11 +45,15 @@
 			<slot name="label" />
 		</Label>
 	{/if}
-	<div class="{shadowClass[shadow]} rounded-lg flex flex-row items-center text-sm {$$props.class}">
+	<div class="{shadowClass[shadow]} border {borderClass}
+  focus-within:border-primary-900 focus-within:dark:border-primary-100 focus-within:ring-2
+  ring-slate-300 dark:ring-zinc-700
+  transition-colors
+  rounded-lg flex flex-row items-center text-sm {$$props.class}">
 		{#if $$slots.prefix}
 			<div
-				class="rounded-lg rounded-r-none border {borderClass}
-			border-r-0 text-slate-600 dark:text-zinc-400 {inlineAffixes
+				class="rounded-lg rounded-r-none
+			text-slate-600 dark:text-zinc-400 {inlineAffixes
 					? 'bg-white dark:bg-zinc-950 pr-0 w-8'
 					: ''} {sizeClass[size]}"
 			>
@@ -66,10 +70,8 @@
 			on:change
 			on:focus
 			{...$$restProps}
-			class="{sizeClass[size]} {borderClass} focus:border-slate-800
-			focus:dark:border-zinc-200 bg-white dark:bg-zinc-950
-		 focus:outline-none focus:ring-2 ring-slate-800/50 rounded-lg
-		dark:ring-zinc-200/50 transition-all text-sm w-full disabled:bg-slate-100
+			class="{sizeClass[size]} bg-white dark:bg-zinc-950
+		 focus:outline-none rounded-lg text-sm w-full disabled:bg-slate-100
 		disabled:cursor-not-allowed disabled:dark:bg-zinc-900 invalid:!border-red-500
 		peer invalid:text-red-500 z-10
 		{$$props.class || ''}"
@@ -80,8 +82,7 @@
 		/>
 		{#if $$slots.suffix}
 			<div
-				class="rounded-lg rounded-l-none border {borderClass}
-			border-l-0 text-slate-600 dark:text-zinc-400 {inlineAffixes
+				class="rounded-lg rounded-l-none text-slate-600 dark:text-zinc-400 {inlineAffixes
 					? 'bg-white dark:bg-zinc-950 pl-0'
 					: ''} {sizeClass[size]}"
 			>

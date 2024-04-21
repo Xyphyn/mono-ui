@@ -2,7 +2,7 @@
 	import { Button } from '$lib/index.js'
 	import { createEventDispatcher } from 'svelte'
 	import { Icon, XMark } from 'svelte-hero-icons'
-	import { expoOut } from 'svelte/easing'
+	import { backOut, expoOut } from 'svelte/easing'
 	import { fade, scale } from 'svelte/transition'
 	import { focusTrap } from 'svelte-focus-trap'
 
@@ -34,7 +34,7 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div
-			transition:scale|global={{ start: 0.95, easing: expoOut }}
+			transition:scale|global={{ start: 0.95, easing: backOut, duration: 300 }}
 			class="overflow-y-auto {$$props.class} rounded-xl max-w-full box-border w-full overscroll-contain"
 		>
 			<!-- svelte-ignore a11y-no-static-element-interactions -->

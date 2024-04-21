@@ -13,7 +13,7 @@
 
 <script lang="ts">
 	import Material from '$lib/materials/Material.svelte'
-	import { expoOut } from 'svelte/easing'
+	import { backOut, expoOut } from 'svelte/easing'
 	import { fly, scale } from 'svelte/transition'
 	import { createFloatingActions } from 'svelte-floating-ui'
 	import {
@@ -30,7 +30,7 @@
 	export let open = false
 	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(6), shift(), flip()]
-	export let strategy: Strategy = 'absolute'
+	export let strategy: Strategy = 'fixed'
 
 	let canUseContents = true
 
@@ -90,7 +90,7 @@
 
 {#if open}
 	<div
-		transition:scale={{ duration: 200, start: .97, easing: expoOut }}
+		transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
 		class="z-30  {$$props.popoverClass}"
 		use:customFloatingContent
 	>
