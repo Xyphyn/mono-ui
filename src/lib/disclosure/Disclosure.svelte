@@ -10,7 +10,7 @@
 		<slot name="summary" {open} />
 	</button>
 	{#if open}
-		<div transition:slide={{ axis: 'y', easing: backOut, duration: 300 }}>
+		<div transition:slide={{ axis: 'y', easing: expoOut, duration: 300 }}>
 			<slot {open} />
 		</div>
 	{/if}
