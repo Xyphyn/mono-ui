@@ -4,6 +4,7 @@
 	export let color: ButtonColor = 'tertiary'
 	export let alignment: ButtonAlignment = 'left'
 	export let href: string | undefined = undefined
+	export let disabled: boolean = false
 </script>
 
 <Button
@@ -14,6 +15,7 @@
 	class="w-full px-4 min-h-[36px] {$$props.class}"
 	{alignment}
 	{href}
+	{disabled}
 >
 	<span
 		class="contents {color == 'tertiary' ? 'text-slate-600 dark:text-zinc-400' : ''} flex-shrink-0"
