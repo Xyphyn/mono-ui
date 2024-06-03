@@ -36,12 +36,6 @@
 		background-color: black;
 	}
 
-	@media (prefers-color-scheme: dark) {
-		div.spinner div {
-			background-color: white;
-		}
-	}
-
 	.dark div.spinner div {
 		background-color: white;
 	}

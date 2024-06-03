@@ -7,6 +7,7 @@
 </script>
 
 <Button
+	{...$$restProps}
 	on:click
 	{color}
 	rounding="none"
@@ -14,9 +15,12 @@
 	{alignment}
 	{href}
 >
-  <span class="contents text-slate-600 dark:text-zinc-400 flex-shrink-0" slot="prefix">
-	  <slot name="prefix" />
-  </span>
+	<span
+		class="contents {color == 'tertiary' ? 'text-slate-600 dark:text-zinc-400' : ''} flex-shrink-0"
+		slot="prefix"
+	>
+		<slot name="prefix" />
+	</span>
 	<slot />
 	<slot name="suffix" slot="suffix" />
 </Button>
