@@ -12,7 +12,9 @@
 	on:click
 	{color}
 	rounding="none"
-	class="w-full px-4 min-h-[36px] {$$props.class}"
+	class="w-full px-4 min-h-[36px] {disabled
+		? 'opacity-70 pointer-events-none cursor-not-allowed'
+		: ''} {$$props.class}"
 	{alignment}
 	{href}
 	{disabled}

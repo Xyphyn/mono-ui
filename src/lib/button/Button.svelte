@@ -69,37 +69,37 @@
 	type ButtonRoundingSide = 'all' | 'left' | 'right' | 'top' | 'bottom'
 
 	const buttonRounding = {
-		"pill" : {
-			"all": 'rounded-full',
-			'left': 'rounded-l-full',
-			'right': 'rounded-r-full',
-			'top': 'rounded-t-full',
-			'bottom': 'rounded-b-full',
+		pill: {
+			all: 'rounded-full',
+			left: 'rounded-l-full',
+			right: 'rounded-r-full',
+			top: 'rounded-t-full',
+			bottom: 'rounded-b-full'
 		},
 
-		"lg" : {
-			"all": 'rounded-lg',
-			'left': 'rounded-l-lg',
-			'right': 'rounded-r-lg',
-			'top': 'rounded-t-lg',
-			'bottom': 'rounded-b-lg',
+		lg: {
+			all: 'rounded-lg',
+			left: 'rounded-l-lg',
+			right: 'rounded-r-lg',
+			top: 'rounded-t-lg',
+			bottom: 'rounded-b-lg'
 		},
 
-		"md" : {
-			"all": 'rounded-md',
-			'left': 'rounded-l-md',
-			'right': 'rounded-r-md',
-			'top': 'rounded-t-md',
-			'bottom': 'rounded-b-md',
+		md: {
+			all: 'rounded-md',
+			left: 'rounded-l-md',
+			right: 'rounded-r-md',
+			top: 'rounded-t-md',
+			bottom: 'rounded-b-md'
 		},
 
-		"none" : {
-			"all": '',
-			'left': '',
-			'right': '',
-			'top': '',
-			'bottom': '',
-		},
+		none: {
+			all: '',
+			left: '',
+			right: '',
+			top: '',
+			bottom: ''
+		}
 	}
 
 	export let loading = false
