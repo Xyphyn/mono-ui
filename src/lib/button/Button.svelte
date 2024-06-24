@@ -124,6 +124,11 @@
 	{href}
 	{...$$restProps}
 	on:click
+	on:contextmenu
+	on:drag
+	on:drop
+	on:dragstart
+	on:dragend
 	class="
       {buttonColor[color]}
       {buttonSize[size]}

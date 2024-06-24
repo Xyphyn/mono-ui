@@ -45,6 +45,8 @@
 </script>
 
 <div
+  on:click
+  {...$$restProps}
 	class="{elevationClass[elevation]}
   {paddingClass[padding]}
   {roundedClass[rounding]}
