@@ -43,11 +43,11 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 				<div
 					bind:this={el}
 					use:focusTrap
-					class="w-full border-slate-200 dark:border-zinc-800 dark:bg-zinc-950 rounded-xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
+					class="w-full dark:border border-slate-200 dark:border-zinc-900 dark:bg-zinc-925 rounded-2xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
 				>
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
-						class="p-6 rounded-xl flex flex-col gap-4 w-full dark:bg-zinc-950
+						class="p-6 rounded-2xl flex flex-col gap-4 w-full dark:bg-zinc-950
           bg-white"
 						class:rounded-b-none={action}
 						class:border-b-0={action}

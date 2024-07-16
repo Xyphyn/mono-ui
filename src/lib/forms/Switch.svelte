@@ -3,11 +3,11 @@
 	export let checked: boolean = defaultValue
 </script>
 
-<label class="font-normal cursor-pointer flex flex-row items-start gap-4 {$$props.class}">
+<label class="font-normal cursor-pointer flex flex-row items-start gap-4 group {$$props.class}">
 	<div
 		class="w-11 h-6 rounded-full relative z-[inherit] cursor-pointer flex flex-row transition-colors shadow-sm
 {checked ? 'bg-primary-900 dark:bg-primary-100' : 'bg-slate-200 dark:bg-zinc-800'}
-group p-0.5 flex-shrink-0"
+ p-0.5 flex-shrink-0"
 	>
 		<input
 			bind:checked
@@ -16,7 +16,8 @@ group p-0.5 flex-shrink-0"
 		/>
 		<div
 			class="box-border w-5 h-full bg-white peer-checked:dark:bg-black rounded-full shadow-sm
-		group-active:w-6 transition-all peer-checked:translate-x-5 group-active:peer-checked:translate-x-4"
+		group-active:w-6 transition peer-checked:translate-x-5 group-active:peer-checked:translate-x-4
+		rtl:peer-checked:-translate-x-5 rtl:group-active:peer-checked:-translate-x-4"
 		/>
 	</div>
 	<div class="flex flex-col {$$props.labelClass}">
@@ -28,3 +29,9 @@ group p-0.5 flex-shrink-0"
 		{/if}
 	</div>
 </label>
+
+<style>
+	.transition {
+		transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+</style>
