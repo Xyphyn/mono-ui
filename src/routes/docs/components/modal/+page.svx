@@ -12,13 +12,13 @@ This component does not work without JS.
 
 Also referred to as a dialog, a modal will open full-screen and prompt the user for action.
 
-<Modal bind:open title="Modal" action="Action" on:action={(e) => {
+<Modal bind:open title="This is a Modal" action="Action" on:action={(e) => {
 alert('action')
 open = !open
 }}>
 
   <p>
-    Modal text
+    This is an example of a modal, a full-screen dialog that can be used in many ways.
   </p>
 </Modal>
 

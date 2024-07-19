@@ -65,7 +65,7 @@
 <script lang="ts">
 	import Spinner from '$lib/loader/Spinner.svelte'
 
-	type ButtonRoundness = 'pill' | 'lg' | 'md' | 'none'
+	type ButtonRoundness = 'pill' | 'xl' | 'lg' | 'md' | 'none'
 	type ButtonRoundingSide = 'all' | 'left' | 'right' | 'top' | 'bottom'
 
 	const buttonRounding = {
@@ -75,6 +75,14 @@
 			right: 'rounded-r-full',
 			top: 'rounded-t-full',
 			bottom: 'rounded-b-full'
+		},
+
+		xl: {
+			all: 'rounded-xl',
+			left: 'rounded-l-xl',
+			right: 'rounded-r-xl',
+			top: 'rounded-t-xl',
+			bottom: 'rounded-b-xl'
 		},
 
 		lg: {
@@ -107,7 +115,7 @@
 
 	export let color: ButtonColor = 'secondary'
 	export let size: ButtonSize = 'md'
-	export let rounding: ButtonRoundness = 'lg'
+	export let rounding: ButtonRoundness = size == 'lg' ? 'xl' : 'lg'
 	export let roundingSide: ButtonRoundingSide = 'all'
 	export let alignment: ButtonAlignment = 'center'
 	export let shadow: ButtonShadow = 'none'
@@ -137,7 +145,7 @@
       text-sm transition-all disabled:!opacity-70 disabled:!pointer-events-none
       disabled:!border disabled:!border-slate-300 disabled:!bg-slate-200
       disabled:dark:!border-zinc-700 disabled:dark:!bg-zinc-800 disabled:text-inherit
-      font-normal cursor-pointer
+      font-medium cursor-pointer
       {$$props.class}
      {loading ? (color == 'primary' ? '!bg-transparent !text-inherit' : '') : ''}"
 	type={submit ? 'submit' : 'button'}

@@ -24,8 +24,9 @@
 		<div
 			role="dialog"
 			class="overflow-hidden fixed top-0 left-0 w-screen h-screen z-[100]
-flex flex-col items-center justify-center bg-black/50 box-border p-4"
-			transition:fade|global={{ duration: 200 }}
+flex flex-col items-center justify-center backdrop-blur-sm
+bg-[#ffffff]/50 dark:bg-black/50 box-border p-4"
+			transition:fade|global={{ duration: 100 }}
 			on:click={(e) => {
 				if (!el.contains(e.target)) {
 					open = false
@@ -34,68 +35,57 @@ flex flex-col items-center justify-center bg-black/50 box-border p-4"
 				}
 			}}
 		>
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
+				bind:this={el}
+				use:focusTrap
 				transition:scale|global={{ start: 0.95, easing: backOut, duration: 300 }}
-				class="overflow-y-auto {$$props.class} rounded-xl max-w-full box-border w-full overscroll-contain"
+				class="w-full border border-slate-200 border-b-slate-300
+				dark:border-zinc-900 dark:border-t-zinc-800 dark:border-b-zinc-900
+				rounded-2xl max-w-lg box-border mx-auto overscroll-contain shadow-lg overflow-auto
+				text-center sm:text-left p-5 flex flex-col gap-2 dark:bg-zinc-950 dark:bg-zinc-925
+          bg-white relative"
 			>
-				<!-- svelte-ignore a11y-no-static-element-interactions -->
-				<div
-					bind:this={el}
-					use:focusTrap
-					class="w-full dark:border border-slate-200 dark:border-zinc-800 dark:bg-zinc-925 rounded-2xl max-w-xl box-border mx-auto overscroll-contain shadow-xl"
-				>
-					<!-- svelte-ignore a11y-no-static-element-interactions -->
-					<div
-						class="p-6 rounded-2xl flex flex-col gap-4 w-full dark:bg-zinc-950
-          bg-white"
-						class:rounded-b-none={action}
-						class:border-b-0={action}
+				{#if dismissable}
+					<Button
+						class="absolute top-0 right-0 m-2 text-slate-600 dark:text-zinc-400"
+						color="tertiary"
+						size="square-sm"
+						on:click={() => {
+							open = false
+							dispatcher('dismissed')
+						}}
 					>
-						<div
-							class="flex flex-row max-w-full sticky top-0 left-0 dark:bg-zinc-950
-          bg-white"
-						>
-							<h1 class="font-bold text-2xl w-max max-w-full">
-								{#if $$slots.title}
-									<slot name="title" />
-								{:else if title}
-									{title}
-								{/if}
-							</h1>
-							{#if dismissable}
-								<Button
-									size="square-md"
-									class="ml-auto"
-									on:click={() => {
-										open = false
-										dispatcher('dismissed')
-									}}
-									color="tertiary"
-								>
-									<Icon src={XMark} mini size="16" />
-								</Button>
-							{/if}
-						</div>
-						<slot />
-					</div>
-					{#if action}
-						<div
-							class="bg-white dark:bg-zinc-950 dark:border-zinc-800 p-4 flex w-full rounded-b-xl"
-						>
-							<slot name="action" {action}>
-								<Button
-									class="w-full"
-									on:click={(e) => dispatcher('action', e)}
-									color="primary"
-									size="lg"
-								>
-									{action}
-								</Button>
-							</slot>
-						</div>
+						<Icon src={XMark} size="20" mini slot="prefix" />
+					</Button>
+				{/if}
+				<h1 class="font-semibold text-xl max-w-full">
+					{#if $$slots.title}
+						<slot name="title" />
+					{:else if title}
+						{title}
 					{/if}
-				</div>
+				</h1>
+				<slot />
+				{#if action}
+					<div class="mt-2 flex w-full">
+						<slot name="action" {action}>
+							<Button
+								class="w-full"
+								on:click={(e) => {
+									dispatcher('action', e)
+									open = false
+									dispatcher('dismissed')
+								}}
+								color="primary"
+								size="lg"
+								rounding="xl"
+							>
+								{action}
+							</Button>
+						</slot>
+					</div>
+				{/if}
 			</div>
 		</div>
 	{/if}
