@@ -6,10 +6,10 @@
 	const dispatch = createEventDispatcher<{ mounted: void }>()
 
 	onMount(() => {
-		portal = document.createElement('div')
-		portal.className = 'portal-mount'
-		document.body.appendChild(portal)
-		portal.appendChild(slottedElements)
+		portal = document?.createElement('div')
+		if (portal) portal.className = 'portal-mount'
+		document?.body.appendChild(portal)
+		portal?.appendChild(slottedElements)
 		dispatch('mounted')
 	})
 
@@ -19,7 +19,7 @@
 </script>
 
 <div class="portal-initial-mount-point">
-	<div bind:this={slottedElements} class="portal-content">
+	<div bind:this={slottedElements} class="portal-content {$$props.class || ''}">
 		<slot />
 	</div>
 </div>

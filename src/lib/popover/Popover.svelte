@@ -31,7 +31,7 @@
 	export let open = false
 	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(6), shift(), flip()]
-	export let strategy: Strategy = 'fixed'
+	export let strategy: Strategy = 'absolute'
 
 	let canUseContents = true
 
@@ -90,10 +90,10 @@
 </button>
 
 {#if open}
-	<Portal>
+	<Portal class="z-[100]">
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
-			class="z-30 {$$props.popoverClass}"
+			class="z-50 {$$props.popoverClass}"
 			use:customFloatingContent
 		>
 			<slot name="popover">
