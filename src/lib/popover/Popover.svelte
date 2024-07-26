@@ -25,6 +25,7 @@
 		type Strategy,
 		size
 	} from '@floating-ui/core'
+	import Portal from './Portal.svelte'
 
 	export let openOnHover: boolean = false
 	export let open = false
@@ -89,15 +90,17 @@
 </button>
 
 {#if open}
-	<div
-		transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
-		class="z-30 {$$props.popoverClass}"
-		use:customFloatingContent
-	>
-		<slot name="popover">
-			<Material elevation="high" color="distinct" class="flex flex-col">
-				<slot />
-			</Material>
-		</slot>
-	</div>
+	<Portal>
+		<div
+			transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
+			class="z-30 {$$props.popoverClass}"
+			use:customFloatingContent
+		>
+			<slot name="popover">
+				<Material elevation="high" color="distinct" class="flex flex-col">
+					<slot />
+				</Material>
+			</slot>
+		</div>
+	</Portal>
 {/if}
