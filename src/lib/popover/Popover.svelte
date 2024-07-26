@@ -91,7 +91,7 @@
 {#if open}
 	<div
 		transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
-		class="z-30  {$$props.popoverClass}"
+		class="z-30 {$$props.popoverClass}"
 		use:customFloatingContent
 	>
 		<slot name="popover">

@@ -26,14 +26,21 @@
 	{strategy}
 	{...$$restProps}
 	bind:open
+	popoverClass="backdrop-blur-lg rounded-xl"
 	class={$$props.class}
 >
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
-		class="w-72 origin-top-left max-h-[32rem] overflow-auto list-none shadow-xl rounded-xl"
+		class="w-72 origin-top-left
+	max-h-[32rem] overflow-auto list-none shadow-xl rounded-xl"
 	>
-		<Material class="flex flex-col py-2 list-none" color="distinct" padding="none" rounding="xl">
+		<Material
+			class="flex flex-col py-2 list-none bg-white/70 dark:bg-zinc-950/70 px-2"
+			color="transparent"
+			padding="none"
+			rounding="xl"
+		>
 			<slot />
 		</Material>
 	</div>
