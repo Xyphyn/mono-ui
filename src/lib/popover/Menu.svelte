@@ -16,7 +16,7 @@
 
 	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(6), shift(), flip()]
-	export let strategy: Strategy = 'fixed'
+	export let strategy: Strategy = 'absolute'
 </script>
 
 <Popover
