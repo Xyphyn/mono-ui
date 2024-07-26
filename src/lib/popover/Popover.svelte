@@ -31,7 +31,7 @@
 	export let open = false
 	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(6), shift(), flip()]
-	export let strategy: Strategy = 'absolute'
+	export let strategy: Strategy = 'fixed'
 
 	let canUseContents = true
 

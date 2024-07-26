@@ -16,7 +16,7 @@
 
 	export let placement: Placement = 'bottom-start'
 	export let middleware: Middleware[] = [offset(6), shift(), flip()]
-	export let strategy: Strategy = 'absolute'
+	export let strategy: Strategy = 'fixed'
 </script>
 
 <Popover
@@ -36,7 +36,7 @@
 	max-h-[32rem] overflow-auto list-none shadow-xl rounded-xl"
 	>
 		<Material
-			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-950/80 px-2"
+			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-900/80 px-2"
 			color="transparent"
 			padding="none"
 			rounding="xl"
