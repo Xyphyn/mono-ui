@@ -32,7 +32,12 @@ export const action = (action?: {
 	icon?: IconSource
 	close?: boolean
 }): Action => ({
-	action: action?.action ?? (() => shownModal.set(undefined)),
+	action: action?.action
+		? () => {
+				action?.action?.()
+				if (action.close) shownModal.set(undefined)
+		  }
+		: () => shownModal.set(undefined),
 	type: action?.type ?? 'secondary',
 	content: action?.content || 'OK',
 	close: action?.close ?? true
