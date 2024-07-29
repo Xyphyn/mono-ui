@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let width: number = 18
+	export let width: number = 16
 </script>
 
 <svg
@@ -7,7 +7,8 @@
 	{width}
 	height={width}
 	role="status"
-	class="inline -mt-px animate-spin text-zinc-200 fill-primary-900 dark:text-zinc-800 dark:fill-primary-100"
+	class="inline -mt-px animate-spin text-zinc-400 fill-primary-900
+	 dark:text-zinc-600 dark:fill-primary-100"
 	viewBox="0 0 100 101"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +30,6 @@
 		}
 	}
 	.animate-spin {
-		animation: spin 0.5s linear infinite;
+		animation: spin 0.8s linear infinite;
 	}
 </style>

@@ -160,12 +160,12 @@
 				width={loaderWidth
 					? loaderWidth
 					: size == 'lg'
-					? 20
-					: size == 'md'
-					? 18
-					: size == 'sm'
 					? 16
-					: 16}
+					: size == 'md'
+					? 14
+					: size == 'sm'
+					? 12
+					: 14}
 			/>
 		{:else if $$slots.prefix}
 			<slot name="prefix" />
