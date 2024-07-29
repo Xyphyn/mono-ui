@@ -2,101 +2,33 @@
 	export let width: number = 18
 </script>
 
-<div class="spinner" style="width: {width}px; height: {width}px;">
-	<div class="bar1" />
-	<div class="bar2" />
-	<div class="bar3" />
-	<div class="bar4" />
-	<div class="bar5" />
-	<div class="bar6" />
-	<div class="bar7" />
-	<div class="bar8" />
-	<div class="bar9" />
-	<div class="bar10" />
-	<div class="bar11" />
-	<div class="bar12" />
-</div>
+<svg
+	{...$$restProps}
+	{width}
+	height={width}
+	role="status"
+	class="inline -mt-px animate-spin text-zinc-200 fill-primary-900 dark:text-zinc-800 dark:fill-primary-100"
+	viewBox="0 0 100 101"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<path
+		d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+		fill="currentColor"
+	/>
+	<path
+		d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+		fill="currentFill"
+	/>
+</svg>
 
-<style lang="postcss">
-	div.spinner {
-		position: relative;
-		display: inline-block;
-		border-radius: 10px;
-	}
-
-	div.spinner div {
-		width: 7.5%;
-		height: 22%;
-		position: absolute;
-		left: 49%;
-		top: 43%;
-		opacity: 0;
-		border-radius: 50px;
-		animation: fade 1s linear infinite;
-		background-color: black;
-	}
-
-	.dark div.spinner div {
-		background-color: white;
-	}
-
-	@keyframes fade {
-		from {
-			opacity: 1;
-		}
+<style>
+	@keyframes spin {
 		to {
-			opacity: 0.25;
+			transform: rotate(360deg);
 		}
 	}
-
-	div.spinner div.bar1 {
-		transform: rotate(0deg) translate(0, -130%);
-		animation-delay: 0s;
-	}
-
-	div.spinner div.bar2 {
-		transform: rotate(30deg) translate(0, -130%);
-		animation-delay: -0.9167s;
-	}
-
-	div.spinner div.bar3 {
-		transform: rotate(60deg) translate(0, -130%);
-		animation-delay: -0.833s;
-	}
-	div.spinner div.bar4 {
-		transform: rotate(90deg) translate(0, -130%);
-		animation-delay: -0.7497s;
-	}
-	div.spinner div.bar5 {
-		transform: rotate(120deg) translate(0, -130%);
-		animation-delay: -0.667s;
-	}
-	div.spinner div.bar6 {
-		transform: rotate(150deg) translate(0, -130%);
-		animation-delay: -0.5837s;
-	}
-	div.spinner div.bar7 {
-		transform: rotate(180deg) translate(0, -130%);
-		animation-delay: -0.5s;
-	}
-	div.spinner div.bar8 {
-		transform: rotate(210deg) translate(0, -130%);
-		animation-delay: -0.4167s;
-	}
-	div.spinner div.bar9 {
-		transform: rotate(240deg) translate(0, -130%);
-		animation-delay: -0.333s;
-	}
-	div.spinner div.bar10 {
-		transform: rotate(270deg) translate(0, -130%);
-		animation-delay: -0.2497s;
-	}
-	div.spinner div.bar11 {
-		transform: rotate(300deg) translate(0, -130%);
-		animation-delay: -0.167s;
-	}
-	div.spinner div.bar12 {
-		transform: rotate(330deg) translate(0, -130%);
-		animation-delay: -0.0833s;
+	.animate-spin {
+		animation: spin 0.5s linear infinite;
 	}
 </style>
