@@ -90,7 +90,7 @@
 </button>
 
 {#if open}
-	<Portal class="z-40">
+	<Portal class="z-[150]">
 		<div
 			transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
 			class="z-50 {$$props.popoverClass}"
