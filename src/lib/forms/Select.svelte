@@ -85,8 +85,11 @@
 							value = option.value
 							dispatcher('change')
 						}}
+						size="custom"
 						disabled={option.disabled}
-						class={option.value == value ? '!bg-slate-100 dark:!bg-zinc-800' : ''}
+						class="min-h-[28px] py-[5px] {option.value == value
+							? '!bg-slate-100 dark:!bg-zinc-800'
+							: ''}"
 					>
 						{@html option.label}
 					</MenuButton>

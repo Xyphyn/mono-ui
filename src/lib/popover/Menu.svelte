@@ -8,14 +8,15 @@
 		shift,
 		type Strategy,
 		flip,
-		autoPlacement
+		autoPlacement,
+		size
 	} from '@floating-ui/core'
 
 	export let openOnHover: boolean = false
 	export let open: boolean = false
 
 	export let placement: Placement = 'bottom-start'
-	export let middleware: Middleware[] = [offset(6), shift(), flip()]
+	export let middleware: Middleware[] = [offset(6), shift({ padding: 6 }), flip()]
 	export let strategy: Strategy = 'absolute'
 </script>
 
@@ -26,13 +27,13 @@
 	{strategy}
 	{...$$restProps}
 	bind:open
-	popoverClass="backdrop-blur-xl rounded-xl"
+	popoverClass="backdrop-blur-xl rounded-xl w-full max-w-xs"
 	class={$$props.class}
 >
 	<slot name="target" slot="target" />
 	<div
 		slot="popover"
-		class="w-72 origin-top-left
+		class="w-full max-w-xs origin-top-left
 	max-h-[32rem] overflow-auto list-none shadow-xl rounded-xl"
 	>
 		<Material
