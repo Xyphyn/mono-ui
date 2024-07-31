@@ -82,8 +82,8 @@
 					<MenuButton
 						on:contextmenu={() => dispatcher('contextmenu')}
 						on:click={() => {
-							dispatcher('change')
 							value = option.value
+							dispatcher('change')
 						}}
 						disabled={option.disabled}
 						class={option.value == value ? '!bg-slate-100 dark:!bg-zinc-800' : ''}
