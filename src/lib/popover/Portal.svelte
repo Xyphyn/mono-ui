@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from '$app/environment'
+
 	// https://github.com/sveltejs/svelte/issues/3088#issuecomment-505785516
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte'
 	let slottedElements: HTMLDivElement, portal: HTMLDivElement
@@ -6,6 +8,7 @@
 	const dispatch = createEventDispatcher<{ mounted: void }>()
 
 	onMount(() => {
+		if (!browser) return
 		portal = document?.createElement('div')
 		if (portal) portal.className = 'portal-mount'
 		document?.body.appendChild(portal)

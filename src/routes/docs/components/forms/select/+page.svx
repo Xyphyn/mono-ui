@@ -1,13 +1,23 @@
 <script>
 	import ComponentContainer from '../../ComponentContainer.svelte';import {Select, Codeblock}
 	from '$lib/index'
+	import { GlobeAlt, CheckBadge, GlobeAmericas, Icon } from 'svelte-hero-icons'
 </script>
 
 # Select Menus
 
-<Select placeholder="test" label="Select Menu">
+<Select label="Select Menu">
   <option value="option1">
+		<Icon src={GlobeAlt} size="16" mini />
 		Option 1
+	</option>
+  <option value="option2">
+		<Icon src={CheckBadge} size="16" mini />
+		Option 2
+	</option>
+  <option value="option3">
+		<Icon src={GlobeAmericas} size="16" mini />
+		Option 3
 	</option>
 </Select>
 

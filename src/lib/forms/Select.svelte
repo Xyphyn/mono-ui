@@ -8,6 +8,10 @@
 	} from '$lib/button/Button.svelte'
 	import Label from '$lib/forms/Label.svelte'
 	import { generateID } from '$lib/forms/helper.js'
+	import Menu from '$lib/popover/Menu.svelte'
+	import MenuButton from '$lib/popover/MenuButton.svelte'
+	import Popover from '$lib/popover/Popover.svelte'
+	import { createEventDispatcher, onMount } from 'svelte'
 	import { ChevronDown, ChevronUpDown, Icon } from 'svelte-hero-icons'
 
 	export let value: string | undefined = undefined
@@ -17,6 +21,24 @@
 	export let shadow: ButtonShadow = 'none'
 
 	export let id: string = generateID()
+
+	let open = false
+	let element: HTMLSelectElement
+
+	let options: { value: string; label: string | null; disabled: boolean }[] = []
+
+	onMount(() => {
+		// Capture all options from the select element
+		options = Array.from(element?.options).map((option) => ({
+			value: option.value,
+			label: option.innerHTML,
+			disabled: option.disabled
+		}))
+
+		console.log($$slots)
+	})
+
+	const dispatcher = createEventDispatcher<{ change: any; contextmenu: any; input: any }>()
 </script>
 
 <div class="flex flex-col gap-1 {$$props.class}">
@@ -27,24 +49,50 @@
 	{/if}
 
 	<div class="w-full relative">
-		<select
-			{id}
-			class="{buttonSize[size]} {buttonShadow[
-				shadow
-			]} {buttonColor.secondary} appearance-none transition-colors rounded-lg text-sm
+		<Menu bind:open>
+			<select
+				slot="target"
+				{id}
+				bind:this={element}
+				class="{buttonSize[size]} {buttonShadow[
+					shadow
+				]} {buttonColor.secondary} appearance-none transition-colors rounded-lg text-sm
 	w-full min-w-full cursor-pointer pr-6 {buttonColor.secondary}
 	{$$props.class}"
-			bind:value
-			on:change
-			on:contextmenu
-			on:input
-			{placeholder}
-		>
-			{#if placeholder}
-				<option disabled selected value="">{placeholder}</option>
-			{/if}
-			<slot />
-		</select>
+				bind:value
+				on:mousedown={(e) => {
+					e.preventDefault()
+				}}
+				on:keypress={(e) => {
+					e.preventDefault()
+					open = !open
+				}}
+				on:change
+				on:contextmenu
+				{placeholder}
+			>
+				{#if placeholder}
+					<option disabled selected value="">{placeholder}</option>
+				{/if}
+				<slot />
+			</select>
+
+			{#each options as option}
+				<slot name="option" {option} selected={option.value == value}>
+					<MenuButton
+						on:contextmenu={() => dispatcher('contextmenu')}
+						on:click={() => {
+							dispatcher('change')
+							value = option.value
+						}}
+						disabled={option.disabled}
+						class={option.value == value ? '!bg-slate-100 dark:!bg-zinc-800' : ''}
+					>
+						{@html option.label}
+					</MenuButton>
+				</slot>
+			{/each}
+		</Menu>
 		<Icon
 			src={ChevronUpDown}
 			mini

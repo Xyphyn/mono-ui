@@ -36,8 +36,8 @@
 	max-h-[32rem] overflow-auto list-none shadow-xl rounded-xl"
 	>
 		<Material
-			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-900/80 px-2"
-			color="transparent"
+			class="flex flex-col py-2 list-none bg-white/80 dark:bg-zinc-900/80 px-2 gap-1"
+			color="distinct"
 			padding="none"
 			rounding="xl"
 		>
