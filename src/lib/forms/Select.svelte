@@ -34,8 +34,6 @@
 			label: option.innerHTML,
 			disabled: option.disabled
 		}))
-
-		console.log($$slots)
 	})
 
 	const dispatcher = createEventDispatcher<{ change: any; contextmenu: any; input: any }>()
