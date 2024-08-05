@@ -46,6 +46,10 @@
 
 <div
   on:click
+  on:keypress
+  on:keydown
+  on:keyup
+  on:focus
   {...$$restProps}
 	class="{elevationClass[elevation]}
   {paddingClass[padding]}
