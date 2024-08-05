@@ -13,7 +13,7 @@
 
 <script lang="ts">
 	import Material from '$lib/materials/Material.svelte'
-	import { backOut, expoOut } from 'svelte/easing'
+	import { backOut, elasticIn, elasticOut, expoOut } from 'svelte/easing'
 	import { fly, scale } from 'svelte/transition'
 	import { createFloatingActions } from 'svelte-floating-ui'
 	import {
@@ -26,6 +26,8 @@
 		size
 	} from '@floating-ui/core'
 	import Portal from './Portal.svelte'
+	import { focusTrap } from 'svelte-focus-trap'
+	import { tick } from 'svelte'
 
 	export let openOnHover: boolean = false
 	export let open = false
@@ -68,6 +70,12 @@
 			open = false
 		}
 	}}
+	on:keydown={async (e) => {
+		if (open && e.key == 'Escape') {
+			open = false
+			el.firstChild.focus()
+		}
+	}}
 />
 
 <button
@@ -77,11 +85,10 @@
 	on:focusout={() => (openOnHover ? (open = false) : false)}
 	on:click={() => (!openOnHover ? (open = !open) : false)}
 	on:keydown={(e) => {
-		if (e.key == 'Escape') open = !open
+		if (e.key == 'Escape') open = false
 	}}
 	role="menu"
 	type="button"
-	tabindex="-1"
 	class="{canUseContents ? 'contents text-left' : 'w-max h-max'} {$$props.class}"
 	bind:this={el}
 	use:customFloatingRef
@@ -92,9 +99,10 @@
 {#if open}
 	<Portal class="z-[150]">
 		<div
-			transition:scale={{ duration: 200, start: 0.95, easing: backOut }}
+			transition:scale={{ duration: 200, start: 0.92, easing: backOut }}
 			class="z-[150] {$$props.popoverClass}"
 			use:customFloatingContent
+			use:focusTrap
 		>
 			<slot name="popover">
 				<Material elevation="high" color="distinct" class="flex flex-col">
